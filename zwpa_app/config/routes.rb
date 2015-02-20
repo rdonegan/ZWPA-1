@@ -1,4 +1,6 @@
 ZwpaApp::Application.routes.draw do
+  resources :customers
+
   resources :wastes
 
   resources :audits
