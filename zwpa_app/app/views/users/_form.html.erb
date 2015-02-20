@@ -1,0 +1,373 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :Customer %><br>
+    <%= f.text_field :Customer %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Request %><br>
+    <%= f.text_field :Request %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.number_field :customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_firstname %><br>
+    <%= f.text_field :contact_firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_lastname %><br>
+    <%= f.text_field :contact_lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address %><br>
+    <%= f.text_area :street_address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :Note %><br>
+    <%= f.text_field :Note %>
+  </div>
+  <div class="field">
+    <%= f.label :request_id %><br>
+    <%= f.number_field :request_id %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_area :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :Walkthrough %><br>
+    <%= f.text_field :Walkthrough %>
+  </div>
+  <div class="field">
+    <%= f.label :request_id %><br>
+    <%= f.number_field :request_id %>
+  </div>
+  <div class="field">
+    <%= f.label :square_footage %><br>
+    <%= f.number_field :square_footage %>
+  </div>
+  <div class="field">
+    <%= f.label :num_floors %><br>
+    <%= f.number_field :num_floors %>
+  </div>
+  <div class="field">
+    <%= f.label :max_occupancy %><br>
+    <%= f.number_field :max_occupancy %>
+  </div>
+  <div class="field">
+    <%= f.label :other_businesses %><br>
+    <%= f.number_field :other_businesses %>
+  </div>
+  <div class="field">
+    <%= f.label :other_businesses_type %><br>
+    <%= f.text_area :other_businesses_type %>
+  </div>
+  <div class="field">
+    <%= f.label :ownership %><br>
+    <%= f.number_field :ownership %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_disposal_contract %><br>
+    <%= f.number_field :waste_disposal_contract %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_management_cost %><br>
+    <%= f.number_field :waste_management_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :loading_dock %><br>
+    <%= f.number_field :loading_dock %>
+  </div>
+  <div class="field">
+    <%= f.label :freight_elevators %><br>
+    <%= f.number_field :freight_elevators %>
+  </div>
+  <div class="field">
+    <%= f.label :storage_space %><br>
+    <%= f.number_field :storage_space %>
+  </div>
+  <div class="field">
+    <%= f.label :storage_space_details %><br>
+    <%= f.text_area :storage_space_details %>
+  </div>
+  <div class="field">
+    <%= f.label :trash_hauler %><br>
+    <%= f.text_area :trash_hauler %>
+  </div>
+  <div class="field">
+    <%= f.label :trash_hauler_contract %><br>
+    <%= f.number_field :trash_hauler_contract %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_available %><br>
+    <%= f.number_field :contract_available %>
+  </div>
+  <div class="field">
+    <%= f.label :annual_record %><br>
+    <%= f.number_field :annual_record %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_storage %><br>
+    <%= f.text_field :waste_storage %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_containers %><br>
+    <%= f.text_field :waste_containers %>
+  </div>
+  <div class="field">
+    <%= f.label :buy_recycled %><br>
+    <%= f.number_field :buy_recycled %>
+  </div>
+  <div class="field">
+    <%= f.label :buy_recycled_details %><br>
+    <%= f.text_area :buy_recycled_details %>
+  </div>
+  <div class="field">
+    <%= f.label :green_cleaning_products %><br>
+    <%= f.number_field :green_cleaning_products %>
+  </div>
+  <div class="field">
+    <%= f.label :green_cleaning_details %><br>
+    <%= f.text_area :green_cleaning_details %>
+  </div>
+  <div class="field">
+    <%= f.label :mandated_recycling %><br>
+    <%= f.number_field :mandated_recycling %>
+  </div>
+  <div class="field">
+    <%= f.label :recycling_program %><br>
+    <%= f.number_field :recycling_program %>
+  </div>
+  <div class="field">
+    <%= f.label :recycling_details %><br>
+    <%= f.text_area :recycling_details %>
+  </div>
+  <div class="field">
+    <%= f.label :recycling_stream %><br>
+    <%= f.number_field :recycling_stream %>
+  </div>
+  <div class="field">
+    <%= f.label :recycling_stream_details %><br>
+    <%= f.text_area :recycling_stream_details %>
+  </div>
+  <div class="field">
+    <%= f.label :discontinued_recycling %><br>
+    <%= f.text_area :discontinued_recycling %>
+  </div>
+  <div class="field">
+    <%= f.label :current_compost %><br>
+    <%= f.number_field :current_compost %>
+  </div>
+  <div class="field">
+    <%= f.label :past_compost %><br>
+    <%= f.number_field :past_compost %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_toner_ink %><br>
+    <%= f.number_field :generate_toner_ink %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_toner_ink %><br>
+    <%= f.number_field :recycle_toner_ink %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_CFLs %><br>
+    <%= f.number_field :generate_CFLs %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_CFLs %><br>
+    <%= f.number_field :recycle_CFLs %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_batteries %><br>
+    <%= f.number_field :generate_batteries %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_batteries %><br>
+    <%= f.number_field :recycle_batteries %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_computers %><br>
+    <%= f.number_field :generate_computers %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_computers %><br>
+    <%= f.number_field :recycle_computers %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_cellphones %><br>
+    <%= f.number_field :generate_cellphones %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_cellphones %><br>
+    <%= f.number_field :recycle_cellphones %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_tvs %><br>
+    <%= f.number_field :generate_tvs %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_tvs %><br>
+    <%= f.number_field :recycle_tvs %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_other_corded_equipment %><br>
+    <%= f.number_field :generate_other_corded_equipment %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_cellphones %><br>
+    <%= f.number_field :recycle_cellphones %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_furniture %><br>
+    <%= f.number_field :generate_furniture %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_furniture %><br>
+    <%= f.number_field :recycle_furniture %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_linens_uniforms %><br>
+    <%= f.number_field :generate_linens_uniforms %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_linens_uniforms %><br>
+    <%= f.number_field :recycle_linens_uniforms %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_construction_debris %><br>
+    <%= f.number_field :generate_construction_debris %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_construction_debris %><br>
+    <%= f.number_field :recycle_construction_debris %>
+  </div>
+  <div class="field">
+    <%= f.label :generate_pallets %><br>
+    <%= f.number_field :generate_pallets %>
+  </div>
+  <div class="field">
+    <%= f.label :recycle_pallets %><br>
+    <%= f.number_field :recycle_pallets %>
+  </div>
+  <div class="field">
+    <%= f.label :ZW_policy %><br>
+    <%= f.number_field :ZW_policy %>
+  </div>
+  <div class="field">
+    <%= f.label :LEED %><br>
+    <%= f.number_field :LEED %>
+  </div>
+  <div class="field">
+    <%= f.label :recertify_LEED %><br>
+    <%= f.number_field :recertify_LEED %>
+  </div>
+  <div class="field">
+    <%= f.label :requesting_audit_services %><br>
+    <%= f.number_field :requesting_audit_services %>
+  </div>
+  <div class="field">
+    <%= f.label :Audit %><br>
+    <%= f.text_field :Audit %>
+  </div>
+  <div class="field">
+    <%= f.label :request_id %><br>
+    <%= f.number_field :request_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :origin %><br>
+    <%= f.text_field :origin %>
+  </div>
+  <div class="field">
+    <%= f.label :time_period %><br>
+    <%= f.text_field :time_period %>
+  </div>
+  <div class="field">
+    <%= f.label :dumpster_type %><br>
+    <%= f.text_field :dumpster_type %>
+  </div>
+  <div class="field">
+    <%= f.label :Waste %><br>
+    <%= f.text_field :Waste %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_id %><br>
+    <%= f.number_field :audit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :material_type %><br>
+    <%= f.text_field :material_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
