@@ -1,8 +1,12 @@
 class Request < ActiveRecord::Base
-	#Relationships
+	# Relationships
+	belongs_to :customer
+	has_many :walkthroughs 
+	has_many :notes
+	has_many :audits
 
-
-	#Validations
+	# Validations
+	validates_presence_of :request_id, customer_id:
 
 
 end
