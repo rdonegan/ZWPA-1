@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223020409) do
+ActiveRecord::Schema.define(version: 20150223224507) do
 
   create_table "audits", force: true do |t|
     t.integer  "request_id"
@@ -41,10 +41,6 @@ ActiveRecord::Schema.define(version: 20150223020409) do
     t.string   "city"
     t.string   "state"
     t.date     "date"
-    t.string   "Note"
-    t.integer  "request_id"
-    t.text     "photo"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "zip_code"
