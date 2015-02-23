@@ -11,6 +11,6 @@ class Request < ActiveRecord::Base
 
 	#scopes
 	scope :chronological, -> { order('created_at') }
-	scope :by_customer, ->
+	scope :by_customer, -> { joins(:customer).order('customers.company_name') }
 
 end
