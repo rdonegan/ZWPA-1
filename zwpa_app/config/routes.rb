@@ -1,4 +1,6 @@
 ZwpaApp::Application.routes.draw do
+  resources :notes
+
   get "home/index"
   resources :customers
 
