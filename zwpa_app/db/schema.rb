@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223015623) do
+ActiveRecord::Schema.define(version: 20150223020147) do
 
   create_table "audits", force: true do |t|
     t.integer  "request_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150223015623) do
     t.integer  "generator",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "location"
   end
 
   create_table "customers", force: true do |t|
