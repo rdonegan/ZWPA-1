@@ -9,8 +9,7 @@ class Customer < ActiveRecord::Base
 	validates_presence_of :company_name
 
 	# Scopes
-	scope 
-
+	scope :alphabetical, -> {order ('company_name')}
 
 	# Methods
 end
