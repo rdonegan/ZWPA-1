@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220033506) do
+ActiveRecord::Schema.define(version: 20150223015623) do
 
   create_table "audits", force: true do |t|
     t.integer  "request_id"
     t.date     "date"
-    t.string   "origin"
     t.string   "time_period"
-    t.string   "dumpster_type"
+    t.integer  "generator",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -124,6 +123,7 @@ ActiveRecord::Schema.define(version: 20150220033506) do
     t.string   "material_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "origin"
   end
 
 end
