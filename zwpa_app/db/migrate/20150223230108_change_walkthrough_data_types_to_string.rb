@@ -43,6 +43,5 @@ class ChangeWalkthroughDataTypesToString < ActiveRecord::Migration
   	change_column :walkthroughs, :LEED, :string
   	change_column :walkthroughs, :recertify_LEED, :string
   	change_column :walkthroughs, :requesting_audit_services, :string
-
   end
 end

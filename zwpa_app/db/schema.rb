@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223230108) do
+ActiveRecord::Schema.define(version: 20150224010147) do
 
   create_table "audits", force: true do |t|
     t.integer  "request_id"
     t.date     "date"
     t.string   "time_period"
-    t.integer  "generator",   limit: 255
+    t.string   "generator"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "location"
