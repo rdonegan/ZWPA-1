@@ -29,5 +29,5 @@ class User < ActiveRecord::Base
 	# 	find_by_email(email).try(:authenticate, password)
 	# end
 
-	#reset password - TO DO LATER
+	#reset password - TO DO LATERr
 end
