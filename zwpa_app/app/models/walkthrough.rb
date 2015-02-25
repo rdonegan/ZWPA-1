@@ -26,7 +26,7 @@ class Walkthrough < ActiveRecord::Base
 	validates_inclusion_of :recycling_program, in: %w[Yes No DK]
 	validates_inclusion_of :recycling_stream, in: %w[Yes No DK]
 	validates_inclusion_of :current_compost, in: %w[Yes No DK]
-	# past_compost
+	validates_inclusion_of :past_compost, in: %w[Yes No DK]
 
 	validates_inclusion_of :generate_toner_ink, in: %w[Yes No DK]
 	validates_inclusion_of :recycle_toner_ink, in: %w[Yes No DK]
@@ -41,8 +41,8 @@ class Walkthrough < ActiveRecord::Base
 	validates_inclusion_of :generate_tvs, in: %w[Yes No DK]
 	validates_inclusion_of :recycle_tvs, in: %w[Yes No DK]
 	validates_inclusion_of :generate_other_corded_equipment, in: %w[Yes No DK]
-	# need recycle other corded equipment
-
+	validates_inclusion_of :recycle_other_corded_equipment, in: %w[Yes No DK]
+	
 	validates_inclusion_of :generate_furniture, in: %w[Yes No DK]
 	validates_inclusion_of :recycle_furniture, in: %w[Yes No DK]
 	validates_inclusion_of :generate_linens_uniforms, in: %w[Yes No DK]
