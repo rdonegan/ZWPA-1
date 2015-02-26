@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'foundation-rails', '5.4.5'
 
+# Use a gem for handling pagination
+gem 'will_paginate'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -47,6 +50,18 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'capybara'
+end
+
+# Additional gems that are very useful in Rails development
+group :development do
+  gem 'quiet_assets'
+  gem 'thin'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'wirble'
+  gem 'hirb'
+  gem 'faker'
 end
 
 # Use ActiveModel has_secure_password
