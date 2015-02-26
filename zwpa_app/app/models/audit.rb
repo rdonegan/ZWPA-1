@@ -10,7 +10,7 @@ class Audit < ActiveRecord::Base
 
 	#Scope
 	scope :chronological, -> { order('created_at') }
-	scope :alphabetical, -> { order('family_name') }
+	
 
 
 end
