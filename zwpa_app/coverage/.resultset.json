@@ -1,6 +1,42 @@
 {
   "Unit Tests": {
     "coverage": {
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/audits_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/customers_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/notes_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/requests_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/walkthroughs_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/wastes_helper.rb": [
+        1,
+        null
+      ],
       "/Users/ryandonegan/ZWPA-1/zwpa_app/app/models/customer.rb": [
         1,
         null,
@@ -162,6 +198,6 @@
         null
       ]
     },
-    "timestamp": 1424928294
+    "timestamp": 1424929070
   }
 }
