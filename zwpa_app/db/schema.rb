@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224010147) do
+ActiveRecord::Schema.define(version: 20150226043256) do
 
   create_table "audits", force: true do |t|
     t.integer  "request_id"
@@ -120,6 +120,7 @@ ActiveRecord::Schema.define(version: 20150224010147) do
     t.string   "requesting_audit_services"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "recycle_other_corded_equipment"
   end
 
   create_table "wastes", force: true do |t|
