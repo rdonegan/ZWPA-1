@@ -13,7 +13,6 @@ class CustomerTest < ActiveSupport::TestCase
   should_not allow_value(0).for(:user_id)
   should_not allow_value(50.50).for(:user_id)
   should validate_presence_of(:company_name)
-  should validate_numericality_of(:company_name)
 
   context "Within context" do
 
