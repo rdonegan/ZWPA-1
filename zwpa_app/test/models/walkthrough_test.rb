@@ -13,21 +13,18 @@ class WalkthroughTest < ActiveSupport::TestCase
   should_not allow_value(-1).for(:request_id)
   should_not allow_value('false').for(:request_id)
 
-  should validate_presence_of(:square_footage)
   should validate_numericality_of(:square_footage)
   should allow_value(100).for(:square_footage)
   should_not allow_value(-1).for(:square_footage)
   should_not allow_value(false).for(:square_footage)
   should_not allow_value('-1').for(:square_footage)
 
-  should validate_presence_of(:num_floors)
   should validate_numericality_of(:num_floors)
   should allow_value(100).for(:num_floors)
   should_not allow_value(-1).for(:num_floors)
   should_not allow_value(false).for(:num_floors)
   should_not allow_value('-1').for(:num_floors)
 
-  should validate_presence_of(:max_occupancy)
   should validate_numericality_of(:max_occupancy)
   should allow_value(100).for(:max_occupancy)
   should_not allow_value(-1).for(:max_occupancy)
@@ -39,8 +36,8 @@ class WalkthroughTest < ActiveSupport::TestCase
   should allow_value('No').for(:other_businesses)
   should allow_value("DK").for(:other_businesses)
 
-  should allow_value('Owned').for(:ownership)
-  should allow_value('Leased').for(:ownership)
+  should allow_value('Own').for(:ownership)
+  should allow_value('Lease').for(:ownership)
 
   should allow_value('Yes').for(:waste_disposal_contract)
   should allow_value('No').for(:waste_disposal_contract)
@@ -114,7 +111,7 @@ class WalkthroughTest < ActiveSupport::TestCase
   should allow_value("DK").for(:recycle_toner_ink)
 
   should allow_value('Yes').for(:generate_CFLs)
-  should allow_value('No').for(:gen)
+  should allow_value('No').for(:generate_CFLs)
   should allow_value("DK").for(:generate_CFLs)
 
   should allow_value('Yes').for(:recycle_CFLs)
