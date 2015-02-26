@@ -5,9 +5,11 @@ class Walkthrough < ActiveRecord::Base
 
 	# Validations
 	validates_presence_of :request_id
-	validates_numericality_of :square_footage, only_integer: true, greater_than_or_equal_to: 0
-	validates_numericality_of :num_floors, only_integer: true, greater_than_or_equal_to: 0
-	validates_numericality_of :max_occupancy, only_integer: true, greater_than_or_equal_to: 0
+	validates_numericality_of :request_id, only_integer: true, greater_than: 0
+
+	validates_numericality_of :square_footage, only_integer: true, greater_than: 0
+	validates_numericality_of :num_floors, only_integer: true, greater_than: 0
+	validates_numericality_of :max_occupancy, only_integer: true, greater_than: 0
 
 	validates_inclusion_of :other_businesses, in: %w[Yes No DK]
 	validates_inclusion_of :ownership, in: %w[Own Lease]

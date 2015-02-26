@@ -16,14 +16,17 @@ class CustomerTest < ActiveSupport::TestCase
 
   context "Within context" do
 
+    setup do
+      create_customers
+    end
+
+    teardown do
+      delete_customers
+    end
+
     should "show that there are three customers in in alphabetical order" do
-      user1 = FactoryGirl.build(:user, username: "user", password: "secret")
-      c = FactoryGirl.build(:customer, user: user1, company_name: "Council")
-      a = FactoryGirl.build(:customer, user: user1, company_name: "Alcoa")
-      b = FactoryGirl.build(:customer, user: user1, company_name: "BurgerKing")
       assert_equal ["Alcoa", "BurgerKing", "Council"], Customer.alphabetical.all.map{|c| c.company_name}
     end
 
   end
-
 end
