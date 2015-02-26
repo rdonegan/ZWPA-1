@@ -157,6 +157,10 @@ class WalkthroughTest < ActiveSupport::TestCase
   should allow_value('No').for(:generate_other_corded_equipment)
   should allow_value("I don't know").for(:generate_other_corded_equipment)
 
+  should allow_value('Yes').for(:recycle_other_corded_equipment)
+  should allow_value('No').for(:recycle_other_corded_equipment)
+  should allow_value("I don't know").for(:recycle_other_corded_equipment)
+
   should allow_value('Yes').for(:generate_furniture)
   should allow_value('No').for(:generate_furniture)
   should allow_value("I don't know").for(:generate_furniture)
