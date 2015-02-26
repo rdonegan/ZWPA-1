@@ -9,7 +9,7 @@ require './test/sets/waste_contexts.rb'
 
 module Contexts
 	# include Contexts::AuditContexts
-	# include Contexts::CustomerContexts
+	include Contexts::CustomerContexts
 	# include Contexts::RequestContexts
 	include Contexts::NoteContexts
 	# include Contexts::UserContexts
