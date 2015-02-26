@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <!-- should populate automatically based on where you selected to add a new form -->
+  <!-- for MVP, just give user a dropdown of requests -->
   <div class="field">
     <%= f.label :request_id %><br>
     <%= f.number_field :request_id %>
@@ -20,121 +22,128 @@
     <%= f.number_field :square_footage %>
   </div>
   <div class="field">
-    <%= f.label :num_floors %><br>
+    <%= f.label "Number of floors" %><br>
     <%= f.number_field :num_floors %>
   </div>
   <div class="field">
-    <%= f.label :max_occupancy %><br>
+    <%= f.label "Maximum Occupancy" %><br>
     <%= f.number_field :max_occupancy %>
   </div>
   <div class="field">
-    <%= f.label :other_businesses %><br>
+    <%= f.label "Are there other spaces/businesses (Leased or Owned/Operated) in the building?" %><br>
     <%= f.number_field :other_businesses %>
   </div>
   <div class="field">
-    <%= f.label :other_businesses_type %><br>
-    <%= f.text_area :other_businesses_type %>
+    <label> If yes, what type of business/spaces?</label><br>
+    <%= f.text_area :other_businesses_type, placeholder: "i.e. coffee shop, bar, restaurant, gift shop, business center" %>
   </div>
   <div class="field">
-    <%= f.label :ownership %><br>
+    <%= f.label "Is your building owned or leased?" %><br>
     <%= f.number_field :ownership %>
   </div>
   <div class="field">
-    <%= f.label :waste_disposal_contract %><br>
+    <label>If leased, does the leasing agent control the solid waste/recycling disposal contract?</label><br>
     <%= f.number_field :waste_disposal_contract %>
   </div>
   <div class="field">
-    <%= f.label :waste_management_cost %><br>
+    <label>If leased, are waste management costs included in the rent payment?</label><br>
     <%= f.number_field :waste_management_cost %>
   </div>
+  <h4>Does your building have a...</h4>
   <div class="field">
-    <%= f.label :loading_dock %><br>
+    <label>Loading dock?</label><br>
     <%= f.number_field :loading_dock %>
   </div>
   <div class="field">
-    <%= f.label :freight_elevators %><br>
+    <label>Freight elevators?</label><br>
     <%= f.number_field :freight_elevators %>
   </div>
   <div class="field">
-    <%= f.label :storage_space %><br>
+    <label>Ample storage space?</label><br>
     <%= f.number_field :storage_space %>
   </div>
   <div class="field">
-    <%= f.label :storage_space_details %><br>
+    <label>Storage details</label><br>
     <%= f.text_area :storage_space_details %>
   </div>
   <div class="field">
-    <%= f.label :trash_hauler %><br>
+    <%= f.label "Current trash hauler" %><br>
     <%= f.text_area :trash_hauler %>
   </div>
   <div class="field">
-    <%= f.label :trash_hauler_contract %><br>
+    <%= f.label "Do you have a contract with them?" %><br>
     <%= f.number_field :trash_hauler_contract %>
   </div>
   <div class="field">
-    <%= f.label :contract_available %><br>
+    <%= f.label "If yes, is a copy available?" %><br>
     <%= f.number_field :contract_available %>
   </div>
   <div class="field">
-    <%= f.label :annual_record %><br>
+    <label>Do you have at least one year's records of solid waste and/or recycling volumes?</label><br>
     <%= f.number_field :annual_record %>
   </div>
   <div class="field">
-    <%= f.label :waste_storage %><br>
+    <%= f.label "Where is solid waste currently stored?" %><br>
     <%= f.text_field :waste_storage %>
   </div>
   <div class="field">
-    <%= f.label :waste_containers %><br>
+    <%= f.label "What solid waste containers do you use?" %><br>
+    <label>Dumpster, Roll-off, Toter, Other...</label>
     <%= f.text_field :waste_containers %>
   </div>
   <div class="field">
-    <%= f.label :buy_recycled %><br>
+    <label>Does your company have a <strong>'Buy Recycled'</strong> policy re: recyclability or recycled content of products?<br>
     <%= f.number_field :buy_recycled %>
   </div>
   <div class="field">
-    <%= f.label :buy_recycled_details %><br>
+    <%= f.label "If yes, please describe" %><br>
     <%= f.text_area :buy_recycled_details %>
   </div>
   <div class="field">
-    <%= f.label :green_cleaning_products %><br>
+    <label>Does your company have a policy of purchasing non-toxic/'Green' cleaning products?</label><br>
     <%= f.number_field :green_cleaning_products %>
   </div>
   <div class="field">
-    <%= f.label :green_cleaning_details %><br>
+    <%= f.label "If yes, please describe" %><br>
     <%= f.text_area :green_cleaning_details %>
   </div>
   <div class="field">
-    <%= f.label :mandated_recycling %><br>
+    <%= f.label "Is your building located in a recycling mandated community?" %><br>
     <%= f.number_field :mandated_recycling %>
   </div>
   <div class="field">
-    <%= f.label :recycling_program %><br>
+    <label>Does your building currently have a <strong> recycling program </strong> ?</label><br>
     <%= f.number_field :recycling_program %>
   </div>
+
+  <!-- Put the example in the text area itself!!! -->
+
   <div class="field">
-    <%= f.label :recycling_details %><br>
-    <%= f.text_area :recycling_details %>
+    <label>If yes, describe your current recycling system and material collected for recycling</label><br>
+    <%= f.text_area :recycling_details, placeholder: "e.g. 'We collect office paper in 90 gallon toters'" %>
   </div>
   <div class="field">
-    <%= f.label :recycling_stream %><br>
+    <label>Does your building currently utilize a duel-stream or single-stream recycling program in your building?</label><br>
     <%= f.number_field :recycling_stream %>
   </div>
   <div class="field">
-    <%= f.label :recycling_stream_details %><br>
-    <%= f.text_area :recycling_stream_details %>
+    <%= f.label "Recycling stream details" %><br>
+    <%= f.text_area :recycling_stream_details, placeholder: "e.g. 'We collect white office and mixed paper in separate 90 gallon toters'" %>
   </div>
   <div class="field">
-    <%= f.label :discontinued_recycling %><br>
+    <label>If your company was recycling and discontinued the effort, please explain why.</label><br>
     <%= f.text_area :discontinued_recycling %>
   </div>
   <div class="field">
-    <%= f.label :current_compost %><br>
+    <label>Does your company currently compost organic materials such as food waste/yard waste? </label><br>
     <%= f.number_field :current_compost %>
   </div>
   <div class="field">
-    <%= f.label :past_compost %><br>
+    <label>Has your organization composted organic material in the past?</label><br>
     <%= f.number_field :past_compost %>
   </div>
+
+  <h4>E-Wastes</h4>
   <div class="field">
     <%= f.label :generate_toner_ink %><br>
     <%= f.number_field :generate_toner_ink %>
@@ -191,6 +200,8 @@
     <%= f.label :recycle_cellphones %><br>
     <%= f.number_field :recycle_cellphones %>
   </div>
+
+  <h4>Other Materials</h4>
   <div class="field">
     <%= f.label :generate_furniture %><br>
     <%= f.number_field :generate_furniture %>
@@ -224,19 +235,20 @@
     <%= f.number_field :recycle_pallets %>
   </div>
   <div class="field">
-    <%= f.label :ZW_policy %><br>
+    <labe>Does your company currently have a <strong>Zero Waste Policy<strong> in place?</label><br>
+      <p>This would require 90% of overall diversion of landfill for non-hazardous wastes discarded materials are reused, recycled, composted, or recovered for productive use in nature or the economy at biological temperatures.</p>
     <%= f.number_field :ZW_policy %>
   </div>
   <div class="field">
-    <%= f.label :LEED %><br>
+    <%= f.label "Is your building/organization LEED certified?" %><br>
     <%= f.number_field :LEED %>
   </div>
   <div class="field">
-    <%= f.label :recertify_LEED %><br>
+    <%= f.label "If so, is your buiding/organization looking to recertify your LEED building?" %><br>
     <%= f.number_field :recertify_LEED %>
   </div>
   <div class="field">
-    <%= f.label :requesting_audit_services %><br>
+    <%= f.label "Is your buiding requesting PRC for waste audit services?" %><br>
     <%= f.number_field :requesting_audit_services %>
   </div>
   <div class="actions">
