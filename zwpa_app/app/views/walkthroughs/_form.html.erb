@@ -53,7 +53,7 @@
   </div>
   <div class="field">
     <%= f.label "Are there other spaces/businesses (Leased or Owned/Operated) in the building?" %><br>
-    <%= f.number_field :other_businesses %>
+    <%= f.input :other_businesses, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
     
   </div>
   <div class="field">
@@ -62,53 +62,72 @@
   </div>
   <div class="field">
     <%= f.label "Is your building owned or leased?" %><br>
-    <%= f.number_field :ownership %>
+    <%#= f.number_field :ownership %>
+    <%= f.input :ownership, :collection => [['Own', 'Owned'], ['Lease', 'Leased']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <label>If leased, does the leasing agent control the solid waste/recycling disposal contract?</label><br>
-    <%= f.number_field :waste_disposal_contract %>
+    <%#= f.number_field :waste_disposal_contract %>
+    <%= f.input :waste_disposal_contract, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <label>If leased, are waste management costs included in the rent payment?</label><br>
-    <%= f.number_field :waste_management_cost %>
+    <%#= f.number_field :waste_management_cost %>
+    <%= f.input :waste_management_cost, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
-  <h4>Does your building have a...</h4>
-  <div class="field">
-    <label>Loading dock?</label><br>
-    <%= f.number_field :loading_dock %>
-  </div>
-  <div class="field">
-    <label>Freight elevators?</label><br>
-    <%= f.number_field :freight_elevators %>
-  </div>
-  <div class="field">
-    <label>Ample storage space?</label><br>
-    <%= f.number_field :storage_space %>
-  </div>
-  <div class="field">
-    <label>Storage details</label><br>
-    <%= f.text_area :storage_space_details %>
-  </div>
+  
+  <!-- FIELDSET -->
+  <!-- Does your building have a.... -->
+  <fieldset>
+    <legend><h4>Does your building have a...</h4></legend>
+    <div class="field">
+      <label>Loading dock?</label><br>
+      <%#= f.number_field :loading_dock %>
+      <%= f.input :loading_dock, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
+    </div>
+    <div class="field">
+      <label>Freight elevators?</label><br>
+      <%#= f.number_field :freight_elevators %>
+      <%= f.input :freight_elevators, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
+    </div>
+    <div class="field">
+      <label>Ample storage space?</label><br>
+      <%#= f.number_field :storage_space %>
+      <%= f.input :storage_space, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
+    </div>
+    <div class="field">
+      <label>Storage details</label><br>
+      <%= f.text_area :storage_space_details %>
+    </div>
+  </fieldset>
+
+
   <div class="field">
     <%= f.label "Current trash hauler" %><br>
     <%= f.text_area :trash_hauler %>
   </div>
+
   <div class="field">
     <%= f.label "Do you have a contract with them?" %><br>
-    <%= f.number_field :trash_hauler_contract %>
+    <%#= f.number_field :trash_hauler_contract %>
+    <%= f.input :trash_hauler_contract, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
+
   <div class="field">
     <%= f.label "If yes, is a copy available?" %><br>
-    <%= f.number_field :contract_available %>
+    <%= f.input :contract_available, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
+
   <div class="field">
     <label>Do you have at least one year's records of solid waste and/or recycling volumes?</label><br>
-    <%= f.number_field :annual_record %>
+    <%= f.input :annual_record, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
+
   <div class="field">
     <%= f.label "Where is solid waste currently stored?" %><br>
     <%= f.text_field :waste_storage %>
   </div>
+
   <div class="field">
     <%= f.label "What solid waste containers do you use?" %><br>
     <label>Dumpster, Roll-off, Toter, Other...</label>
