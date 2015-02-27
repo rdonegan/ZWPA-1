@@ -1,4 +1,5 @@
-<%= form_for(@walkthrough) do |f| %>
+<%#= form_for(@walkthrough) do |f| %>
+<%= simple_form_for(@walkthrough, html: { class: 'form-horizontal'}) do |f| %>
   <% if @walkthrough.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@walkthrough.errors.count, "error") %> prohibited this walkthrough from being saved:</h2>
@@ -18,22 +19,21 @@
     <%= f.number_field :request_id %>
   </div>
 
+  <%= f.input :created_at, as: :date, order: [:month, :day, :year], start_year: Date.today.year - 1, end_year: Date.today.year + 1, label: 'Date of Walkthrough' %>
+
   <!-- Need a date entry space use simple form gem for this -->
   <!-- https://github.com/plataformatec/simple_form -->
 
 
   <div class="row">
     <div class="small-12 medium-6 large-4 columns">
-      <div class="field row">
-        
+      <div class="field row">       
         <div class="small-4 columns">
           <label for="right-label" class="right inline">Sq. footage</label>
         </div>
         <div class="small-8 columns">
           <%= f.number_field :square_footage %>
         </div>
-
-
       </div>
 
     </div>
@@ -275,6 +275,6 @@
     <%= f.number_field :requesting_audit_services %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save", class: 'button'%>
   </div>
 <% end %>
