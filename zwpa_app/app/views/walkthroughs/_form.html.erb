@@ -44,15 +44,15 @@
 
   
   <div class="field">
-    <%= f.label "Number of floors" %><br>
+    <label>Number of floors</label><br>
     <%= f.number_field :num_floors %>
   </div>
   <div class="field">
-    <%= f.label "Maximum Occupancy" %><br>
+    <label>Maximum Occupancy</label><br>
     <%= f.number_field :max_occupancy %>
   </div>
   <div class="field">
-    <%= f.label "Are there other spaces/businesses (Leased or Owned/Operated) in the building?" %><br>
+    <label>Are there other spaces/businesses (Leased or Owned/Operated) in the building?</label><br>
     <%= f.input :other_businesses, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
     
   </div>
@@ -61,7 +61,7 @@
     <%= f.text_area :other_businesses_type, placeholder: "i.e. coffee shop, bar, restaurant, gift shop, business center" %>
   </div>
   <div class="field">
-    <%= f.label "Is your building owned or leased?" %><br>
+    <label>Is your building owned or leased?</label><br>
     <%#= f.number_field :ownership %>
     <%= f.input :ownership, :collection => [['Own', 'Owned'], ['Lease', 'Leased']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
@@ -103,18 +103,18 @@
 
 
   <div class="field">
-    <%= f.label "Current trash hauler" %><br>
+    <label>Current trash hauler</label><br>
     <%= f.text_area :trash_hauler %>
   </div>
 
   <div class="field">
-    <%= f.label "Do you have a contract with them?" %><br>
+    <label>Do you have a contract with them?</label><br>
     <%#= f.number_field :trash_hauler_contract %>
     <%= f.input :trash_hauler_contract, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
 
   <div class="field">
-    <%= f.label "If yes, is a copy available?" %><br>
+    <label>If yes, is a copy available? </label><br>
     <%= f.input :contract_available, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
 
@@ -124,12 +124,12 @@
   </div>
 
   <div class="field">
-    <%= f.label "Where is solid waste currently stored?" %><br>
+    <label>Where is solid waste currently stored?</label><br>
     <%= f.text_field :waste_storage %>
   </div>
 
   <div class="field">
-    <%= f.label "What solid waste containers do you use?" %><br>
+    <label>What solid waste containers do you use?</label><br>
     <label>Dumpster, Roll-off, Toter, Other...</label>
     <%#= f.text_field :waste_containers %>
     <%= f.input :waste_containers, :collection => [['Dumpster', 'Dumpster'],['Roll-off', 'Roll-off'], ['Toter', 'Toter'], ['Other', 'Other']], :label_method => :last, :value_method => :first, :as => :check_boxes, label: '' %>
@@ -153,7 +153,7 @@
     <%= f.text_area :green_cleaning_details %>
   </div>
   <div class="field">
-    <%= f.label "Is your building located in a recycling mandated community?" %><br>
+    <label>Is your building located in a recycling mandated community?</label><br>
     <%#= f.number_field :mandated_recycling %>
     <%= f.input :mandated_recycling, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
@@ -175,7 +175,7 @@
     <%= f.input :recycling_stream, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
-    <%= f.label "Recycling stream details" %><br>
+    <label> Recycling stream details</label><br>
     <%= f.text_area :recycling_stream_details, placeholder: "e.g. 'We collect white office and mixed paper in separate 90 gallon toters'" %>
   </div>
   <div class="field">
@@ -197,7 +197,7 @@
 
   <div class="row">
     <div class="small-12 medium-4 columns">
-      <%= f.label :generate_toner_ink, label: "Toner ink" %><br>
+      <label>Toner ink </label><br>
 
     </div>
 
@@ -216,7 +216,7 @@
 
   <div class="row">
     <div class="small-12 medium-4 columns">
-      <%= f.label :generate_CFLS, label: "CFLs/Fluorescent tubes" %><br>
+      <label> CFLs/Fluorescent tubes </label><br>
 
     </div>
 
@@ -504,23 +504,23 @@
     <%= f.number_field :recycle_pallets %>
   </div> -->
   <div class="field">
-    <labe>Does your company currently have a <strong>Zero Waste Policy<strong> in place?</label><br>
+    <label>Does your company currently have a <strong>Zero Waste Policy<strong> in place?</label><br>
       <p>This would require 90% of overall diversion of landfill for non-hazardous wastes discarded materials are reused, recycled, composted, or recovered for productive use in nature or the economy at biological temperatures.</p>
     <%#= f.number_field :ZW_policy %>
     <%= f.input :ZW_policy, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
-    <%= f.label "Is your building/organization LEED certified?" %><br>
+    <label> Is your building/organization LEED certified? </label><br>
     <%#= f.number_field :LEED %>
     <%= f.input :LEED, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
-    <%= f.label "If so, is your buiding/organization looking to recertify your LEED building?" %><br>
+    <label>If so, is your buiding/organization looking to recertify your LEED building? </label><br>
     <%#= f.number_field :recertify_LEED %>
     <%= f.input :recertify_LEED, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
-    <%= f.label "Is your buiding requesting PRC for waste audit services?" %><br>
+    <label> Is your buiding requesting PRC for waste audit services? </label><br>
     <%#= f.number_field :requesting_audit_services %>
     <%= f.input :requesting_audit_services, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
