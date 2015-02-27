@@ -131,11 +131,13 @@
   <div class="field">
     <%= f.label "What solid waste containers do you use?" %><br>
     <label>Dumpster, Roll-off, Toter, Other...</label>
-    <%= f.text_field :waste_containers %>
+    <%#= f.text_field :waste_containers %>
+    <%= f.input :waste_containers, :collection => [['Dumpster', 'Dumpster'],['Roll-off', 'Roll-off'], ['Toter', 'Toter'], ['Other', 'Other']], :label_method => :last, :value_method => :first, :as => :check_boxes, label: '' %>
   </div>
   <div class="field">
     <label>Does your company have a <strong>'Buy Recycled'</strong> policy re: recyclability or recycled content of products?<br>
-    <%= f.number_field :buy_recycled %>
+    <%#= f.number_field :buy_recycled %>
+    <%= f.input :buy_recycled, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <%= f.label "If yes, please describe" %><br>
@@ -143,7 +145,8 @@
   </div>
   <div class="field">
     <label>Does your company have a policy of purchasing non-toxic/'Green' cleaning products?</label><br>
-    <%= f.number_field :green_cleaning_products %>
+    <%#= f.number_field :green_cleaning_products %>
+    <%= f.input :green_cleaning_products, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <%= f.label "If yes, please describe" %><br>
@@ -151,11 +154,13 @@
   </div>
   <div class="field">
     <%= f.label "Is your building located in a recycling mandated community?" %><br>
-    <%= f.number_field :mandated_recycling %>
+    <%#= f.number_field :mandated_recycling %>
+    <%= f.input :mandated_recycling, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <label>Does your building currently have a <strong> recycling program </strong> ?</label><br>
-    <%= f.number_field :recycling_program %>
+    <%#= f.number_field :recycling_program %>
+    <%= f.input :recycling_program, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
 
   <!-- Put the example in the text area itself!!! -->
@@ -166,7 +171,8 @@
   </div>
   <div class="field">
     <label>Does your building currently utilize a duel-stream or single-stream recycling program in your building?</label><br>
-    <%= f.number_field :recycling_stream %>
+    <%#= f.number_field :recycling_stream %>
+    <%= f.input :recycling_stream, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <%= f.label "Recycling stream details" %><br>
@@ -178,17 +184,20 @@
   </div>
   <div class="field">
     <label>Does your company currently compost organic materials such as food waste/yard waste? </label><br>
-    <%= f.number_field :current_compost %>
+    <%#= f.number_field :current_compost %>
+    <%= f.input :current_compost, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
   <div class="field">
     <label>Has your organization composted organic material in the past?</label><br>
-    <%= f.number_field :past_compost %>
+    <%#= f.number_field :past_compost %>
+    <%= f.input :past_compost, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
   </div>
 
   <h4>E-Wastes</h4>
   <div class="field">
-    <%= f.label :generate_toner_ink %><br>
-    <%= f.number_field :generate_toner_ink %>
+    <%= f.label :generate_toner_ink, label: "Toner ink" %><br>
+    <%#= f.number_field :generate_toner_ink %>
+    <%= f.input :generate_toner_ink, :collection => [['Yes', 'Yes']], :label_method => :last, :value_method => :first, :as => :check_boxes, label: 'Do you generate?' %>
   </div>
   <div class="field">
     <%= f.label :recycle_toner_ink %><br>
