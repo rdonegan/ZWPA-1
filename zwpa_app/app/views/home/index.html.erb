@@ -2,6 +2,8 @@
 <!-- Main div for displaying most recent requests -->
 <div class="small-12 medium-12 large-7 columns">
 	<h1>Recent Requests</h1>
+	<!-- Show latest requests that have been issued -->
+	<%= render :partial => "recent_requests", locals: { requests: @requests } %>
 
 </div>
 
