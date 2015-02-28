@@ -30,4 +30,11 @@ FactoryGirl.define do
 		association :request
 	end
 
+	factory :waste do
+		association :audit
+		note "This is a test description for this waste."
+		weight 1.0
+		material_type "Trash"
+		origin "Bathroom"
+	end
 end

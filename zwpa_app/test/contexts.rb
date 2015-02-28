@@ -14,5 +14,5 @@ module Contexts
 	include Contexts::NoteContexts
 	# include Contexts::UserContexts
 	# include Contexts::WalthroughContexts
-	# include Contexts::WasteContexts
+	include Contexts::WasteContexts
 end
