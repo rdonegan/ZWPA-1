@@ -1,95 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/audits_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/customers_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/notes_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/requests_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/walkthroughs_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/wastes_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/customer.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        2,
-        null,
-        null,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/user.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/request.rb": [
+      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/request.rb": [
         1,
         null,
         1,
@@ -112,7 +24,43 @@
         null,
         null
       ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/note.rb": [
+      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/customer.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/audit.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/note.rb": [
         1,
         null,
         null,
@@ -122,7 +70,7 @@
         1,
         null,
         null,
-        2,
+        1,
         null,
         null,
         null,
@@ -134,7 +82,7 @@
         null,
         null
       ],
-      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/walkthrough.rb": [
+      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/walkthrough.rb": [
         1,
         null,
         null,
@@ -200,6 +148,6 @@
         null
       ]
     },
-    "timestamp": 1424929909
+    "timestamp": 1425084117
   }
 }
