@@ -40,10 +40,12 @@ class RequestTest < ActiveSupport::TestCase
 	# setup context
 	context "Within context" do
 		setup do
+			create_customers
 			create_requests
 		end
 
 		teardown do
+			delete_customers
 			delete_requests
 		end
 
@@ -54,7 +56,7 @@ class RequestTest < ActiveSupport::TestCase
 		end
 
 		should "sort the requests by the customer's company name" do
-			assert_equal [""], Request.alphabetical.all.map{|c| c.customer.company_name}
+			assert_equal ["Alcoa", "BurgerKing", "Council"], Request.by_customer.all.map{|c| c.customer.company_name}
 		end
 
 	end	
