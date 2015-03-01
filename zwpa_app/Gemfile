@@ -29,8 +29,12 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'foundation-rails', '5.4.5'
 
+<<<<<<< HEAD
 # Use a gem for handling pagination
 gem 'will_paginate'
+=======
+gem 'simple_form'
+>>>>>>> pr/21
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
