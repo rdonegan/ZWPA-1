@@ -30,4 +30,19 @@ FactoryGirl.define do
 		association :request
 	end
 
+	factory :waste do
+		association :audit
+		note "This is a test description for this waste."
+		weight 1.0
+		material_type "trash"
+		origin "Bathroom"
+	end
+
+	factory :audit do
+		association :request
+		date Date.new(2015,1,4)
+		time_period "January 1-3, 2015"
+		generator "Trash"
+		location "Porter Hall"
+	end
 end
