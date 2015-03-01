@@ -9,7 +9,7 @@
   <% audits.each do |audit| %>
     <tr>
       <!-- How do I get the company name of request??? -->
-      <td><%= link_to "COMPANY NAME HERE", audit_path(audit) %></td>
+      <td><%= link_to audit.request.customer.company_name, audit_path(audit) %></td>
       <td><%= audit.generator%></td>
       <td><%= audit.date%></td>
       
