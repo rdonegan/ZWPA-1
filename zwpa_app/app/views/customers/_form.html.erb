@@ -10,11 +10,7 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+  <!-- took away user_id input and set it to always be user_id=1 in the controller -->
   <div class="field">
     <%= f.label :company_name %><br>
     <%= f.text_field :company_name %>
