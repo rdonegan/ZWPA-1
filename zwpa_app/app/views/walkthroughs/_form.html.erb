@@ -15,8 +15,7 @@
   <!-- should populate automatically based on where you selected to add a new form, then the field itself can just stay hidden. -->
   <!-- for MVP, just give user a dropdown of requests -->
   <div class="field">
-    <%= f.label :request_id %><br>
-    <%= f.number_field :request_id %>
+    <%= f.input :request_id, collection: Request.chronological, prompt:"Select request" %>
   </div>
 
   <%= f.input :created_at, as: :date, order: [:month, :day, :year], start_year: Date.today.year - 1, end_year: Date.today.year + 1, label: 'Date of Walkthrough' %>
