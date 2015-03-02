@@ -17,6 +17,8 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
+    # set user id to always be one because there is only one username/pw to login with
+    @customer[:user_id] = 1
 
     respond_to do |format|
       if @customer.save
@@ -59,4 +61,5 @@ class CustomersController < ApplicationController
     def customer_params
       params.require(:customer).permit(:user_id, :company_name)
     end
+
 end
