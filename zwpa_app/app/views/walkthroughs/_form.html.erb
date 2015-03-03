@@ -4,8 +4,7 @@
 
 
   <div class="field">
-      <%= f.label :request_id %><br>
-      <%= f.collection_select :request_id, Request.chronological.all, :id, :id, prompt: "Select customer..." %>
+      <%= f.hidden_field :request_id %><br>
     </div>
 
   <label> Date of Walkthrough </label><br>
