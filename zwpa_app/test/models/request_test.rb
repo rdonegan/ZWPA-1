@@ -13,6 +13,7 @@ class RequestTest < ActiveSupport::TestCase
 	should allow_value("412-268-3259").for(:phone)
 	should allow_value("412.268.3259").for(:phone)
 	should allow_value("(412) 268-3259").for(:phone)
+	should allow_value("").for(:phone)
 
 	should_not allow_value("2683259").for(:phone)
 	should_not allow_value("4122683259x224").for(:phone)
@@ -25,6 +26,7 @@ class RequestTest < ActiveSupport::TestCase
 	should allow_value("my_fred@fred.org").for(:email)
 	should allow_value("fred123@fred.gov").for(:email)
 	should allow_value("my.fred@fred.net").for(:email)
+	should allow_value("").for(:email)
 
 	should_not allow_value("fred").for(:email)
 	should_not allow_value("fred@fred,com").for(:email)
@@ -33,6 +35,7 @@ class RequestTest < ActiveSupport::TestCase
 	should_not allow_value("fred@fred.con").for(:email)
 
 	should allow_value(12345).for(:zip_code)
+	should allow_value("").for(:zip_code)
 
 	should_not allow_value("fred").for(:zip_code)
 	should_not allow_value(111).for(:zip_code)
