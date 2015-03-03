@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Request</th>
+      <th>Customer</th>
       <th>Square footage</th>
       <th>Num floors</th>
       <th>Max occupancy</th>
@@ -69,7 +69,7 @@
   <tbody>
     <% @walkthroughs.each do |walkthrough| %>
       <tr>
-        <td><%= walkthrough.request_id %></td>
+        <td><%= walkthrough.request.customer.company_name %></td>
         <td><%= walkthrough.square_footage %></td>
         <td><%= walkthrough.num_floors %></td>
         <td><%= walkthrough.max_occupancy %></td>
