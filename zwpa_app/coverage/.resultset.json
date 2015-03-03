@@ -1,46 +1,62 @@
 {
   "Unit Tests": {
     "coverage": {
-<<<<<<< HEAD
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/application_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/audits_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/audits_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/customers_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/customers_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/home_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/notes_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/notes_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/requests_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/requests_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/users_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/walkthroughs_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/walkthroughs_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/helpers/wastes_helper.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/helpers/wastes_helper.rb": [
         1,
         null
       ],
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/models/customer.rb": [
-=======
-      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/request.rb": [
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/audit.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/request.rb": [
         1,
         null,
         1,
@@ -52,7 +68,6 @@
         1,
         1,
         1,
->>>>>>> 83e7f0b7db7397b89c68f3cc3e519e3e6e9f6f4d
         1,
         null,
         null,
@@ -64,37 +79,24 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/models/user.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-=======
-      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/customer.rb": [
->>>>>>> 83e7f0b7db7397b89c68f3cc3e519e3e6e9f6f4d
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/waste.rb": [
         1,
+        null,
+        null,
+        1,
+        null,
+        null,
         null,
         1,
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
+        2,
         null,
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/models/request.rb": [
-=======
-      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/audit.rb": [
->>>>>>> 83e7f0b7db7397b89c68f3cc3e519e3e6e9f6f4d
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/customer.rb": [
         1,
         null,
         1,
@@ -103,31 +105,38 @@
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
         1,
         null,
+        null,
+        2,
         null,
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/models/note.rb": [
-=======
-      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/note.rb": [
->>>>>>> 83e7f0b7db7397b89c68f3cc3e519e3e6e9f6f4d
-        1,
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/user.rb": [
+        null,
+        null,
+        null,
         null,
         null,
         1,
         null,
         null,
-        1,
+        null,
+        null,
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -139,11 +148,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/Users/ryandonegan/ZWPA-1/zwpa_app/app/models/walkthrough.rb": [
-=======
-      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/walkthrough.rb": [
->>>>>>> 83e7f0b7db7397b89c68f3cc3e519e3e6e9f6f4d
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/note.rb": [
         1,
         null,
         null,
@@ -151,103 +156,86 @@
         null,
         null,
         1,
-        1,
         null,
-        1,
-        1,
-        1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        2,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
-        1,
-        1,
-        1,
-        1,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
       ],
-      "/Users/katherinedu/Documents/15Spring/373/ZWPA/zwpa_app/app/models/user.rb": [
-        null,
-        null,
-        null,
+      "/Users/achalchannarasappa/Desktop/zwpa_app/zwpa_app/app/models/walkthrough.rb": [
+        1,
         null,
         null,
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
         1,
         1,
         null,
+        1,
+        1,
+        1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1424930858
-=======
-    "timestamp": 1425088456
->>>>>>> 83e7f0b7db7397b89c68f3cc3e519e3e6e9f6f4d
+    "timestamp": 1425398537
   }
 }
