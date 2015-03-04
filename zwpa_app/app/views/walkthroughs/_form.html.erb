@@ -12,10 +12,10 @@
 
 
     <div class="row">
-      <div class="small-12 medium-6 large-4 columns">
+      <div class="small-12 medium-6 columns">
           <div class="field row">       
             <div class="small-4 columns">
-                <label for="right-label" class="right inline">Sq. footage</label>
+                <label for="right-label" class="left inline">Sq. footage</label>
             </div>
             <div class="small-8 columns">
                 <%= f.number_field :square_footage %>
@@ -24,30 +24,62 @@
 
       </div>
 
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-4 columns">
+            <label for="right-label" class="left inline">Number of floors</label>
+          </div>
+
+          <div class="small-8 columns">
+            <%= f.number_field :num_floors, class: "left" %>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <div class="field row">
+        <div class="small-4 columns">
+          <label>Maximum Occupancy</label>
+        </div>
+        <div class="small-8 columns">
+          <%= f.number_field :max_occupancy %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <label>Are there other spaces/businesses (Leased or Owned/Operated) in the building?</label>
+    </div>
+  </div>
+
+  <div class="field row">
+    <div class="small-12 columns">
+      <%= f.input :other_businesses, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <label>If yes, what type of business/spaces?</label>
+    </div>
+  </div>
+
+  <div class="field row">
+    <div class="small-12 columns">
+      <%= f.text_area :other_businesses_type, placeholder: "i.e. coffee shop, bar, restaurant, gift shop, business center" %>
+
+    </div>
+
   </div>
 
 
-  <div class="field">
-      <label>Number of floors</label><br>
-      <%= f.number_field :num_floors %>
-    </div>
-
-    <div class="field">
-      <label>Maximum Occupancy</label><br>
-      <%= f.number_field :max_occupancy %>
-    </div>
-
-    <div class="field">
-      <label>Are there other spaces/businesses (Leased or Owned/Operated) in the building?</label><br>
-
-      <%= f.input :other_businesses, :collection => [['Yes', 'Yes'], ['No', 'No'], ['DK', 'DK']], :label_method => :last, :value_method => :first, :as => :radio_buttons, label: '' %>
-    
-    </div>
-
-  <div class="field">
-      <label> If yes, what type of business/spaces?</label><br>
-      <%= f.text_area :other_businesses_type, placeholder: "i.e. coffee shop, bar, restaurant, gift shop, business center" %>
-    </div>
+  
   
     <div class="field">
       <label>Is your building owned or leased?</label><br>
