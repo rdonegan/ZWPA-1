@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Request:</strong>
-  <%= @walkthrough.request_id %>
+  <strong>Customer:</strong>
+  <%= @walkthrough.request.customer.company_name %>
 </p>
 
 <p>
@@ -285,5 +285,6 @@
   <%= @walkthrough.requesting_audit_services %>
 </p>
 
-<%= link_to 'Edit', edit_walkthrough_path(@walkthrough) %> |
-<%= link_to 'Back', walkthroughs_path %>
+<%= link_to 'Edit', edit_walkthrough_path(@walkthrough), class: 'button' %> |
+<%= link_to 'Back to Request', request_path(@walkthrough.request), class: 'button' %> |
+<%= link_to 'Back', walkthroughs_path, class: 'button' %>

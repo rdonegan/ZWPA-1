@@ -10,11 +10,14 @@ class WalkthroughsController < ApplicationController
   # GET /walkthroughs/1
   # GET /walkthroughs/1.json
   def show
+
   end
 
   # GET /walkthroughs/new
   def new
     @walkthrough = Walkthrough.new
+    @req = Request.find_by_id(params[:request_id])
+    @walkthrough.request_id = @req.id    
   end
 
   # GET /walkthroughs/1/edit

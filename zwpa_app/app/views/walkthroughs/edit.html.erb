@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @walkthrough %> |
-<%= link_to 'Back', walkthroughs_path %>
+<%#= link_to 'Show', @walkthrough, class: 'button' %>
+<%= link_to 'Back', walkthroughs_path, class: 'button' %> |
+<%= link_to 'Back to Request', request_path(@walkthrough.request), class: 'button' %>
+
