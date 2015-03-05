@@ -14,9 +14,13 @@
       <%= link_to walkthrough.created_at.strftime('%b %e, %Y'), walkthrough %>
       <% end %>
     </li>
-    <li>
-      <%= @request.id %>
-    </li>
+<!--     *********TEST AFTER AUDIT/WASTE MODELS/CONTROLLERS WORK******** -->
+    <%#= @audits = Audit.where(request_id: @request_id) %>
+    <%# @audits.each do |audit| %>
+<!--     <li>
+      <%#= audit.generator %> Audit - 
+      <%#= link_to audit.created_at.strftime('%b %e, %Y'), audit %>
+    </li> -->
   </ol>
 </div>
 <p>
