@@ -4,17 +4,16 @@
   <thead>
     <tr>
       <th>Customer</th>
+      <th>Date</th>
       <th>Contact Name</th>
-      <th>Title</th>
+<!--       <th>Title</th>
       <th>Email</th>
       <th>Phone Number</th>
-      <th>Address</th>
-      <th>Date</th>
+      <th>Address</th> -->
       <!-- <th>Note</th>
       <th>Request</th>
       <th>Photo</th>
       <th>Description</th> -->
-      <th>Show</th>
       <th>Edit</th>
     </tr>
   </thead>
@@ -24,14 +23,13 @@
       <tr>
         <!-- <td><%= request.customer_id %></td> -->
         <td><%= link_to request.customer.company_name, request.customer %></td>
+        <td><%= link_to request.date.strftime('%b %e, %Y'), request_path(request) %></td>
         <td><%= link_to request.contact_firstname+" "+request.contact_lastname, request_path(request) %></td>
-        <td><%= link_to request.title, request_path(request) %></td>
+<!--         <td><%= link_to request.title, request_path(request) %></td>
         <td><%= link_to request.email, request_path(request) %></td>
         <td><%= link_to request.phone, request_path(request) %></td>
-        <td><%= link_to request.street_address+" "+request.city+", "+request.state, request_path(request) %></td>
-        <td><%= link_to request.date.strftime('%b %e, %Y'), request_path(request) %></td>
+        <td><%= link_to request.street_address+" "+request.city+", "+request.state, request_path(request) %></td> -->
         
-        <td><%= link_to 'Show', request, class: 'button tiny' %></td>
         <td><%= link_to 'Edit', edit_request_path(request), class: 'button tiny' %></td>
       </tr>
     <% end %>
