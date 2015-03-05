@@ -4,7 +4,7 @@
   <%= @request.date.strftime('%B %e, %Y') %>
 </h1>
 
-<div class="documents">
+<div class="small-12 medium-12 large-7 columns">
   <h3>Documents</h3>
   <ol>
     <li>
@@ -23,75 +23,81 @@
     </li> -->
   </ol>
 </div>
-<p>
-  <strong>Customer:</strong>
-  <%= @request.customer.company_name %>
-</p>
 
-<p>
-  <strong>Contact firstname:</strong>
-  <%= @request.contact_firstname %>
-</p>
+<div class="show-for-large-up large-5 columns">
+  <h3>Request Details</h3>
+  <p>
+    <strong>Customer:</strong>
+    <%= @request.customer.company_name %>
+  </p>
 
-<p>
-  <strong>Contact lastname:</strong>
-  <%= @request.contact_lastname %>
-</p>
+  <p>
+    <strong>Contact First Name:</strong>
+    <%= @request.contact_firstname %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @request.title %>
-</p>
+  <p>
+    <strong>Contact Last Name:</strong>
+    <%= @request.contact_lastname %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @request.email %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @request.title %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @request.phone %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @request.email %>
+  </p>
 
-<p>
-  <strong>Street address:</strong>
-  <%= @request.street_address %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @request.phone %>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @request.city %>
-</p>
+  <p>
+    <strong>Street Address:</strong>
+    <%= @request.street_address %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @request.state %>
-</p>
+  <p>
+    <strong>City:</strong>
+    <%= @request.city %>
+  </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @request.date %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @request.state %>
+  </p>
 
-<p>
-  <strong>Note:</strong>
-  <%#= @request.Note %>
-</p>
+  <p>
+    <strong>Date:</strong>
+    <%= @request.date %>
+  </p>
+</div>
 
-<p>
-  <strong>Request:</strong>
-  <%#= @request.request_id %>
-</p>
+<div class="notes">
+    <p>
+    <strong>Note:</strong>
+    <%#= @request.Note %>
+  </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%#= @request.photo %>
-</p>
+  <p>
+    <strong>Request:</strong>
+    <%#= @request.request_id %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%#= @request.description %>
-</p>
+  <p>
+    <strong>Photo:</strong>
+    <%#= @request.photo %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%#= @request.description %>
+  </p>
+</div>
 <%= link_to 'Add Walkthrough', new_walkthrough_path(:request_id => @request.id) %>
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
