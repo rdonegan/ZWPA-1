@@ -155,115 +155,91 @@
   <%= @walkthrough.past_compost %>
 </p>
 
-<p>
-  <strong>Generate toner ink:</strong>
-  <%= @walkthrough.generate_toner_ink %>
-</p>
+<table>
+  <h2>E-wastes</h2>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Generate</th>
+      <th>Recycle</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Recycle toner ink:</strong>
-  <%= @walkthrough.recycle_toner_ink %>
-</p>
+  <tbody>
+        <tr>
+          <td>Toner/Ink Cartridges</td>
+          <td><%= @walkthrough.generate_toner_ink %></td>
+          <td><%= @walkthrough.recycle_toner_ink %></td>        
+        </tr>
+        <tr>
+          <td>CFLs/Fluorescent tubes</td>
+          <td><%= @walkthrough.generate_CFLs %></td>
+          <td><%= @walkthrough.recycle_CFLs %></td>        
+        </tr>
+        <tr>
+          <td>Batteries</td>
+          <td><%= @walkthrough.generate_batteries %></td>
+          <td><%= @walkthrough.recycle_batteries %></td>          
+        </tr>
+        <tr>
+          <td>Computers, Peripherals</td>
+          <td><%= @walkthrough.generate_computers %></td>
+          <td><%= @walkthrough.recycle_computers %></td>        
+        </tr>
+        <tr>
+          <td>Cell Phones</td>
+          <td><%= @walkthrough.generate_cellphones %></td>
+          <td><%= @walkthrough.recycle_cellphones %></td>        
+        </tr>
+        <tr>
+          <td>TVs</td>
+          <td><%= @walkthrough.generate_tvs %></td>
+          <td><%= @walkthrough.recycle_tvs %></td>        
+        </tr>
+        <tr>
+          <td>Other Corded Equipment</td>
+          <td><%= @walkthrough.generate_other_corded_equipment %></td>
+          <td><%= @walkthrough.recycle_other_corded_equipment %></td>        
+        </tr>
+  </tbody>
+</table>
+  <p>(Other Corded Equip can be Vacuum Cleaner, lamps, coffee machine, etc.)</p>
 
-<p>
-  <strong>Generate cfls:</strong>
-  <%= @walkthrough.generate_CFLs %>
-</p>
 
-<p>
-  <strong>Recycle cfls:</strong>
-  <%= @walkthrough.recycle_CFLs %>
-</p>
 
-<p>
-  <strong>Generate batteries:</strong>
-  <%= @walkthrough.generate_batteries %>
-</p>
+<table>
+  <h2>Other Materials</h2>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Generate</th>
+      <th>Recycle</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Recycle batteries:</strong>
-  <%= @walkthrough.recycle_batteries %>
-</p>
-
-<p>
-  <strong>Generate computers:</strong>
-  <%= @walkthrough.generate_computers %>
-</p>
-
-<p>
-  <strong>Recycle computers:</strong>
-  <%= @walkthrough.recycle_computers %>
-</p>
-
-<p>
-  <strong>Generate cellphones:</strong>
-  <%= @walkthrough.generate_cellphones %>
-</p>
-
-<p>
-  <strong>Recycle cellphones:</strong>
-  <%= @walkthrough.recycle_cellphones %>
-</p>
-
-<p>
-  <strong>Generate tvs:</strong>
-  <%= @walkthrough.generate_tvs %>
-</p>
-
-<p>
-  <strong>Recycle tvs:</strong>
-  <%= @walkthrough.recycle_tvs %>
-</p>
-
-<p>
-  <strong>Generate other corded equipment:</strong>
-  <%= @walkthrough.generate_other_corded_equipment %>
-</p>
-
-<p>
-  <strong>Recycle cellphones:</strong>
-  <%= @walkthrough.recycle_cellphones %>
-</p>
-
-<p>
-  <strong>Generate furniture:</strong>
-  <%= @walkthrough.generate_furniture %>
-</p>
-
-<p>
-  <strong>Recycle furniture:</strong>
-  <%= @walkthrough.recycle_furniture %>
-</p>
-
-<p>
-  <strong>Generate linens uniforms:</strong>
-  <%= @walkthrough.generate_linens_uniforms %>
-</p>
-
-<p>
-  <strong>Recycle linens uniforms:</strong>
-  <%= @walkthrough.recycle_linens_uniforms %>
-</p>
-
-<p>
-  <strong>Generate construction debris:</strong>
-  <%= @walkthrough.generate_construction_debris %>
-</p>
-
-<p>
-  <strong>Recycle construction debris:</strong>
-  <%= @walkthrough.recycle_construction_debris %>
-</p>
-
-<p>
-  <strong>Generate pallets:</strong>
-  <%= @walkthrough.generate_pallets %>
-</p>
-
-<p>
-  <strong>Recycle pallets:</strong>
-  <%= @walkthrough.recycle_pallets %>
-</p>
+  <tbody>
+        <tr>
+          <td>Furniture</td>
+          <td><%= @walkthrough.generate_furniture %></td>
+          <td><%= @walkthrough.recycle_furniture %></td>        
+        </tr>
+        <tr>
+          <td>Linens/Uniforms</td>
+          <td><%= @walkthrough.generate_linens_uniforms %></td>
+          <td><%= @walkthrough.recycle_linens_uniforms %></td>        
+        </tr>
+        <tr>
+          <td>Construction Debris</td>
+          <td><%= @walkthrough.generate_construction_debris %></td>
+          <td><%= @walkthrough.recycle_construction_debris %></td>          
+        </tr>
+        <tr>
+          <td>Pallets</td>
+          <td><%= @walkthrough.generate_pallets %></td>
+          <td><%= @walkthrough.recycle_pallets %></td>        
+        </tr>
+  </tbody>
+</table>
 
 <p>
   <strong>Does your company currently have a Zero Waste Policy in place? This would require 90% of overall diversion of landfill for non-hazardous wastes discarded materials are reused, reused, recycled, composted, or recovered for productive use in nature or the economy at biological temperatures.</strong>
