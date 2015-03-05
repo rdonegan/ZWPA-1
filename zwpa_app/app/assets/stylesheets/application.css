@@ -13,3 +13,10 @@
 
  *= require_tree .
  */
+w1 {
+    padding-left: 50px;
+} 
+
+w2 {
+    padding-left: 80px;
+} 

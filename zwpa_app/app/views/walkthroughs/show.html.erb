@@ -28,10 +28,14 @@
   <%= @walkthrough.other_businesses %>
 </p>
 
+
 <p>
-  <strong>If yes, what type of business/spaces? (i.e. coffee shop, bar, restaurant, gift shop, business center): </strong>
-  <%= @walkthrough.other_businesses_type %>
+  <w1>
+    <strong>If yes, what type of business/spaces? (i.e. coffee shop, bar, restaurant, gift shop, business center): </strong>
+    <%= @walkthrough.other_businesses_type %>
+  </w1>
 </p>
+
 
 <p>
   <strong>Is your building owned or leased?</strong>
@@ -39,37 +43,54 @@
 </p>
 
 <p>
-  <strong>If leased, does the leasing agent control the solid waste/recycling disposal contract?</strong>
-  <%= @walkthrough.waste_disposal_contract %>
+  <w1>
+    <strong>If leased, does the leasing agent control the solid waste/recycling disposal contract?</strong>
+    <%= @walkthrough.waste_disposal_contract %>
+  </w1>
 </p>
 
 <p>
-  <strong>If leased, are waste management costs included in the rent payment?</strong>
-  <%= @walkthrough.waste_management_cost %>
+  <w1>
+    <strong>If leased, are waste management costs included in the rent payment?</strong>
+    <%= @walkthrough.waste_management_cost %>
+  </w1>
 </p>
 </fieldset>
 
 <!-- ///////////////////////////  FIELDSET  /////////////////////////////-->
 <fieldset>
   <legend></legend>
+
 <p>
-  <strong>Does your building have a Loading dock:</strong>
-  <%= @walkthrough.loading_dock %>
+  <strong>Does your building have a </strong>
 </p>
 
 <p>
-  <strong>Freight elevators?</strong>
-  <%= @walkthrough.freight_elevators %>
+  <w1>
+    <strong>Loading dock:</strong>
+    <%= @walkthrough.loading_dock %>
+  </w1>
 </p>
 
 <p>
-  <strong>Ample storage space?</strong>
-  <%= @walkthrough.storage_space %>
+  <w1>
+    <strong>Freight elevators?</strong>
+    <%= @walkthrough.freight_elevators %>
+  </w1>
 </p>
 
 <p>
-  <strong>Please explain.</strong>
-  <%= @walkthrough.storage_space_details %>
+  <w1>
+    <strong>Ample storage space?</strong>
+    <%= @walkthrough.storage_space %>
+  </w1>
+</p>
+
+<p>
+  <w2>
+    <strong>Please explain.</strong>
+    <%= @walkthrough.storage_space_details %>
+  </w2>
 </p>
 
 <p>
@@ -83,8 +104,10 @@
 </p>
 
 <p>
-  <strong>If yes, is a copy available?</strong>
-  <%= @walkthrough.contract_available %>
+  <w1>
+    <strong>If yes, is a copy available?</strong>
+    <%= @walkthrough.contract_available %>
+  </w1>
 </p>
 
 <p>
@@ -111,20 +134,20 @@
   <%= @walkthrough.buy_recycled %>
 </p>
 
-<p>
+<p><w1>
   <strong>If yes, please describe:</strong>
   <%= @walkthrough.buy_recycled_details %>
-</p>
+</w1></p>
 
 <p>
   <strong>Does your company have a policy of purchasing non-toxic/“Green” cleaning products?</strong>
   <%= @walkthrough.green_cleaning_products %>
 </p>
 
-<p>
+<p><w1>
   <strong>If yes, please describe:</strong>
   <%= @walkthrough.green_cleaning_details %>
-</p>
+</w1></p>
 
 <p>
   <strong>Is your building located in a recycling mandated community?</strong>
@@ -136,20 +159,20 @@
   <%= @walkthrough.recycling_program %>
 </p>
 
-<p>
+<p><w1>
   <strong>If yes, describe your current recycling system and material collected for recycling (e.g. “We collect office paper in 90 gallon toters”).</strong>
   <%= @walkthrough.recycling_details %>
-</p>
+</w1></p>
 
 <p>
   <strong>Does your building currently utilize a duel-stream or single-stream recycling program in your building?</strong>
   <%= @walkthrough.recycling_stream %>
 </p>
 
-<p>
+<p><w1>
   <strong>Details (For example: “We collect white office and mixed paper in separate 90 gallon toters”):</strong>
   <%= @walkthrough.recycling_stream_details %>
-</p>
+</w1></p>
 
 <p>
   <strong>If your company was recycling, and discontinued the effort, please explain why.</strong>
@@ -266,10 +289,10 @@
   <%= @walkthrough.LEED %>
 </p>
 
-<p>
+<p><w1>
   <strong>If so, is your building/organization looking to recertify your LEED building?</strong>
   <%= @walkthrough.recertify_LEED %>
-</p>
+</w1></p>
 
 <p>
   <strong>Is your building requesting PRC for waste audit services?</strong>
