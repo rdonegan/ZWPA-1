@@ -5,12 +5,13 @@
 </h1>
 
 <div class="documents">
+  <h3>Documents</h3>
   <ol>
     <li>
       Questionnaire - 
       <% @walkthroughs = Walkthrough.where(request_id: @request.id) %>
       <% @walkthroughs.each do |walkthrough| %>
-      <%= walkthrough.created_at.strftime('%b %e, %Y') %>
+      <%= link_to walkthrough.created_at.strftime('%b %e, %Y'), walkthrough %>
       <% end %>
     </li>
     <li>
