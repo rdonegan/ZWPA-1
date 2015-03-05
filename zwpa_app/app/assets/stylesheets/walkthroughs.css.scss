@@ -1,3 +1,38 @@
 // Place all the styles related to the Walkthroughs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//use javascript to change appearance when clicked
+
+input[type=radio]:not(old){
+	  width     : 0em;
+	  margin    : 0;
+	  padding   : 0;
+	  
+	 
+}
+
+.radio{
+	
+  width            : 100%;
+  height           : 2.5em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.1em solid rgb(182,182,182);
+  border-radius    : .90em;
+  background       : rgb(224,224,224);
+  background-image : -moz-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  -ms-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  -o-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image : -webkit-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  text-align:center;
+  color: GRAY;
+  
+
+}
+
+
+
+
