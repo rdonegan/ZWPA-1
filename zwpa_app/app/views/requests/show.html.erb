@@ -1,5 +1,23 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  <%= link_to @request.customer.company_name, @request.customer %> > 
+  <%= @request.date.strftime('%B %e, %Y') %>
+</h1>
 
+<div class="documents">
+  <ol>
+    <li>
+      Questionnaire - 
+      <% @walkthroughs = Walkthrough.where(request_id: @request.id) %>
+      <% @walkthroughs.each do |walkthrough| %>
+      <%= walkthrough.created_at.strftime('%b %e, %Y') %>
+      <% end %>
+    </li>
+    <li>
+      <%= @request.id %>
+    </li>
+  </ol>
+</div>
 <p>
   <strong>Customer:</strong>
   <%= @request.customer.company_name %>
