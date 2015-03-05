@@ -14,6 +14,14 @@ input[type=radio]:not(old){
 	 
 }
 
+input[type=checkbox]:not(old){
+    width     : 2em;
+    margin    : 0;
+    padding-right   : 2em;
+    
+   
+}
+
 .radio{
 	
   width            : 100%;
@@ -30,6 +38,23 @@ input[type=radio]:not(old){
   text-align:center;
   color: GRAY;
   
+
+}
+
+.checkbox{
+  width            : 100%;
+  height           : 2.5em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.1em solid rgb(182,182,182);
+  background       : rgb(224,224,224);
+  background-image : -moz-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  -ms-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  -o-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image : -webkit-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  text-align:center;
+  color: GRAY;
+
 
 }
 
