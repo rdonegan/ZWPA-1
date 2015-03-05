@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Walkthrough</h1>
+<fieldset>
+  <legend></legend>
 <p>
   <strong>Customer:</strong>
   <%= @walkthrough.request.customer.company_name %>
@@ -44,7 +47,11 @@
   <strong>If leased, are waste management costs included in the rent payment?</strong>
   <%= @walkthrough.waste_management_cost %>
 </p>
+</fieldset>
 
+<!-- ///////////////////////////  FIELDSET  /////////////////////////////-->
+<fieldset>
+  <legend></legend>
 <p>
   <strong>Does your building have a Loading dock:</strong>
   <%= @walkthrough.loading_dock %>
@@ -94,7 +101,11 @@
   <strong>What solid waste containers do you use?</strong>
   <%= @walkthrough.waste_containers %>
 </p>
+</fieldset>
+<!-- ///////////////////////////  FIELDSET  /////////////////////////////-->
 
+<fieldset>
+  <legend></legend>
 <p>
   <strong>Does your company have a “Buy recycled” policy re recyclability or recycled content of products?</strong>
   <%= @walkthrough.buy_recycled %>
@@ -154,6 +165,7 @@
   <strong>Has your organization composted organic material in the past?</strong>
   <%= @walkthrough.past_compost %>
 </p>
+</fieldset>
 
 <table>
   <h2>E-wastes</h2>
@@ -241,6 +253,9 @@
   </tbody>
 </table>
 
+<!-- ///////////////////////////  FIELDSET  /////////////////////////////-->
+
+<fieldset><legend></legend>
 <p>
   <strong>Does your company currently have a Zero Waste Policy in place? This would require 90% of overall diversion of landfill for non-hazardous wastes discarded materials are reused, reused, recycled, composted, or recovered for productive use in nature or the economy at biological temperatures.</strong>
   <%= @walkthrough.ZW_policy %>
@@ -260,7 +275,7 @@
   <strong>Is your building requesting PRC for waste audit services?</strong>
   <%= @walkthrough.requesting_audit_services %>
 </p>
-
+</fieldset>
 <%= link_to 'Edit', edit_walkthrough_path(@walkthrough), class: 'button' %> |
 <%= link_to 'Back to Request', request_path(@walkthrough.request), class: 'button' %> |
 <%= link_to 'Back', walkthroughs_path, class: 'button' %>
