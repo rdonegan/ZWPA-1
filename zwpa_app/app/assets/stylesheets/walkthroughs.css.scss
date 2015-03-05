@@ -59,13 +59,17 @@ input[type=checkbox]:not(old){
 }
 
 .form-back{
-  background-color: #FAFAFA;
-  border           : 0.1em solid rgb(182,182,182);
+ 
+  border           : 0.2em solid rgb(182,182,182);
   border-radius    : 1em;
   padding-left: 2em;
   padding-right: 2em;
+
 }
 
+.button{
+  color:WHITE;
+}
 
 
 

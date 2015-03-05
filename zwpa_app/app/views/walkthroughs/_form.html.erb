@@ -1,8 +1,28 @@
 
 
-<%= simple_form_for(@walkthrough, html: { class: 'form-horizontal'}) do |f| %>
 
 
+  <%= simple_form_for(@walkthrough, html: { class: 'form-horizontal'}) do |f| %>
+
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <h1>Initial Questionnaire</h1>
+
+    </div>
+
+    <div class="small-12 medium-6 columns">
+      <div class="actions">
+        <%= link_to 'Cancel', request_path(@walkthrough.request_id), class: 'button' %>
+        <%= f.submit "Save", class: 'button' %>
+        
+      </div>
+    </div>
+
+  </div>
+  
+  
+
+  <div class="form-back">
   <div class="field">
       <%= f.hidden_field :request_id %><br>
     </div>
@@ -825,8 +845,9 @@
 
     </div>
 
-    <div class="actions">
-      <%= f.submit "Save", class: 'button' %>
-    </div>
+    
 
-<% end %>
+
+    </div>
+  <% end %>
+
