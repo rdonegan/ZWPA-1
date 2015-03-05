@@ -14,13 +14,16 @@
       <%= link_to walkthrough.created_at.strftime('%b %e, %Y'), walkthrough %>
       <% end %>
     </li>
+    <%= link_to 'Add Walkthrough', new_walkthrough_path(:request_id => @request.id) %><br><br>
 <!--     *********TEST AFTER AUDIT/WASTE MODELS/CONTROLLERS WORK******** -->
     <%#= @audits = Audit.where(request_id: @request_id) %>
     <%# @audits.each do |audit| %>
-<!--     <li>
+    <li>
       <%#= audit.generator %> Audit - 
       <%#= link_to audit.created_at.strftime('%b %e, %Y'), audit %>
-    </li> -->
+    </li>
+    <%# end %>
+    <%= link_to 'Add Audit', new_audit_path(:request_id => @request.id) %>
   </ol>
 </div>
 
@@ -98,6 +101,6 @@
     <%#= @request.description %>
   </p>
 </div>
-<%= link_to 'Add Walkthrough', new_walkthrough_path(:request_id => @request.id) %>
+
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
