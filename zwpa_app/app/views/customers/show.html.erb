@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @customer.user_id %>
-</p>
+<div class="small-12 columns">
+	<h1 class="button-head"><%=@customer.company_name%></h1>
+	<div class="add_button"><%= link_to 'Update Customer', edit_customer_path(@customer), class: 'button tiny left ' %></div>
+</div>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @customer.company_name %>
-</p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+
+<div class="small-12 columns">
+    <%= render 'customer_requests' %>
+ </div>
+
+<div class="small-12 columns">
+	<%= link_to 'Back', customers_path, class: "button" %>
+</div>
