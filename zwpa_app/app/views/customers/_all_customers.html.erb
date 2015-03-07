@@ -2,9 +2,9 @@
   <thead>
     <tr>
       <th>Company name</th>
+      <th>Latest Request</th>
       <th></th>
-      <th></th>
-      <th></th>
+     
     </tr>
   </thead>
 
@@ -12,8 +12,11 @@
     <% @customers.each do |customer| %>
       <tr>
         <td><%= link_to customer.company_name, customer %></td>
-        
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <%#= customer.requests.last.created%>
+        <!-- I don't know how to get this right now -->
+        <td>Request Date - Name of Contact</td>
+        <!-- Make this an icon later -->
+        <td>></td>
       </tr>
     <% end %>
   </tbody>
