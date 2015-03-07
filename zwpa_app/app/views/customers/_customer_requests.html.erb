@@ -1,12 +1,18 @@
 <h4>Client Requests</h4>
-<table class="table">
-  <% @requests.each do |request| %>
-    <td><%=link_to request.created_at.strftime('%b %e, %Y'), request_path(request)%></td>
-    <td><%=link_to "-", request_path(request)%></td>
-    <td><%=link_to request.name, request_path(request)%></td>
-    <td><%=link_to request.email, request_path(request)%></td>
-    <td><%=link_to ">", request_path(request)%></td>
-  <% end %>
+<% if !@requests.empty? %>
+
+	<table class="table">
+  	
+	  <% @requests.each do |request| %>
+	    <td><%=link_to request.created_at.strftime('%b %e, %Y'), request_path(request)%></td>
+	    <td><%=link_to "-", request_path(request)%></td>
+	    <td><%=link_to request.name, request_path(request)%></td>
+	    <td><%=link_to request.email, request_path(request)%></td>
+	    <td><%=link_to ">", request_path(request)%></td>
+	  <% end %>
+<% else %>
+		<td>No requests created at this time...</td></br>
+<%end%>
 
 </table></br>
  
