@@ -11,12 +11,13 @@
       <!-- How do I get the company name of request??? -->
       <td><%= link_to audit.request.customer.company_name, audit_path(audit) %></td>
       <td><%= audit.generator%></td>
-      <td><%= audit.date%></td>
+      <td><%= audit.date.strftime('%b %e, %Y')%></td>
+      <td>></td>
       
       
     </tr>
   <% end %>
-</table>
+</table></br>
 
 <%= link_to "View All Audits", audits_path %>
 

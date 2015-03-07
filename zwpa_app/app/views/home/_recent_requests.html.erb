@@ -9,12 +9,13 @@
     <tr>
       <!-- How do I get the company name of request??? -->
       <td><%= link_to request.customer.company_name, requests_path(request) %></td>
-      <td><%= request.date%></td>
+      <td><%= request.date.strftime('%b %e, %Y')%></td>
+      <td>></td>
       
       
     </tr>
   <% end %>
-</table>
+</table></br>
 
 <%= link_to "View All Requests", requests_path %>
 
