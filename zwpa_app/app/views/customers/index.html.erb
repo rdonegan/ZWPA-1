@@ -1,26 +1,17 @@
-<h1>Listing customers</h1>
+<div class="row">
+  <div class="small-12 columns">
+    <h1 class="button-head">All Clients</h1>
+    <div class="add_button"><%= link_to '+ Add Client', new_customer_path, class: 'button round tiny left ' %></div>
+  </div>
+  
 
-<table>
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+</div>
 
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= customer.company_name %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'all_customers' %>
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+
+
+
+
