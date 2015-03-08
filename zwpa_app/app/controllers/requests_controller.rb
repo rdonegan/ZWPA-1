@@ -10,6 +10,10 @@ class RequestsController < ApplicationController
   # GET /requests/1
   # GET /requests/1.json
   def show
+    @walkthroughs = @request.walkthroughs.to_a
+    @audits = @request.audits.to_a
+    @documents = @walkthroughs + @audits
+    @documents = @documents.sort_by(&:created_at) 
   end
 
   # GET /requests/new
