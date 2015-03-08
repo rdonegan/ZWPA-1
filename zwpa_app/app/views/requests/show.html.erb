@@ -1,8 +1,32 @@
 <p id="notice"><%= notice %></p>
-<h1>
-  <%= link_to @request.customer.company_name, @request.customer %> > 
-  <%= @request.date.strftime('%B %e, %Y') %>
-</h1>
+<div class="small-12 columns">
+  <h4>
+    <%= link_to @request.customer.company_name, @request.customer %> > 
+    <%= @request.date.strftime('%B %e, %Y') %>
+  </h4>
+</div>
+
+
+<div class="small-12 columns">
+  <h1 class="button-head">Documents</h1>
+  <div class="add_button show-for-medium-up">
+     <ul class="button-group radius ">
+      <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
+      <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div class="add_button show-for-small-only">
+   <ul class="button-group radius ">
+    <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button small "%></li>
+    <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button small" %></li>
+  </ul>
+</div>
+
+
 
 
 <!-- Display table of all documents for the request.

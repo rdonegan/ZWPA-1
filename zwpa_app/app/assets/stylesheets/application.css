@@ -29,13 +29,15 @@ table{
 }
 
 .button-head{
-	display:inline;
+	
 	float:left;
+	margin-right:.5em;
 	
 } 
 
 .add_button{
 	margin: 1.2em;
+	
 	
 }
 
