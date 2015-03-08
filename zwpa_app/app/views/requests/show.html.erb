@@ -4,7 +4,14 @@
   <%= @request.date.strftime('%B %e, %Y') %>
 </h1>
 
-<div class="small-12 medium-12 large-7 columns">
+
+<!-- Display table of all documents for the request.
+Includes Questionnaire and audits -->
+<div class="small-12 columns">
+    <%= render 'docs_by_request' %>
+</div>
+
+<!-- <div class="small-12 medium-12 large-7 columns">
   <fieldset>
     <legend><h3>Documents</h3></legend>
       <ol>
@@ -19,15 +26,15 @@
     <!--     *********TEST AFTER AUDIT/WASTE MODELS/CONTROLLERS WORK******** -->
         <%#= @audits = Audit.where(request_id: @request_id) %>
         <%# @audits.each do |audit| %>
-        <li>
-          <%#= audit.generator %> Audit - 
+        
+          <%#= audit.generator %>
           <%#= link_to audit.created_at.strftime('%b %e, %Y'), audit %>
-        </li>
+        
         <%# end %>
-        <%= link_to 'Add Audit', new_audit_path(:request_id => @request.id) %>
-      </ol>
+        <%#= link_to 'Add Audit', new_audit_path(:request_id => @request.id) %>
+<!--       </ol>
     </div>
-  </fieldset>
+  </fieldset> --> 
 
 <div class="small-12 medium-12 large-7 columns">
   <fieldset>
