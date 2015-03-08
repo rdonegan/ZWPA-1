@@ -1,0 +1,48 @@
+<div class="panel">
+	<p>
+		<h4 class="button-head">Request Details</h4>
+		<div><%= link_to 'Update', edit_request_path(request), class: 'button round tiny left ' %></div></br>
+	</p>
+</br>
+	<p>
+    <strong>Customer:</strong>
+    <%= @request.customer.company_name %>
+  </p>
+
+  <p>
+    <strong>Contact Name:</strong>
+    <%= @request.title + @request.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @request.email %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @request.phone %>
+  </p>
+
+  <p>
+    <strong>Street Address:</strong>
+    <%= @request.street_address %>
+  </p>
+
+  <p>
+    <strong>City:</strong>
+    <%= @request.city %>
+  </p>
+
+  <p>
+    <strong>State:</strong>
+    <%= @request.state %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= @request.date.strftime('%b %e, %Y') %>
+  </p>
+
+
+</div>

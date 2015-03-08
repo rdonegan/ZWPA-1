@@ -7,14 +7,14 @@
 
         <tr>
          
-          <td><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
+          <td width="300"><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
           
           <td>></td>
         </tr>
 
       <%else%>
         <tr>
-          <td><%=link_to doc.origin + " Audit - " + doc.created_at.strftime('%b %e, %Y'), edit_audit_path(doc) %> </td>
+          <td width="300"><%=link_to doc.origin + " Audit - " + doc.created_at.strftime('%b %e, %Y'), edit_audit_path(doc) %> </td>
           
           <td>></td>
 

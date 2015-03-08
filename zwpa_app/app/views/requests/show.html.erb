@@ -1,13 +1,10 @@
 <p id="notice"><%= notice %></p>
-<div class="small-12 columns">
+<div class="small-12 large-7 columns">
   <h4>
     <%= link_to @request.customer.company_name, @request.customer %> > 
     <%= @request.date.strftime('%B %e, %Y') %>
   </h4>
-</div>
 
-
-<div class="small-12 columns">
   <h1 class="button-head">Documents</h1>
   <div class="add_button show-for-medium-up">
      <ul class="button-group radius ">
@@ -16,10 +13,7 @@
     </ul>
   </div>
 
-</div>
-
-
-<div class="add_button show-for-small-only">
+  <div class="add_button show-for-small-only">
    <ul class="button-group radius ">
     <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button small "%></li>
     <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button small" %></li>
@@ -27,13 +21,50 @@
 </div>
 
 
+<%= render 'docs_by_request' %>
+
+</br>
+
+<h1 class="button-head">Notes</h1>
+  <div class="add_button show-for-medium-up">
+     <ul class="button-group radius ">
+      <li><%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%></li>
+      
+    </ul>
+  </div>
+
+  <div class="add_button show-for-small-only">
+   <ul class="button-group radius ">
+    <li><%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button small "%></li>
+   
+  </ul>
+</div>
+
+<%= render 'notes_by_request' %>
+
+</br>
+
+
+<div class="show-for-medium-down">
+  <%= render 'request_details'%>
+</div>
+
+
+
+
+
+
+</div>
+
+<div class="medium-5 columns show-for-large-only ">
+    <%= render 'request_details' %>
+</div>
+
 
 
 <!-- Display table of all documents for the request.
 Includes Questionnaire and audits -->
-<div class="small-12 columns">
-    <%= render 'docs_by_request' %>
-</div>
+
 
 <!-- <div class="small-12 medium-12 large-7 columns">
   <fieldset>
@@ -60,7 +91,9 @@ Includes Questionnaire and audits -->
     </div>
   </fieldset> --> 
 
-<div class="small-12 medium-12 large-7 columns">
+
+
+<!-- <div class="small-12 medium-12 large-7 columns">
   <fieldset>
   <legend><h3>Request Details</h3></legend>
   <p>
@@ -113,21 +146,13 @@ Includes Questionnaire and audits -->
     <%= @request.date %>
   </p>
   </fieldset>
-</div>
+</div> -->
 
-<div class="small-12 medium-12 large-7 columns">
-  <fieldset>
-  <legend><h3>Notes</h3></legend>
-<!--   ********* TEST AFTER NOTE MODEL/CONTROLLER ARE DONE ********* -->
-<!--   <ul>
-    <%# @notes = Note.where(request_id: @request.id) %>
-    <%# @notes.each do |note| %>
-    <li><%#= note.description %></li>
-    <li><%#= note.photo %></li>
-  </ul> -->
-  </fieldset>
-</div>
-<div class="small-12 medium-12 large-7 columns">
-<%= link_to 'Edit Request', edit_request_path(@request), :class => "button" %>
-<%= link_to 'Back to All Requests', requests_path, :class => "button" %>
+
+
+<div class="row">
+  <div class="small-12 medium-12 large-7 columns">
+    <%= link_to 'Edit Request', edit_request_path(@request), :class => "button " %>
+    <%= link_to 'Back to All Requests', requests_path, :class => "button" %>
+  </div>
 </div>
