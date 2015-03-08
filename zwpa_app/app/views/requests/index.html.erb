@@ -3,42 +3,10 @@
   <div class="add_button"><%= link_to '+ Add Request', new_request_path, class: 'button round tiny left ' %></div>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Customer</th>
-      <th>Date</th>
-      <th>Contact Name</th>
-<!--       <th>Title</th>
-      <th>Email</th>
-      <th>Phone Number</th>
-      <th>Address</th> -->
-      <!-- <th>Note</th>
-      <th>Request</th>
-      <th>Photo</th>
-      <th>Description</th> -->
-      <th>Edit</th>
-    </tr>
-  </thead>
+<div class="small-12 columns">
+    <%= render 'all_requests' %>
+</div>
 
-  <tbody>
-    <% @requests.each do |request| %>
-      <tr>
-        <!-- <td><%= request.customer_id %></td> -->
-        <td><%= link_to request.customer.company_name, request_path(request) %></td>
-        <td><%= link_to request.date.strftime('%b %e, %Y'), request_path(request) %></td>
-        <td><%= link_to request.contact_firstname+" "+request.contact_lastname, request_path(request) %></td>
-<!--         <td><%= link_to request.title, request_path(request) %></td>
-        <td><%= link_to request.email, request_path(request) %></td>
-        <td><%= link_to request.phone, request_path(request) %></td>
-        <td><%= link_to request.street_address+" "+request.city+", "+request.state, request_path(request) %></td> -->
-        
-        <td><%= link_to 'Edit', edit_request_path(request), class: 'button tiny' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
 
 <br>
-
-<%= link_to 'New Request', new_request_path, class: 'button' %>
