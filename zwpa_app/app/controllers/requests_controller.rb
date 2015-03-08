@@ -13,7 +13,8 @@ class RequestsController < ApplicationController
     @walkthroughs = @request.walkthroughs.to_a
     @audits = @request.audits.to_a
     @documents = @walkthroughs + @audits
-    @documents = @documents.sort_by(&:created_at) 
+    @documents = @documents.sort_by(&:created_at)
+    @notes = @request.notes.chronological 
   end
 
   # GET /requests/new
