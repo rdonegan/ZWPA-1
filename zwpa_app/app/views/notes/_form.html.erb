@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :request_id %><br>
-    <%= f.number_field :request_id %>
+    <%= f.collection_select :request_id, Request.chronological.all, :id, :date, prompt: "Select request..." %>
   </div>
 
   <div class="field">
