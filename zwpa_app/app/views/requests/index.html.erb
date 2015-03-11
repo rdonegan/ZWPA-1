@@ -22,7 +22,7 @@
     <% @requests.each do |request| %>
       <tr>
         <!-- <td><%= request.customer_id %></td> -->
-        <td><%= link_to request.customer.company_name, request.customer %></td>
+        <td><%= link_to request.customer.company_name, request_path(request) %></td>
         <td><%= link_to request.date.strftime('%b %e, %Y'), request_path(request) %></td>
         <td><%= link_to request.contact_firstname+" "+request.contact_lastname, request_path(request) %></td>
 <!--         <td><%= link_to request.title, request_path(request) %></td>
