@@ -4,12 +4,17 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.by_customer.paginate(:page => params[:page]).per_page(10)
+    @requests = Request.chronological.paginate(:page => params[:page]).per_page(10)
   end
 
   # GET /requests/1
   # GET /requests/1.json
   def show
+    @walkthroughs = @request.walkthroughs.to_a
+    @audits = @request.audits.to_a
+    @documents = @walkthroughs + @audits
+    @documents = @documents.sort_by(&:created_at)
+    @notes = @request.notes.chronological 
   end
 
   # GET /requests/new
