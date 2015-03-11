@@ -1,0 +1,21 @@
+
+<% if !@notes.empty? %>
+
+  <table>
+    
+
+    <tbody>
+      <% @notes.each do |note| %>
+        <td><%=link_to note.created_at, note_path(note)%></td>
+        <td><%=link_to note.description, note_path(note)%></td>
+        
+      <% end %>
+    
+    </tbody>
+  </table>
+
+<%else%>
+
+  <p>There are no notes.</p>
+
+<%end%>
