@@ -5,9 +5,10 @@
   <%= @note.request_id %>
 </p>
 
+
 <p>
-  <strong>Photo:</strong>
-  <%= @note.photo %>
+  <strong>Image:</strong>
+  <%= image_tag @note.image.url(:large) %>
 </p>
 
 <p>

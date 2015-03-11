@@ -2,6 +2,8 @@ class Note < ActiveRecord::Base
 
 	#Relationships
 	belongs_to :request
+	has_attached_file :image, styles: {large: "500x500>", normal: "300x300>", thumb: "150x150#"}
+	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 	#Validations
 	validates_presence_of :request_id #, :description
