@@ -6,6 +6,7 @@ class CustomersController < ApplicationController
   end
 
   def show
+    @requests = @customer.requests.chronological
   end
 
   def new

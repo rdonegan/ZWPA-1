@@ -18,4 +18,8 @@ class Request < ActiveRecord::Base
 	# CHECK FOR CORRECTNESS
 	scope :by_customer, -> { joins(:customer).order('customers.company_name') }
 
+	def name
+    	"#{self.contact_firstname} #{self.contact_lastname}"
+  	end
+
 end
