@@ -1,20 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <strong>Request:</strong>
   <%= @note.request_id %>
 </p>
+ -->
 
+<div class="small-12 columns">
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @note.image.url(:large) %>
-</p>
+	<p>
+	  
+	  <%= image_tag @note.image.url(:large) %>
+	</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @note.description %>
-</p>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @note.description %>
+	</p>
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+	<%= link_to 'Edit', edit_note_path(@note), class: "button" %> 
+	<%= link_to 'Back', notes_path , class: "button" %>
+
+</div>
