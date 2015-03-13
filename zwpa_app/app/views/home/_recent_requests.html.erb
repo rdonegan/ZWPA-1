@@ -9,7 +9,7 @@
     <tr>
       <!-- How do I get the company name of request??? -->
       <td><%= link_to request.customer.company_name, requests_path(request) %></td>
-      <td><%= request.date.strftime('%b %e, %Y')%></td>
+      <td><%= link_to request.date.strftime('%b %e, %Y'), requests_path(request)%></td>
       <td>></td>
       
       
