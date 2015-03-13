@@ -11,7 +11,7 @@
       		<%if note.image.exists?%>
       			<%= image_tag note.image.url(:thumb) %></br>
       		<%end%>
-      		<%= note.created_at.strftime('%b %e, %Y')%></td>
+      		<%= link_to note.created_at.strftime('%b %e, %Y'), note_path(note) %></td>
         <td>
         	<% if note.description.blank? %>
         		<%=link_to "No description...", note_path(note)%>
