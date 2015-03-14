@@ -1,27 +1,35 @@
-<table>
-  
+<% if !@documents.empty? %>
 
-  <tbody>
-    <% @documents.each do |doc| %>
-      <%if doc.instance_of? Walkthrough%>
+  <table>
+    
 
-        <tr>
-         
-          <td width="300"><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
-          
-          <td>></td>
-        </tr>
+    <tbody>
+      <% @documents.each do |doc| %>
+        <%if doc.instance_of? Walkthrough%>
 
-      <%else%>
-        <tr>
-          <td width="300"><%=link_to doc.origin + " Audit - " + doc.created_at.strftime('%b %e, %Y'), edit_audit_path(doc) %> </td>
-          
-          <td>></td>
+          <tr>
+           
+            <td width="300"><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
+            
+            <td>></td>
+          </tr>
+
+        <%else%>
+          <tr>
+            <td width="300"><%=link_to doc.origin + " Audit - " + doc.created_at.strftime('%b %e, %Y'), edit_audit_path(doc) %> </td>
+            
+            <td>></td>
 
 
-        </tr>
-      <%end%>
-    <% end %>
-  
-  </tbody>
-</table>
+          </tr>
+        <%end%>
+      <% end %>
+    
+    </tbody>
+  </table>
+
+<% else %>
+
+  <p>There are no documents.</p>
+
+<%end%>
