@@ -9,6 +9,8 @@ development:
   database: zwpa_dev
   pool: 5
   timeout: 5000
+  username: zwpa
+  password: z3r0W@st3P@
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -16,9 +18,10 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: zwpa_test
   pool: 5
   timeout: 5000
+  username: zwpa
+  password: z3r0W@st3P@
 
 production:
   adapter: postgresql
@@ -26,3 +29,5 @@ production:
   database: zwpa_prod
   pool: 5
   timeout: 5000
+  username: zwpa
+  password: z3r0W@st3P@
