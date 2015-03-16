@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314215325) do
+ActiveRecord::Schema.define(version: 20150316193231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20150314215325) do
     t.string   "contract_available"
     t.string   "annual_record"
     t.string   "waste_storage"
-    t.string   "waste_containers"
+    t.text     "waste_containers",                array: true
     t.string   "buy_recycled"
     t.text     "buy_recycled_details"
     t.string   "green_cleaning_products"

@@ -1,5 +1,5 @@
 class AllowWasteContainerToAcceptArray < ActiveRecord::Migration
   def change
-  	change_column :walkthroughs, :waste_containers, :string, array: true, default:[]
+  	change_column :walkthroughs, :waste_containers, :text, array: true
   end
 end
