@@ -20,8 +20,6 @@ class RequestsController < ApplicationController
   # GET /requests/new
   def new
     @request = Request.new
-    @cus = Customer.find_by_id(params[:customer_id])
-    @request.customer_id = @cus.id
   end
 
   # GET /requests/1/edit
