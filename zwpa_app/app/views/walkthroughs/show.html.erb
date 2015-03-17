@@ -2,7 +2,7 @@
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Walkthrough</h1><%=@walkthrough.created_at %>
+  <h1><%="Walkthrough - " + @walkthrough.created_at.strftime('%b %e, %Y') %> </h1>
   <fieldset>
     <legend></legend>
   <p>
