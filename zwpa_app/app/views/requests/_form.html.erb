@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select customer..." %>
+    <%= f.label :customer_id, "Client" %><br>
+    <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select client..." %>
   </div>
   <div class="field">
     <%= f.label "Contact First Name" %><br>
