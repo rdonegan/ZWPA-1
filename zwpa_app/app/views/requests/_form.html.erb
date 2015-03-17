@@ -15,6 +15,13 @@
     <%= f.label :customer_id %><br>
     <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select customer..." %>
   </div>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%#= f.date_select :date %>
+    <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date"}, label: false %>
+  </div>
+
   <div class="field">
     <%= f.label "Contact First Name" %><br>
     <%= f.text_field :contact_firstname %>
@@ -43,11 +50,7 @@
     <%= f.label :city %><br>
     <%= f.text_field :city %>
   </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%#= f.date_select :date %>
-    <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date"}, label: false %>
-  </div>
+  
 
   <%#= render 'note_form' %>
   
