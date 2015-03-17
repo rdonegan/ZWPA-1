@@ -31,7 +31,7 @@ class WalkthroughsController < ApplicationController
 
     respond_to do |format|
       if @walkthrough.save
-        format.html { redirect_to @walkthrough, notice: 'Walkthrough was successfully created.' }
+        format.html { redirect_to @walkthrough, notice: 'Questionnaire was successfully created.' }
         format.json { render action: 'show', status: :created, location: @walkthrough }
       else
         format.html { render action: 'new' }
@@ -45,7 +45,7 @@ class WalkthroughsController < ApplicationController
   def update
     respond_to do |format|
       if @walkthrough.update(walkthrough_params)
-        format.html { redirect_to @walkthrough, notice: 'Walkthrough was successfully updated.' }
+        format.html { redirect_to @walkthrough, notice: 'Questionnaire was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
