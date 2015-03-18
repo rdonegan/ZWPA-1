@@ -28,4 +28,15 @@ $(function() {
     changeYear: true,
     format: 'mm/dd/YYYY'
   });
+
+
+
+	$('.checkbox').change(function(){
+		$(this).toggleClass('boxed-checked');
+	})
+
+	$('.radio').change(function(){
+		$(this).toggleClass('radio-checked');
+	})
 });
+

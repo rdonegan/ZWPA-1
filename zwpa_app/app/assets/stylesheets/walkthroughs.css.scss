@@ -18,17 +18,19 @@ input[type=checkbox]:not(old){
     width     : 2em;
     margin    : 0;
     padding-right   : 2em;
+    display:none;
     
    
 }
 
+
 .radio{
-	
   width            : 100%;
   height           : 2.5em;
-  margin           : 0.25em 0.5em 0.25em 0.25em;
+  margin           : 0.25em 0.2em 0.25em 0.25em;
+  border-radius: 9px;
+  padding-top: .3em;
   border           : 0.1em solid rgb(182,182,182);
-  border-radius    : .90em;
   background       : rgb(224,224,224);
   background-image : -moz-linear-gradient(rgb(242,242,242),rgb(238,238,238));
   background-image :  -ms-linear-gradient(rgb(242,242,242),rgb(238,238,238));
@@ -37,18 +39,16 @@ input[type=checkbox]:not(old){
   background-image :  linear-gradient(rgb(242,242,242),rgb(238,238,238));
   text-align:center;
   color: GRAY;
-  
+
 
 }
-
-
-
 
 
 .checkbox{
   width            : 100%;
   height           : 2.5em;
-  margin           : 0.25em 0.5em 0.25em 0.25em;
+  margin           : 0.25em 0.2em 0.25em 0.25em;
+  padding-top: .3em;
   border           : 0.1em solid rgb(182,182,182);
   background       : rgb(224,224,224);
   background-image : -moz-linear-gradient(rgb(242,242,242),rgb(238,238,238));
@@ -62,8 +62,19 @@ input[type=checkbox]:not(old){
 
 }
 
-.radio-check{
-    border           : 1.0em solid rgb(0,0,0);
+.radio-checked{
+  font-size:1.3em;
+  color: #123B26;
+  border-color: #31B472;
+  background: rgba(49, 180, 148, .2);
+
+}
+
+.boxed-checked{
+  font-size:1.3em;
+  color: #224D59;
+  border-color: #2E8CA5;
+  background: rgba(88, 204, 235, .2);
 }
 
 .form-back{
