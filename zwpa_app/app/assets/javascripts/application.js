@@ -41,15 +41,36 @@ $(function() {
 
 	$('input:radio').change(function(){
 		var theName = this.name;
-		console.log(name); 
 
 		$('input:radio').each(function() {
 			if(this.name==theName){
 				if($(this).is(':checked')){
-					$(this).parent().addClass('radio-checked');
-				}
+					if($(this).val()=="Yes"){
+						
+						$(this).parent().addClass('radio-checked-yes');
+					}
+					else if($(this).val()=="No"){
+						$(this).parent().addClass('radio-checked-no');
+						console.log("no");
+					}
+					else{
+						$(this).parent().addClass('radio-checked-dk');
+					}
+
+
+
+				} 
 				else{
-					$(this).parent().removeClass('radio-checked');
+					if($(this).val()=="Yes"){
+						$(this).parent().removeClass('radio-checked-yes');
+					}
+					else if($(this).val()=="No"){
+						$(this).parent().removeClass('radio-checked-no');
+					}
+					else{
+						$(this).parent().removeClass('radio-checked-dk');
+					}
+					
 				}
 
 			};

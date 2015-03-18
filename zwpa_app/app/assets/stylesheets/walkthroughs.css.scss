@@ -42,12 +42,26 @@ input[type=checkbox]:not(old){
 
 }
 
-.radio-checked{
+.radio-checked-yes{
   font-size:1.3em;
   color: #123B26;
   border-color: #31B472;
   background: rgba(49, 180, 148, .2);
 
+}
+
+.radio-checked-no{
+  font-size:1.3em;
+  color: #340E0D;
+  border-color: #74201E;
+  background: rgba(180, 49, 46, .2);
+}
+
+.radio-checked-dk{
+  font-size:1.3em;
+  color: #302534;
+  border-color: #6B5174;
+  background: rgba(166, 126, 180, .2);
 }
 
 .boxed-checked{
