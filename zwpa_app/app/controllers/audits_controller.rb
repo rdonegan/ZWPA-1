@@ -15,6 +15,7 @@ class AuditsController < ApplicationController
   # GET /audits/new
   def new
     @audit = Audit.new
+    @audit.wastes.build    
   end
 
   # GET /audits/1/edit
@@ -69,6 +70,6 @@ class AuditsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def audit_params
-      params.require(:audit).permit(:request_id, :date, :origin, :time_period, :dumpster_type)
+      params.require(:audit).permit(:request_id, :date, :time_period, :generator, :location, wastes_attributes: [:id, :material_type, :weight, :origin])
     end
 end
