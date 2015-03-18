@@ -1,7 +1,7 @@
 <div class="panel">
 	<p>
 		<h4 class="button-head">Request Details</h4>
-		<div><%= link_to 'Update', edit_request_path(request), class: 'button round tiny left ' %></div></br>
+		<div><%= link_to 'Update', edit_request_path(@request), class: 'button round tiny left ' %></div></br>
 	</p>
 </br>
 	<p>
@@ -32,6 +32,11 @@
   <p>
     <strong>City:</strong>
     <%= @request.city %>
+  </p>
+
+  <p>
+    <strong>Zip Code:</strong>
+    <%= @request.zip_code %>
   </p>
 
 
