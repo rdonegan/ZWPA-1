@@ -6,44 +6,18 @@
 
 //use javascript to change appearance when clicked
 
-input[type=radio]:not(old){
+input[type=radio]:not(old),
+input[type=checkbox]:not(old){
 	  width     : 0em;
 	  margin    : 0;
 	  padding   : 0;
+    display:none;
 	  
 	 
 }
 
-input[type=checkbox]:not(old){
-    width     : 2em;
-    margin    : 0;
-    padding-right   : 2em;
-    display:none;
-    
-   
-}
 
-
-.radio{
-  width            : 100%;
-  height           : 2.5em;
-  margin           : 0.25em 0.2em 0.25em 0.25em;
-  border-radius: 9px;
-  padding-top: .3em;
-  border           : 0.1em solid rgb(182,182,182);
-  background       : rgb(224,224,224);
-  background-image : -moz-linear-gradient(rgb(242,242,242),rgb(238,238,238));
-  background-image :  -ms-linear-gradient(rgb(242,242,242),rgb(238,238,238));
-  background-image :  -o-linear-gradient(rgb(242,242,242),rgb(238,238,238));
-  background-image : -webkit-linear-gradient(rgb(242,242,242),rgb(238,238,238));
-  background-image :  linear-gradient(rgb(242,242,242),rgb(238,238,238));
-  text-align:center;
-  color: GRAY;
-
-
-}
-
-
+.radio, 
 .checkbox{
   width            : 100%;
   height           : 2.5em;
@@ -58,6 +32,12 @@ input[type=checkbox]:not(old){
   background-image :  linear-gradient(rgb(242,242,242),rgb(238,238,238));
   text-align:center;
   color: GRAY;
+
+}
+
+
+.radio{
+  border-radius: 9px;
 
 
 }
@@ -87,9 +67,5 @@ input[type=checkbox]:not(old){
   margin-top: 1em;
 
 }
-
-
-
-
 
 

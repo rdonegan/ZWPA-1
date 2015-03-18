@@ -30,13 +30,35 @@ $(function() {
   });
 
 
+  	// alternate css checkbox groups
 
 	$('.checkbox').change(function(){
 		$(this).toggleClass('boxed-checked');
 	})
 
-	$('.radio').change(function(){
-		$(this).toggleClass('radio-checked');
-	})
-});
+	
+	// alternate css radio groups
+
+	$('input:radio').change(function(){
+		var theName = this.name;
+		console.log(name); 
+
+		$('input:radio').each(function() {
+			if(this.name==theName){
+				if($(this).is(':checked')){
+					$(this).parent().addClass('radio-checked');
+				}
+				else{
+					$(this).parent().removeClass('radio-checked');
+				}
+
+			};
+		
+		});
+
+	});
+	
+
+
+});//end of js
 
