@@ -11,10 +11,22 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery.ui.datepicker
 //= require foundation
 //= require turbolinks
+
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
 
+// Datepicker code
+$(function() {
+  $(".datepicker").datepicker({
+  	changeMonth: true,
+    changeYear: true,
+    //format: 'mm/dd/YYYY'
+    dateFormat: "yyyy-mm-dd"
+  });
+});

@@ -14,17 +14,14 @@
       </div>
     </div>
 
-  
-  
-  
-
   <div class="form-back">
   <div class="field">
       <%= f.hidden_field :request_id %><br>
     </div>
 
-  <label> Date of Walkthrough </label><br>
-    <%= f.date_select :created_at %>
+
+    <%= f.input :created_at, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date"}, label: "Date of Walkthrough" %>
+
 
 
     <div class="row">
