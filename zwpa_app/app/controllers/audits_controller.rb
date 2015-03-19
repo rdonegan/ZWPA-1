@@ -16,6 +16,7 @@ class AuditsController < ApplicationController
   def new
     @audit = Audit.new
     @audit.wastes.build    
+    @waste = Waste.new
   end
 
   # GET /audits/1/edit
@@ -26,6 +27,8 @@ class AuditsController < ApplicationController
   # POST /audits.json
   def create
     @audit = Audit.new(audit_params)
+
+    @waste.audit_id = @audit.id
 
     respond_to do |format|
       if @audit.save
@@ -72,4 +75,5 @@ class AuditsController < ApplicationController
     def audit_params
       params.require(:audit).permit(:request_id, :date, :time_period, :generator, :location, wastes_attributes: [:id, :material_type, :weight, :origin])
     end
+
 end
