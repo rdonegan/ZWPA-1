@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
+ *= require jquery.ui.datepicker
  *= require_tree .
  */
 w1 {
@@ -40,5 +40,7 @@ table{
 	
 	
 }
+
+
 
 
