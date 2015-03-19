@@ -29,4 +29,58 @@ $(function() {
     //format: 'mm/dd/YYYY'
     dateFormat: "yyyy-mm-dd"
   });
-});
+
+
+  	// alternate css checkbox groups
+
+	$('.checkbox').change(function(){
+		$(this).toggleClass('boxed-checked');
+	})
+
+	
+	// alternate css radio groups
+
+	$('input:radio').change(function(){
+		var theName = this.name;
+
+		$('input:radio').each(function() {
+			if(this.name==theName){
+				if($(this).is(':checked')){
+					if($(this).val()=="Yes"){
+						
+						$(this).parent().addClass('radio-checked-yes');
+					}
+					else if($(this).val()=="No"){
+						$(this).parent().addClass('radio-checked-no');
+						console.log("no");
+					}
+					else{
+						$(this).parent().addClass('radio-checked-dk');
+					}
+
+
+
+				} 
+				else{
+					if($(this).val()=="Yes"){
+						$(this).parent().removeClass('radio-checked-yes');
+					}
+					else if($(this).val()=="No"){
+						$(this).parent().removeClass('radio-checked-no');
+					}
+					else{
+						$(this).parent().removeClass('radio-checked-dk');
+					}
+					
+				}
+
+			};
+		
+		});
+
+	});
+	
+
+
+});//end of js
+
