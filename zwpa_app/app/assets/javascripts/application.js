@@ -81,5 +81,30 @@ $(function() {
 	
 
 
-});//end of js
+});
+
+
+
+// nav bar shrink
+
+$(document).scroll(function() {
+
+    if ($(this).scrollTop() >= 50) {
+
+    	// $(".contain-to-grid").addClass("padding-on-my-header");
+    	$(".top-bar").css("height", "45px");
+    	$(".top-bar").css("padding-top", "0px");
+    	
+        // $('#logo-image').attr('src', 'img/Acme_Monogram_Colour.png')
+        
+
+    }
+    if ($(this).scrollTop() < 50) {
+
+        // $(".contain-to-grid").removeClass("padding-on-my-header");
+		$(".top-bar").css("height", "55px");
+		$(".top-bar").css("padding-top", "5px");
+        
+    }
+});
 
