@@ -11,7 +11,7 @@
 
   <p>
     <strong>Contact Name:</strong>
-    <%= @request.title + @request.name %>
+    <%= @request.name + " (" + @request.title + ")" %>
   </p>
 
   <p>
@@ -32,6 +32,11 @@
   <p>
     <strong>City:</strong>
     <%= @request.city %>
+  </p>
+
+  <p>
+    <strong>Zip Code:</strong>
+    <%= @request.zip_code %>
   </p>
 
 
