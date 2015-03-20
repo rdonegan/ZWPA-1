@@ -15,6 +15,18 @@
 	padding-top:5px;
 }
 
+.bottom-bar {
+  
+  color: #FFFFFF;
+  background-color: rgba(15,52,15, .7);
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+}
 
-
-
+.fixed-bottom {
+  width: 100%;
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
