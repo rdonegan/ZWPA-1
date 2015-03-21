@@ -17,11 +17,13 @@
 	padding-top:5px;
 }
 
+
+
+
 .bottom-bar {
   color:white;
-  background-color: rgba(15,52,15, .7);
-	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
-	box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+  //background-color: rgba(15,52,15, .5);
+	
 }
 
 .fixed-bottom {
@@ -35,9 +37,12 @@
 
 .bottom-button{
 	display:inline-block;
-	width:49%;
-	background-color: RED;
+	width:49.4%;
+	background-color: rgba(139,137,137, .9);
 	text-align:center;
+	border-radius:4px;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
 }
 
 
