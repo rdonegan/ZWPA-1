@@ -43,6 +43,12 @@
 	border-radius:4px;
 	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
 	box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+
+.bottom-button:hover{
+	-webkit-box-shadow: 5px 20px 5px 20px rgba(15,52,15, .5);
+	box-shadow: 5px 0 5px 0 rgba(15,52,15, .5);
 }
 
 
