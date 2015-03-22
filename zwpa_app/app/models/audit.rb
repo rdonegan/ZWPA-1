@@ -7,7 +7,7 @@ class Audit < ActiveRecord::Base
 
 	#Validations
 	validates_presence_of :request_id, :date, :generator, :location
-	validates_inclusion_of :generator, in: %w[Trash Recycle Compost]
+	validates_inclusion_of :generator, in: %w[Landfill Recycle Compost]
 	
 	#Need to validate that generator is within accepted values...
 

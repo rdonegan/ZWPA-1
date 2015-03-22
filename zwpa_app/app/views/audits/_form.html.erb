@@ -17,12 +17,10 @@
         <fieldset>
           <legend><%= controller.action_name.capitalize %> Audit</legend>
          
-           <%= audit_form.label :request_id %><br>
-           <%= audit_form.number_field :request_id %>
-           <%= audit_form.label :date %><br>
+           <%= audit_form.input :request_id, input_html: {value: @req_id} %>           
            <%= audit_form.date_select :date %>
            <%= audit_form.label :generator %><br>
-           <%= audit_form.input :generator, :collection => ['Trash', 'Recycle', 'Compost'], :as => :radio_buttons, label: '' %>
+           <%= audit_form.input :generator, :collection => ['Landfill', 'Recycle', 'Compost'], :as => :radio_buttons, label: '' %>
            <%= audit_form.label :time_period %><br>
            <%= audit_form.text_field :time_period %>
            <%= audit_form.label :location %><br>       
@@ -35,10 +33,11 @@
       <legend>Items</legend>
         <div id="wastes">
         <%= simple_nested_form_for @audit do |f| %>
-          <%= f.fields_for :wastes do |waste_form| %>
-            Material Type:<%= waste_form.select :material_type, ["abc", "hi hi"] %>
-            Weight: <%= waste_form.text_field :weight %>
-            Origin:<%= waste_form.text_field :origin %>
+           <%= f.fields_for :wastes do |waste_form| %>
+              <%= waste_form.hidden_field :audit_id, input_html: {value: @aud_id}%>
+              Material Type:<%= waste_form.select :material_type, ["abc", "hi hi"] %>
+              Weight: <%= waste_form.text_field :weight %>
+              Origin:<%= waste_form.text_field :origin %>
           <% end %>
           <p><%= f.link_to_add "Add a item", :wastes %></p>          <% end %> 
           <p>
