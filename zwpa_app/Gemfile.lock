@@ -125,6 +125,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.18.1)
     polyglot (0.3.5)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -235,6 +236,7 @@ DEPENDENCIES
   meta_request
   mocha
   paperclip (~> 4.2)
+  pg
   quiet_assets
   rails (= 4.0.2)
   sass-rails (>= 4.0.4)

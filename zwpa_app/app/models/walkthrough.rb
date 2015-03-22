@@ -21,7 +21,7 @@ class Walkthrough < ActiveRecord::Base
 	validates_inclusion_of :trash_hauler_contract, in: %w[Yes No DK], allow_nil: true
 	validates_inclusion_of :contract_available, in: %w[Yes No DK], allow_nil: true
 	validates_inclusion_of :annual_record, in: %w[Yes No DK], allow_nil: true
-	validates_inclusion_of :waste_containers, in: %w[Dumpster Roll-off Toter Other], allow_nil: true
+	# validates_inclusion_of :waste_containers, in: %w[Dumpster Roll-off Toter Other], allow_nil: true
 	validates_inclusion_of :buy_recycled, in: %w[Yes No DK], allow_nil: true
 	validates_inclusion_of :green_cleaning_products, in: %w[Yes No DK], allow_nil: true
 	validates_inclusion_of :mandated_recycling, in: %w[Yes No DK], allow_nil: true
