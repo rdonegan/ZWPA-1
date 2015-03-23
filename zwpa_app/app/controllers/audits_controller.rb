@@ -17,14 +17,14 @@ class AuditsController < ApplicationController
   def new
     @audit = Audit.new
     @req_id = params[:request_id]
-    @aud_id = Audit.last.id + 1
+    @aud_id = @audit.id
     @audit.wastes.build        
     @waste = Waste.new
   end
 
   # GET /audits/1/edit
   def edit
-     @req_id = params[:request_id]   
+    @req_id = Audit.find(params[:id]).request_id
   end
 
   # POST /audits
