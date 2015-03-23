@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.ui.datepicker
+//= require jquery_nested_form
 //= require foundation
 //= require turbolinks
 
