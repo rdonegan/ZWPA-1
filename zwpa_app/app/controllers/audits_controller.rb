@@ -18,8 +18,6 @@ class AuditsController < ApplicationController
     @audit = Audit.new
     @req = Request.find_by_id(params[:request_id])
     @audit.request_id = @req.id
-    # @audit.wastes.build    
-    # @waste = Waste.new
   end
 
   # GET /audits/1/edit
@@ -30,8 +28,6 @@ class AuditsController < ApplicationController
   # POST /audits.json
   def create
     @audit = Audit.new(audit_params)
-
-    # @waste.audit_id = @audit.id
 
     respond_to do |format|
       if @audit.save
