@@ -1,4 +1,4 @@
-<%= simple_form_for(@walkthrough, html: { class: 'form-horizontal'}) do |f| %>
+<%= simple_form_for(@walkthrough, html: { class: 'form-horizontal form-sub'}) do |f| %>
 
   
     <div class="small-12 medium-6 columns">
@@ -864,6 +864,34 @@
 
     </div>
 
+  </div>
+
+  <div class="sticky-footer">
+    <%#= render 'bottom_bar' %>
+      <div class="fixed-bottom  show-for-medium-down">
+      <nav class="top-bar bottom-bar" >
+        <section class="top-bar-section">
+
+          <%= link_to new_note_path do %>
+            <div class="bottom-button">
+              Add Note
+
+            </div>
+          <%end%>
+          
+          <div class="bottom-button save-button">
+            Save
+          </div>
+
+
+          <!-- <ul class="left">
+          <li><%#=link_to 'Add Note', new_note_path, class: "button bottom_button"%></li>
+          <li><%#=link_to 'Save', new_note_path, class: "button bottom_button"%></li>
+      </ul> -->
+      </section>
+      
+      </nav>
     </div>
-  <% end %>
+  </div> 
+<% end %>
 

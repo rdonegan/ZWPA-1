@@ -109,3 +109,15 @@ $(document).scroll(function() {
     }
 });
 
+//bottom nav bar
+
+//save form on click
+$(document).ready(function(){
+
+    $('.save-button').click(function(){
+    	$('.form-sub').submit();
+    });
+});
+
+//go to new note on page
+
