@@ -5,7 +5,7 @@ class Waste < ActiveRecord::Base
 
 
 	#Validations
-	validates_presence_of :audit_id, :material_type
+	validates_presence_of :material_type
 	validates_numericality_of :weight
 
 	#Scope

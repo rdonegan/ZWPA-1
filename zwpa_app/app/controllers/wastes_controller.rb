@@ -27,6 +27,8 @@ class WastesController < ApplicationController
   # POST /wastes.json
   def create
     @waste = Waste.new(waste_params)
+    @aud = Audit.find_by_id(params[:audit_id])
+    @waste.audit_id = @aud.id
 
     respond_to do |format|
       if @waste.save
@@ -71,6 +73,6 @@ class WastesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def waste_params
-      params.require(:waste).permit(:audit_id, :weight, :material_type)
+      params.require(:waste).permit(:audit_id, :weight, :material_type, :origin)
     end
 end
