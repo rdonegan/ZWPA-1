@@ -94,8 +94,8 @@ $(document).scroll(function() {
     if ($(this).scrollTop() >= 50) {
 
     	// $(".contain-to-grid").addClass("padding-on-my-header");
-    	$(".top-bar").css("height", "45px");
-    	$(".top-bar").css("padding-top", "0px");
+    	$(".top-margin").css("height", "45px");
+    	$(".top-margin").css("padding-top", "0px");
     	
         // $('#logo-image').attr('src', 'img/Acme_Monogram_Colour.png')
         
@@ -104,9 +104,21 @@ $(document).scroll(function() {
     if ($(this).scrollTop() < 50) {
 
         // $(".contain-to-grid").removeClass("padding-on-my-header");
-		$(".top-bar").css("height", "55px");
-		$(".top-bar").css("padding-top", "5px");
+		$(".top-margin").css("height", "55px");
+		$(".top-margin").css("padding-top", "5px");
         
     }
 });
+
+//bottom nav bar
+
+//save form on click
+$(document).ready(function(){
+
+    $('.save-button').click(function(){
+    	$('.form-sub').submit();
+    });
+});
+
+//go to new note on page
 
