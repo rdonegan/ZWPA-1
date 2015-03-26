@@ -11,8 +11,8 @@
       <!-- How do I get the company name of request??? -->
       <td><%= link_to audit.request.customer.company_name, audit_path(audit) %></td>
       <td><%= audit.generator%></td>
-      <td><%= audit.date.strftime('%b %e, %Y')%></td>
-      <td>></td>
+      <td><%= audit.start_date.strftime('%b %e, %Y')%></td>
+      <td><%= audit.end_date.strftime('%b %e, %Y')%></td>
       
       
     </tr>
