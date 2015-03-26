@@ -27,7 +27,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: zwpa_prod
+  database: postgres
   pool: 5
   timeout: 5000
   username: zwpa
