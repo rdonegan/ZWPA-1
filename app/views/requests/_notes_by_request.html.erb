@@ -1,0 +1,33 @@
+
+<% if !@notes.empty? %>
+
+  <table>
+    
+
+    <tbody>
+      <% @notes.each do |note| %>
+      <tr>
+      	<td>
+      		<%if note.image.exists?%>
+      			<%= image_tag note.image.url(:thumb) %></br>
+      		<%end%>
+      		<%= link_to note.created_at.strftime('%b %e, %Y'), note_path(note) %></td>
+        <td>
+        	<% if note.description.blank? %>
+        		<%=link_to "No description...", note_path(note)%>
+        	<%else%>
+        		<%=link_to note.description, note_path(note)%>
+        	<%end%>
+        </td>
+    </tr>
+        
+      <% end %>
+    
+    </tbody>
+  </table>
+
+<%else%>
+
+  <p>There are no notes.</p>
+
+<%end%>

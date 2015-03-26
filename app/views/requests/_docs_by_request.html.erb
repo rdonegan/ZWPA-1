@@ -1,0 +1,35 @@
+<% if !@documents.empty? %>
+
+  <table>
+    
+
+    <tbody>
+      <% @documents.each do |doc| %>
+        <%if doc.instance_of? Walkthrough%>
+
+          <tr>
+           
+            <td width="300"><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
+            
+            <td>></td>
+          </tr>
+
+        <%else%>
+          <tr>
+            <td width="300"><%=link_to " Audit - " + doc.created_at.strftime('%b %e, %Y'), edit_audit_path(doc) %> </td>
+            
+            <td>></td>
+
+
+          </tr>
+        <%end%>
+      <% end %>
+    
+    </tbody>
+  </table>
+
+<% else %>
+
+  <p>There are no documents.</p>
+
+<%end%>

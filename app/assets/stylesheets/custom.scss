@@ -1,0 +1,54 @@
+// Styling for top nav bar
+
+// Background color of nav bar
+
+.contain-to-grid{
+	background-color: rgba(15,52,15, .7);
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	
+}
+
+
+//used to style nav bar size change in application.js
+.top-margin{
+	height: 55px;
+	transition: all 0.5s ease 0.1s;
+	padding-top:5px;
+}
+
+
+
+
+.bottom-bar {
+  color:white;
+  //background-color: rgba(15,52,15, .5);
+	
+}
+
+.fixed-bottom {
+	
+  width: 100%;
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
+
+.bottom-button{
+	display:inline-block;
+	width:49.4%;
+	background-color: rgba(139,137,137, .9);
+	text-align:center;
+	border-radius:4px;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+
+.bottom-button:hover{
+	-webkit-box-shadow: 5px 20px 5px 20px rgba(15,52,15, .5);
+	box-shadow: 5px 0 5px 0 rgba(15,52,15, .5);
+}
+
+

@@ -1,0 +1,89 @@
+// Place all the styles related to the Walkthroughs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//use javascript to change appearance when clicked
+
+input[type=radio]:not(old),
+input[type=checkbox]:not(old){
+	  width     : 0em;
+	  margin    : 0;
+	  padding   : 0;
+    display:none;
+	  
+	 
+}
+
+
+.radio, 
+.checkbox{
+  width            : 100%;
+  height           : 2.5em;
+  margin           : 0.25em 0.2em 0.25em 0.25em;
+  padding-top: .3em;
+  border           : 0.1em solid rgb(182,182,182);
+  background       : rgb(224,224,224);
+  background-image : -moz-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  -ms-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  -o-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image : -webkit-linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  background-image :  linear-gradient(rgb(242,242,242),rgb(238,238,238));
+  text-align:center;
+  color: GRAY;
+
+}
+
+
+.radio{
+  border-radius: 9px;
+
+
+}
+
+.radio-checked-yes{
+  font-size:1.3em;
+  color: #123B26;
+  border-color: #31B472;
+  background: rgba(49, 180, 148, .2);
+
+}
+
+.radio-checked-no{
+  font-size:1.3em;
+  color: #340E0D;
+  border-color: #74201E;
+  background: rgba(180, 49, 46, .2);
+}
+
+.radio-checked-dk{
+  font-size:1.3em;
+  color: #302534;
+  border-color: #6B5174;
+  background: rgba(166, 126, 180, .2);
+}
+
+.boxed-checked{
+  font-size:1.3em;
+  color: #224D59;
+  border-color: #2E8CA5;
+  background: rgba(88, 204, 235, .2);
+}
+
+.form-back{
+ 
+  border           : 0.2em solid rgb(182,182,182);
+  border-radius    : 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+  margin-top: 1em;
+
+}
+
+.sticky-footer{
+  margin-top: 45px;
+}
+
+
