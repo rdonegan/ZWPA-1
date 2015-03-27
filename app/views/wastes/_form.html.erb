@@ -19,7 +19,7 @@
     <%= f.text_field :material_type %>
   </div>
   <div class="field">
-    <%= f.label :weight %><br>
+    <%= f.label "Weight (lbs)" %><br>
     <%= f.text_field :weight %>
   </div>
   <div class="field">
@@ -27,6 +27,6 @@
     <%= f.text_field :origin %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save Waste", class: 'button' %>
   </div>
 <% end %>
