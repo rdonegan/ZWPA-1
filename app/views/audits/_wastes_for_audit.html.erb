@@ -1,9 +1,18 @@
 <% if !@wastes.empty? %>
 	<table>
+		<thead>
+			<tr>
+				<th>Material Type</th>
+				<th>Weight (lbs)</th>
+				<th>Origin</th>
+			</tr>
+		</thead>
 		<tbody>
-			<% @wastes.each do |was| %>
+			<% @wastes.each do |waste| %>
 				<tr>
-					<td width="300"><%=link_to was.material_type.to_s + ' ' + was.weight.to_s, edit_waste_path(was) %></td>
+					<td width="200"><%=link_to waste.material_type, edit_waste_path(waste) %></td>
+					<td width="150"><%= waste.weight %></td>
+					<td width="100"><%= waste.origin %></td>
 				</tr>
 			<% end %>
 		</tbody>

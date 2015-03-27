@@ -1,27 +1,36 @@
-
- <div class="small-12 large-8 columns">
- 	<p id="notice"><%= notice %></p>
-
- 	<h4>
-	 	<%= link_to @audit.request.customer.company_name, @audit.request.customer %> > 
+<div class="small-12 large-8 columns">
+	<p id="notice"><%= notice %></p>
+	<h4>
+		<%= link_to @audit.request.customer.company_name, @audit.request.customer %> > 
 	    <%= @audit.request.date.strftime('%B %e, %Y') %>
  	</h4>
 
- 	<h1 class="button-head">Audit Details</h1>
- 	<div class="add_button show-for-medium-up">
-     <ul class="button-group radius ">
-      <li><%=link_to "+ Add Waste",new_waste_path(:audit_id => @audit.id), class: "button tiny "%></li>
-    </ul>
+ 	<h1 class="button-head">Wastes</h1>
+ 	<br><br><br><br>
+ 	<div class="show-for-medium-up">
+ 		<%= render 'wastes_for_audit' %>
   	</div>
 
-  	<%= render 'wastes_for_audit' %>
+  	<div class="show-for-small-only">
+   		<%= render 'wastes_for_audit' %>
+	</div>
+</br>
 
+</br>
 
+<div class="show-for-medium-down">
+  <%= render 'audit_details'%>
+</div>
 
+</div>
 
+<div class="medium-4 columns show-for-large-only ">
+    <%= render 'audit_details' %>
+</div>
 
-
-
-
-
- </div>
+<div class="row">
+  <div class="small-12 medium-12 large-7 columns">
+    <%= link_to 'Edit Audit', edit_audit_path(@audit), :class => "button " %>
+    <%= link_to 'Back to All Audits', audits_path, :class => "button" %>
+  </div>
+</div>
