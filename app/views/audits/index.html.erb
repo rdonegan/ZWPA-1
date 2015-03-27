@@ -3,8 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Request</th>
-      <th>Date</th>
+      <th>Company</th>
       <th>Start Date</th>
       <th>End Date</th>
       <th>Generator</th>
@@ -16,7 +15,7 @@
   <tbody>
     <% @audits.each do |audit| %>
       <tr>
-        <td><%= audit.request_id %></td>
+        <td><%= audit.request.customer.company_name %></td>
         <td><%= audit.start_date %></td>
         <td><%= audit.end_date %></td>
         <td><%= audit.generator %></td>
@@ -29,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Audit', new_audit_path %>
+
