@@ -89,26 +89,26 @@ $(function() {
 
 // nav bar shrink
 
-$(document).scroll(function() {
+// $(document).scroll(function() {
 
-    if ($(this).scrollTop() >= 50) {
+//     if ($(this).scrollTop() >= 50) {
 
-    	// $(".contain-to-grid").addClass("padding-on-my-header");
-    	$(".top-margin").css("height", "45px");
-    	$(".top-margin").css("padding-top", "0px");
+//     	// $(".contain-to-grid").addClass("padding-on-my-header");
+//     	$(".top-margin").css("height", "45px");
+//     	$(".top-margin").css("padding-top", "0px");
     	
-        // $('#logo-image').attr('src', 'img/Acme_Monogram_Colour.png')
+//         // $('#logo-image').attr('src', 'img/Acme_Monogram_Colour.png')
         
 
-    }
-    if ($(this).scrollTop() < 50) {
+//     }
+//     if ($(this).scrollTop() < 50) {
 
-        // $(".contain-to-grid").removeClass("padding-on-my-header");
-		$(".top-margin").css("height", "55px");
-		$(".top-margin").css("padding-top", "5px");
+//         // $(".contain-to-grid").removeClass("padding-on-my-header");
+// 		$(".top-margin").css("height", "55px");
+// 		$(".top-margin").css("padding-top", "5px");
         
-    }
-});
+//     }
+// });
 
 //bottom nav bar
 
