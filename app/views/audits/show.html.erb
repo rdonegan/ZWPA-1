@@ -2,10 +2,11 @@
 	<p id="notice"><%= notice %></p>
 	<h4>
 		<%= link_to @audit.request.customer.company_name, @audit.request.customer %> > 
-	    <%= @audit.request.date.strftime('%B %e, %Y') %>
+	    <%= @audit.request.date.strftime('%B %e, %Y') %> >
+	    <%= @audit.generator %>
  	</h4>
 
- 	<h1 class="button-head">Wastes</h1>
+ 	<h1 class="button-head">Items in <%= @audit.generator %></h1>
  	<br><br><br><br>
  	<div class="show-for-medium-up">
  		<%= render 'wastes_for_audit' %>

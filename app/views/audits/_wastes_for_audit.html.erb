@@ -10,7 +10,7 @@
 		<tbody>
 			<% @wastes.each do |waste| %>
 				<tr>
-					<td width="200"><%=link_to waste.material_type, edit_waste_path(waste) %></td>
+					<td width="200"><%= waste.material_type %></td>
 					<td width="150"><%= waste.weight %></td>
 					<td width="100"><%= waste.origin %></td>
 				</tr>
