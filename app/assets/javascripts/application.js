@@ -31,6 +31,41 @@ $(function() {
     dateFormat: "yy-mm-dd"
   });
 
+  //FOR WALKTHROUGH
+  //check which checkboxes/radio boxes need to be checked on load, then add css
+  $( document ).ready(function(){
+
+  	//iterate through radio boxes first
+  	$('input:radio').each(function() {
+  		
+  		if(this.checked==true){
+
+  			if($(this).val()=="Yes"){
+
+				$(this).parent().addClass('radio-checked-yes');
+			}
+			else if($(this).val()=="No"){
+				$(this).parent().addClass('radio-checked-no');
+			}
+			else{
+				$(this).parent().addClass('radio-checked-dk');
+			}
+  		}
+
+  	})
+
+  	//iterate checkboxes
+  	$('input:checkbox').each(function() {
+  		if(this.checked==true){
+  			console.log("!");
+  			$(this).parent().addClass('boxed-checked');
+  		}
+  		
+
+  	})
+
+  });
+
 
   	// alternate css checkbox groups
 
@@ -44,6 +79,14 @@ $(function() {
 	$('input:radio').change(function(){
 		var theName = this.name;
 
+		//Iterate through all other radio buttons with the same name
+		//attribute to toggle their selection css.
+
+		//NEED TO DO THIS FOR ALLLLLLL RADIO BUTTONS, not just ones with same name
+		//except you can't use the radio-checked-xx thing because these don't cross over
+
+		//basically need to go through all checkboxes on load and see if they're filled in
+ //(check if attributed checked="checked". BUT can only run this once on load)		//and what their val is. Depending on that, add class.
 		$('input:radio').each(function() {
 			if(this.name==theName){
 				if($(this).is(':checked')){
@@ -53,7 +96,7 @@ $(function() {
 					}
 					else if($(this).val()=="No"){
 						$(this).parent().addClass('radio-checked-no');
-						console.log("no");
+						
 					}
 					else{
 						$(this).parent().addClass('radio-checked-dk');
