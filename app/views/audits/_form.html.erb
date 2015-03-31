@@ -20,8 +20,8 @@
           <div class="reqid" style="display: none;">
            <%= audit_form.input :request_id, input_html: {value: @req_id} %>  
            </div>         
-           <%= audit_form.input :start_date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Start Date"}, label: 'Start Date' %>
-           <%= audit_form.input :end_date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter End Date"}, label: 'End Date' %>
+           <%= audit_form.input :start_date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Start Date", readonly:"readonly"}, label: 'Start Date' %>
+           <%= audit_form.input :end_date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter End Date", readonly:"readonly"}, label: 'End Date' %>
            <%= audit_form.input :generator, :collection => ['Landfill', 'Recycle', 'Compost'], :as => :radio_buttons, label: 'Generator' %>
            <%= audit_form.label :location %><br>       
            <%= audit_form.text_field :location %>
