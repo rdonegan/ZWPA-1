@@ -12,6 +12,11 @@ class AuditsController < ApplicationController
   # GET /audits/1.json
   def show
     @wastes = @audit.wastes.to_a
+    @csvWaste = @audit.wastes
+    respond_to do |format|
+      format.html
+      format.csv { render text: Waste.to_csv(@csvWaste)}
+    end
   end
 
   # GET /audits/new
