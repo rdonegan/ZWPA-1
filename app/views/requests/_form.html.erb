@@ -18,8 +18,7 @@
 
   <div class="field">
     <%= f.label :date %><br>
-    <%#= f.date_select :date %>
-    <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date"}, label: false %>
+    <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Date of Audit", readonly:"readonly"}, label: false %>
   </div>
 
   <div class="field">
