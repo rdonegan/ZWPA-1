@@ -14,7 +14,7 @@
         <td><%= link_to customer.company_name, customer %></td>
         <%#= customer.requests.last.created%>
         <!-- I don't know how to get this right now -->
-        <td><%= link_to 'Request Date - Name of Contact', customer%></td>
+        <td><%= link_to customer.requests.chronological.last.date.to_s + ' - ' + customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname, customer.requests.chronological.last %></td>
         <!-- Make this an icon later -->
         <td><%= link_to '>', customer%></td>
       </tr>
