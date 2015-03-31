@@ -1,0 +1,27 @@
+<div class="panel">
+	<p>
+		<h4 class="button-head">Audit Details</h4>
+		<div><%= link_to 'Update', edit_audit_path(@audit), class: 'button round tiny left ' %></div></br>
+	</p>
+</br>
+	<p>
+    <strong>Start Date:</strong>
+    <%= @audit.start_date.strftime('%b %e, %Y') %>
+  </p>
+
+  <p>
+    <strong>End Date:</strong>
+    <%= @audit.end_date.strftime('%b %e, %Y') %>
+  </p>
+
+  <p>
+    <strong>Generator:</strong>
+    <%= @audit.generator %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= @audit.location %>
+  </p>
+
+</div>
