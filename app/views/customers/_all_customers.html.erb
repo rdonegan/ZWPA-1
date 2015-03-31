@@ -3,6 +3,7 @@
     <tr>
       <th>Client Name</th>
       <th>Latest Request</th>
+      <th>Point of Contact</th>
       <th></th>
      
     </tr>
@@ -12,7 +13,8 @@
     <% @customers.each do |customer| %>
       <tr>
         <td><%= link_to customer.company_name, customer %></td>
-        <td><%= link_to customer.requests.chronological.last.date.to_s + ' - ' + customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname, customer.requests.chronological.last %></td>
+        <td><%= link_to customer.requests.chronological.last.date.to_s, customer.requests.chronological.last%></td>
+        <td><%= mail_to customer.requests.chronological.last.email, customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname %></td>
         <!-- Make this an icon later -->
         <td><%= link_to '>', customer%></td>
       </tr>
