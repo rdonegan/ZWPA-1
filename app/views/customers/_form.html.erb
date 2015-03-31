@@ -11,6 +11,20 @@
     </div>
   <% end %>
   <!-- took away user_id input and set it to always be user_id=1 in the controller -->
+
+    <div class="span5">
+      <legend>Request</legend>
+        <div id="requests">
+        <%= simple_nested_form_for @customer do |f| %>
+           <%= f.fields_for :requests do |request_form| %>
+              <%= request_form.text_field :contact_firstname %>
+          <% end %>
+          <% end %> 
+          <p>
+            <br />
+          </p>
+        </div> 
+      </div>
   <div class="field">
     <%= f.label :company_name %><br>
     <%= f.text_field :company_name %>

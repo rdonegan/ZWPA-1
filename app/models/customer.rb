@@ -3,6 +3,8 @@ class Customer < ActiveRecord::Base
 	has_many :requests
 	belongs_to :user
 	
+	accepts_nested_attributes_for :requests, reject_if: lambda { |waste| waste[:customer_id].blank? }
+
 	# Validations
 	validates_presence_of :user_id
 	validates_numericality_of :user_id, only_integer: true, greater_than: 0

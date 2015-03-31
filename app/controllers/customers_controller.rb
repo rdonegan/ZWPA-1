@@ -3,6 +3,7 @@ class CustomersController < ApplicationController
 
   def index
     @customers = Customer.alphabetical.paginate(:page => params[:page]).per_page(10)
+    @requests = Requests.all
   end
 
   def show
@@ -11,6 +12,8 @@ class CustomersController < ApplicationController
 
   def new
     @customer = Customer.new
+    @cus_id = @customer.id
+    @request = Request.new
   end
 
   def edit
@@ -60,7 +63,7 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:user_id, :company_name)
+      params.require(:customer).permit(:user_id, :company_name, request_attributes: [:id, :customer_id, :contact_firstname, :contact_lastname, :title, :email, :phone, :street_address, :city, :date, :zip_code])
     end
 
 end
