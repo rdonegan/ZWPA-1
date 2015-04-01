@@ -14,9 +14,11 @@ class Waste < ActiveRecord::Base
 
 	def self.to_csv(wastes)
 		CSV.generate do |csv|
-			csv << column_names
+			columns = %w(material_type weight origin)
+			#csv << column_names
+			csv << columns
 			wastes.each do |waste|
-				csv << waste.attributes.values_at(*column_names)
+				csv << waste.attributes.values_at(*columns)
 
 			end
 		end
