@@ -3,7 +3,7 @@
     <tr>
       <th>Client</th>
       <th>Date Initiated</th>
-      <th>Contact</th>
+      <th>Point of Contact</th>
       <th></th>
     </tr>
   </thead>
@@ -11,12 +11,10 @@
   <tbody>
     <% @requests.each do |request| %>
       <tr>
-        <!-- <td><%= request.customer_id %></td> -->
         <td><%= link_to request.customer.company_name, request_path(request) %></td>
         <td><%= link_to request.date.strftime('%b %e, %Y'), request_path(request) %></td>
-        <td><%= link_to request.name, request_path(request) %></td>
-        
-        <td>><%#= link_to 'Update', edit_request_path(request), class: 'button tiny' %></td>
+        <td><%= mail_to request.email, request.contact_firstname + ' ' + request.contact_lastname %></td>
+        <td><%= link_to '>', request %></td>
       </tr>
     <% end %>
   </tbody>
