@@ -15,7 +15,7 @@ class AuditsController < ApplicationController
     @csvWaste = @audit.wastes
     respond_to do |format|
       format.html
-      format.csv { render text: Waste.to_csv(@csvWaste)}
+      format.csv { send_data Waste.to_csv(@csvWaste)}
     end
   end
 
