@@ -3,7 +3,6 @@ require 'test_helper'
 class WasteTest < ActiveSupport::TestCase
 	should belong_to(:audit)
 
-	should validate_presence_of(:audit_id)
 	should validate_presence_of(:material_type)
 
 	should validate_numericality_of(:weight)
