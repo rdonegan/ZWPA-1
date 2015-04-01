@@ -12,8 +12,8 @@ class Waste < ActiveRecord::Base
 	scope :chronological, -> { order('created_at') }
 
 
-	def self.to_csv(wastes)
-		CSV.generate do |csv|
+	def self.to_csv(wastes, options={})
+		CSV.generate(options) do |csv|
 			columns = %w(material_type weight origin)
 			#csv << column_names
 			csv << columns

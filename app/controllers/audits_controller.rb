@@ -16,6 +16,7 @@ class AuditsController < ApplicationController
     respond_to do |format|
       format.html
       format.csv { send_data Waste.to_csv(@csvWaste)}
+      format.xls { send_data Waste.to_csv(@csvWaste, col_sep: "\t") }
     end
   end
 

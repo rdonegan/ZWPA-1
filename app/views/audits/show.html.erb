@@ -7,7 +7,16 @@
  	</h4>
 
  	<h1 class="button-head">Items in <%= @audit.generator %></h1>
+  
  	<br><br><br><br>
+
+
+  <p>
+    Download:
+    <%= link_to "CSV", audit_path(format: "csv") %> |
+    <%= link_to "Excel", audit_path(format: "xls") %>
+  </p>
+  
  	<div class="show-for-medium-up">
  		<%= render 'wastes_for_audit' %>
   	</div>
