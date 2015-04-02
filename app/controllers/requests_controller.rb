@@ -19,11 +19,26 @@ class RequestsController < ApplicationController
 
   # GET /requests/new
   def new
+    # @request = Request.new
+    # @customer = Customer.new
+    # @req_id = params[:request_id]
+    # @cus_id = @customer.id
+    # @customer.requests.build
+
+    # @customer = Customer.new
+    # @cus_id = @customer.id
+    # @customer.requests.build
+    # @req = Request.new
+    # @req_id = params[:request_id]
+    
     @request = Request.new
+    # @cus_id = params[:customer_id]
+    # @req_id = @request.id
   end
 
   # GET /requests/1/edit
   def edit
+
   end
 
   # POST /requests
