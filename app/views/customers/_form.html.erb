@@ -29,7 +29,7 @@
         <%= simple_nested_form_for @customer do |f| %>
            <%= f.fields_for :requests do |request_form| %>
               <%= request_form.hidden_field :customer_id, input_html: {value: @cus_id}%>
-              First Name: <%= request_form.text_field :contact_firstname %>
+              First Name: (required for request form to save) <%= request_form.text_field :contact_firstname %>
               Last Name: <%= request_form.text_field :contact_lastname %>
               Title: <%= request_form.text_field :title %>
               Email: <%= request_form.text_field :email %>
@@ -48,6 +48,6 @@
       </div>
 
   <div class="actions">
-    <%= customer_form.submit "Add Client and Request", class: 'button small' %>
+    <%= customer_form.submit "Save", class: 'button small' %>
   </div>
 <% end %>
