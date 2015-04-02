@@ -1,4 +1,4 @@
-<%= simple_form_for(@request) do |f| %>
+<%= simple_form_for(@request, html: { class: 'form-horizontal form-sub'}) do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
@@ -11,54 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :customer_id, "Client" %><br>
-    <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select client..." %>
+  <div class="small-12 medium-6 columns">
+    <h1>New Request</h1>
   </div>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Date of Audit", readonly:"readonly"}, label: false %>
+  <div class="small-12 medium-6 columns">
+    <div class="actions">
+      <%= f.submit "Save Request", class: 'button' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label "Contact First Name" %><br>
-    <%= f.text_field :contact_firstname %>
-  </div>
-  <div class="field">
-    <%= f.label "Contact Last Name" %><br>
-    <%= f.text_field :contact_lastname %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label "Phone (ex: 111-222-3333)" %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :street_address %><br>
-    <%= f.text_area :street_address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :zip_code %><br>
-    <%= f.text_field :zip_code %>
-  </div>
+  <div class="form-back">
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-2 columns">
+            <label for="right-label" class="left inline">Client</label>
+          </div>
+          <div class="small-10 columns">
+            <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select client..." %>
+          </div>
 
-
-
-  <%#= render 'note_form' %>
-  
-  <div class="actions">
-    <%= f.submit "Save Request", class: 'button' %>
-  </div>
+<!--  -->
 <% end %>
