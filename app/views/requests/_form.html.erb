@@ -25,12 +25,119 @@
     <div class="row">
       <div class="small-12 medium-6 columns">
         <div class="field row">
-          <div class="small-2 columns">
+          <div class="small-3 columns">
             <label for="right-label" class="left inline">Client</label>
           </div>
-          <div class="small-10 columns">
+          <div class="small-9 columns">
             <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select client..." %>
           </div>
+        </div>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Date</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Date of Audit", readonly:"readonly"}, label: false %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Contact Title</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :title %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Contact First Name</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :contact_firstname %>
+          </div>
+        </div>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Contact Last Name</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :contact_lastname %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Email</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :email %>
+          </div>
+        </div>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Phone (111-222-3333)</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :phone %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Street Address</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :street_address %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">City</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :city %>
+          </div>
+        </div>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <div class="field row">
+          <div class="small-3 columns">
+            <label for="right-label" class="left inline">Zip Code</label>
+          </div>
+          <div class="small-9 columns">
+            <%= f.text_field :zip_code %>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <!--  -->
 <% end %>
