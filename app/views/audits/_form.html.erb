@@ -1,4 +1,4 @@
-<%= simple_nested_form_for(@audit, html: { class: 'form-horizontal', class: 'formtext' }) do |audit_form| %>
+<%= simple_nested_form_for(@audit, html: { class: 'form-horizontal form-sub', class: 'formtext' }) do |audit_form| %>
 
   <% if @audit.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +11,16 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="small-12 medium-6 columns">
+    <h1>Audit</h1>
+  </div>
+
+  <div class="small-12 medium-6 columns">
+    <%= audit_form.submit "Save", class: 'button' %>
+  </div>
+
+  <div class="form-back">
 
     <div class="row">
       <div class="span7">
@@ -87,7 +97,8 @@
                   <%= waste_form.text_field :origin, placeholder: "Enter origin..." %>
                 </div>
           <% end %>
-          <p><%= f.link_to_add "+ Add an item", :wastes, class: 'button round tiny left' %></p>          <% end %> 
+          <p><%= f.link_to_add "+ Add an item", :wastes, class: 'button round tiny left' %></p>         
+          <% end %> 
           <p>
             <br /><%#= audit_form.link_to_add("Add Item", :wastes, :class => 'button tiny') %>
           </p>
@@ -95,9 +106,29 @@
         </fieldset>
       </div>
 
+      <div class="sticky-footer">
+      <%#= render 'bottom_bar' %>
+        <div class="fixed-bottom  show-for-medium-down">
+          <nav class="top-bar bottom-bar" >
+            <section class="top-bar-section">
+              <%= link_to new_note_path do %>
+                <div class="bottom-button">
+                  Add Note
+                </div>
+              <%end%>
 
-
-  <div class="actions">
-    <%= audit_form.submit "Save Audit", class: 'button' %>
+              <div class="bottom-button save-button">
+                Save
+              </div>
+               <!-- <ul class="left">
+            <li><%#=link_to 'Add Note', new_note_path, class: "button bottom_button"%></li>
+            <li><%#=link_to 'Save', new_note_path, class: "button bottom_button"%></li>
+        </ul> -->
+        </section>
+        </nav>
+      </div>
+    </div> 
   </div>
+
+  
 <% end %>
