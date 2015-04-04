@@ -46,3 +46,7 @@ a:visited {
 .button:visited{
 	color: white;
 }
+
+.smallbutton:visited{
+	color: white;
+}
