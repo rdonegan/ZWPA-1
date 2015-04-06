@@ -41,6 +41,17 @@ table{
 	
 }
 
+/********************/
+/*Styling for top info on home page*/
+/********************/
+
+.getting_started_container{
+	width:100%;
+  	background-color: rgba(15, 52, 15, 0.2);
+  	text-align:center;
+}
+
+
 
 
 
