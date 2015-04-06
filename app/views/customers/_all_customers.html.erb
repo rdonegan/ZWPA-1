@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to customer.company_name, customer %></td>
         <td><%= link_to customer.requests.chronological.last.date.to_s, customer.requests.chronological.last%></td>
-        <td><%= mail_to customer.requests.chronological.last.email, customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname %></td>
+        <td><%= link_to customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname, customer.requests.chronological.last %></td>
         <!-- Make this an icon later -->
         <td><%= link_to '>', customer%></td>
       </tr>
