@@ -25,22 +25,17 @@
     <div class="row">
       <div class="span7">
         <fieldset>
-          <legend>Audit Details</legend>
+          <legend><%= controller.action_name.capitalize %> Audit</legend>
           
           <div class="reqid" style="display: none;">
            <%= audit_form.input :request_id, input_html: {value: @req_id} %>  
-           </div> 
-
-          <div class="row">
-            <div class="small-12 columns">
-              <label>Generator</label>
-            </div>
-          </div>
-
-          <div class="field row">
-            <div class="small-12 medium-4 columns">
-              <%= audit_form.input :generator, :collection => ['Landfill'], :as => :radio_buttons, label: "" %>
-            </div>
+           </div>         
+           <%= audit_form.input :start_date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Start Date"}, label: false %>
+           <%= audit_form.input :end_date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter End Date"}, label: false %>
+           <%= audit_form.label :generator %><br>
+           <%= audit_form.input :generator, :collection => ['Landfill', 'Recycle', 'Compost'], :as => :radio_buttons, label: '' %>
+           <%= audit_form.label :location %><br>       
+           <%= audit_form.text_field :location %>
 
             <div class="small-12 medium-4 columns">
               <%= audit_form.input :generator, :collection => ['Recycle'], :as => :radio_buttons, label: "" %>
@@ -80,8 +75,7 @@
       </div>
 
     <div class="span5">
-      <fieldset>
-      <legend>Waste Items</legend>
+      <legend>Items</legend>
         <div id="wastes">
         <%= simple_nested_form_for @audit do |f| %>
            <%= f.fields_for :wastes do |waste_form| %>
@@ -103,7 +97,6 @@
             <br /><%#= audit_form.link_to_add("Add Item", :wastes, :class => 'button tiny') %>
           </p>
         </div> 
-        </fieldset>
       </div>
 
       <div class="sticky-footer">
@@ -117,17 +110,8 @@
                 </div>
               <%end%>
 
-              <div class="bottom-button save-button">
-                Save
-              </div>
-               <!-- <ul class="left">
-            <li><%#=link_to 'Add Note', new_note_path, class: "button bottom_button"%></li>
-            <li><%#=link_to 'Save', new_note_path, class: "button bottom_button"%></li>
-        </ul> -->
-        </section>
-        </nav>
-      </div>
-    </div> 
+  <div class="actions">
+    <%= audit_form.submit %>
   </div>
 
   
