@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" width="100%">
   <tr>
     <th>Client</th>
     <th>Start Date</th>
@@ -10,7 +10,7 @@
       <!-- How do I get the company name of request??? -->
       <td><%= link_to request.customer.company_name, request %></td>
       <td><%= link_to request.date.strftime('%b %e, %Y'), request%></td>
-      <td>></td>
+      <td><%= link_to ">", request%></td>
       
       
     </tr>
