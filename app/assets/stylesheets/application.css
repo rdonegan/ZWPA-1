@@ -22,25 +22,31 @@ w2 {
 } 
 
 table{
-
 	border-spacing: 0;
 	border-radius: 5px;
-
 }
 
 .button-head{
-	
 	float:left;
 	margin-right:.5em;
-	
 } 
 
 .add_button{
-	margin: 1.2em;
-	
-	
+	margin: 1.2em;	
 }
 
+.title:visited{
+	color: white;
+}
 
+a:visited {
+	color: white;
+}
 
+.button:visited{
+	color: white;
+}
 
+.smallbutton:visited{
+	color: white;
+}
