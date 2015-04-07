@@ -14,7 +14,6 @@ class CustomersController < ApplicationController
     @cus_id = (Customer.all.count + 1)
     @customer.requests.build
     @req = Request.new
-    # @req_id = params[:request_id]
   end
 
   def edit
