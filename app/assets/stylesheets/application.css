@@ -46,13 +46,17 @@ table{
 /********************/
 
 .getting_started_container{
-	width:100%;
+	
   	background-color: rgba(15, 52, 15, 0.07);
   	border-style:solid;
   	border-color: rgba(15, 52, 15, 0.3);
   	border-width: 1px;
   	border-radius: 4px;
   	text-align:center;
+  	margin-bottom: 2em;
+  
+  	
+
 }
 
 .option{
@@ -61,7 +65,16 @@ table{
 	padding: 2em 2em;
 	border-style: solid;
 	border-radius: 10px;
+	transition: all 0.3s ease-in-out 0.1s;
 }
+
+.option_hover{
+	margin: .5em;
+	border-color:rgba(15, 52, 15, 0.4) ;
+
+}
+
+
 
 
 
