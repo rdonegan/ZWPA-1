@@ -1,50 +1,7 @@
 
 <!-- Main div for displaying most recent requests -->
-
-
-
-
-	<div class="small-12 columns">
-		<h2>Getting Started</h2>
-
-		<div class="getting_started_container content-padding">
-			<div class="row">
-				
-				<!-- option 1 -->
-				<%=link_to new_customer_path do %>
-					<div class="small-12 medium-4 columns">
-						<h4>Add a New Client</h4>
-					</div>
-				<% end %>
-
-				<!-- option 2 -->
-				<%=link_to new_request_path do %>
-					<div class="small-12 medium-4 columns">
-						<h4>Add a Request to an Existing Client</h4>
-					</div>
-				<% end %>
-
-				<!-- option 3 -->
-				<%=link_to requests_path do %>
-					<div class="small-12 medium-4 columns">
-						<h4>Update an Ongoing Request</h4>
-					</div>
-				<% end %>
-
-
-
-			</div>
-
-
-			
-
-					
-		</div>
-
-
-	</div>
-
-
+<%= render "getting_started" %>
+	
 	<!-- <fieldset> -->
 
 		<div class="small-12 medium-12 large-7 columns">
@@ -71,6 +28,8 @@
 			
 
 		</div>
+
+		
 	<!-- </fieldset> -->
 
 
