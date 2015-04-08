@@ -6,11 +6,14 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @requests = @customer.requests.chronological
+    @requests = @customer.requests.to_a
   end
 
   def new
     @customer = Customer.new
+    @cus_id = (Customer.all.count + 1)
+    @customer.requests.build
+    @req = Request.new
   end
 
   def edit
@@ -60,7 +63,7 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:user_id, :company_name)
+      params.require(:customer).permit(:user_id, :company_name, requests_attributes: [:id, :customer_id, :contact_firstname, :contact_lastname, :title, :email, :phone, :street_address, :city, :date, :zip_code])
     end
 
 end
