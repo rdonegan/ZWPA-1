@@ -9,7 +9,9 @@
       <tr>
       	<td>
       		<%if note.image.exists?%>
-      			<%= image_tag note.image.url(:thumb) %></br>
+            <%= link_to note_path(note) do%>
+      			   <%= image_tag note.image.url(:thumb) %></br>
+            <%end%>
       		<%end%>
       		<%= link_to note.created_at.strftime('%b %e, %Y'), note_path(note) %></td>
         <td>
