@@ -1,6 +1,6 @@
 <% if !@documents.empty? %>
 
-  <table>
+  <table width="100%">
     
 
     <tbody>
@@ -9,14 +9,14 @@
 
           <tr>
            
-            <td width="300"><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
+            <td><%=link_to "Site Questionnaire - " + doc.created_at.strftime('%b %e, %Y'), edit_walkthrough_path(doc) %> </td>
             
             <td>></td>
           </tr>
 
         <%else%>
           <tr>
-            <td width="300"><%=link_to doc.generator + " Audit - " + doc.created_at.strftime('%b %e, %Y'), doc %> </td>
+            <td><%=link_to doc.generator + " Audit - " + doc.created_at.strftime('%b %e, %Y'), doc %> </td>
             
             <td>></td>
 
