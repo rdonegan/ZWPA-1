@@ -12,6 +12,12 @@ class AuditsController < ApplicationController
   # GET /audits/1.json
   def show
     @wastes = @audit.wastes.to_a
+    @csvWaste = @audit.wastes
+    respond_to do |format|
+      format.html
+      format.csv { send_data Waste.to_csv(@csvWaste)}
+      format.xls { send_data Waste.to_csv(@csvWaste, col_sep: "\t") }
+    end
   end
 
   # GET /audits/new
@@ -38,7 +44,8 @@ class AuditsController < ApplicationController
         format.html { redirect_to @audit, notice: 'Audit was successfully created.' }
         format.json { render action: 'show', status: :created, location: @audit }
       else
-        format.html { render action: 'new' }
+        flash.keep[:notice] = @audit.errors
+        format.html { redirect_to controller: 'audits', action: 'new', request_id: @audit.request_id }
         format.json { render json: @audit.errors, status: :unprocessable_entity }
       end
     end
@@ -52,7 +59,8 @@ class AuditsController < ApplicationController
         format.html { redirect_to @audit, notice: 'Audit was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        flash.keep[:notice] = @audit.errors
+        format.html { redirect_to controller: 'audits', action: 'edit', request_id: @audit.request_id }
         format.json { render json: @audit.errors, status: :unprocessable_entity }
       end
     end

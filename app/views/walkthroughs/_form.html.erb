@@ -1,5 +1,17 @@
 <%= simple_form_for(@walkthrough, html: { class: 'form-horizontal form-sub'}) do |f| %>
 
+  <% if not flash[:notice].nil? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flash[:notice].count, "error") %> prohibited this questionnaire from being saved:</h2>
+
+      <ul>
+      <% flash[:notice].full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   
     <div class="small-12 medium-6 columns">
       <h1>Initial Questionnaire</h1>
@@ -19,8 +31,7 @@
       <%= f.hidden_field :request_id %><br>
     </div>
 
-
-    <%= f.input :created_at, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date"}, label: "Date of Walkthrough" %>
+    <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date", readonly:"readonly"}, label: "Date of Walkthrough" %>
 
 
 
@@ -872,7 +883,7 @@
       <nav class="top-bar bottom-bar" >
         <section class="top-bar-section">
 
-          <%= link_to new_note_path do %>
+          <%= link_to new_note_path(:request_id => @walkthrough.request_id) do %>
             <div class="bottom-button">
               Add Note
 

@@ -15,6 +15,7 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new
+    @note.request_id = params[:request_id]
   end
 
   # GET /notes/1/edit

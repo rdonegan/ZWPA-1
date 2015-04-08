@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326152221) do
+ActiveRecord::Schema.define(version: 20150406182325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 20150326152221) do
     t.datetime "updated_at"
     t.string   "zip_code"
   end
+
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username"
@@ -128,11 +138,11 @@ ActiveRecord::Schema.define(version: 20150326152221) do
     t.datetime "updated_at"
     t.string   "recycle_other_corded_equipment"
     t.text     "waste_containers_other"
+    t.date     "date"
   end
 
   create_table "wastes", force: true do |t|
     t.integer  "audit_id"
-    t.text     "note"
     t.float    "weight"
     t.string   "material_type"
     t.datetime "created_at"

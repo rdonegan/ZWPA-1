@@ -12,12 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :request_id %><br>
-    <%= f.collection_select :request_id, Request.chronological.all, :id, :date, prompt: "Select request..." %>
+    <%= f.hidden_field :request_id %>
   </div>
 
   <div class="field">
-    <%= f.label :image %><br>
+    <%= f.label :image, 'Image - 5 MB Max Image Size' %><br>
     <%= f.file_field :image %>
   </div>
 
@@ -27,6 +26,6 @@
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save", class: 'button'%>
   </div>
 <% end %>

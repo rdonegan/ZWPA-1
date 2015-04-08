@@ -1,9 +1,9 @@
-<table class="table">
+<table class="table" width="100%">
   <tr>
-    <th width="200">Client</th>
-    <th width="120">Generator</th>
-    <th width="120">Start Date</th>
-    <th width="120">End Date</th>
+    <th>Client</th>
+    <th>Generator</th>
+    <th>Start Date</th>
+    <th>End Date</th>
   </tr>
 
   <% audits.each do |audit| %>
@@ -19,7 +19,7 @@
   <% end %>
 </table></br>
 
-<%= link_to "View All Audits", audits_path %>
+
 
 <!-- Add the pagination using will_paginate gem -->
 <!-- <span class="paginate"> -->

@@ -31,6 +31,46 @@ $(function() {
     dateFormat: "yy-mm-dd"
   });
 
+  //FOR WALKTHROUGH
+  //check which checkboxes/radio boxes need to be checked on load, then add css
+  $( document ).ready(function(){
+
+  	//option buttons on home page hover
+  	$('.option').hover(function(){
+  		$(this).toggleClass('option_hover');
+  	})
+
+  	//iterate through radio boxes first
+  	$('input:radio').each(function() {
+  		
+  		if(this.checked==true){
+
+  			if($(this).val()=="Yes"){
+
+				$(this).parent().addClass('radio-checked-yes');
+			}
+			else if($(this).val()=="No"){
+				$(this).parent().addClass('radio-checked-no');
+			}
+			else{
+				$(this).parent().addClass('radio-checked-dk');
+			}
+  		}
+
+  	})
+
+  	//iterate checkboxes
+  	$('input:checkbox').each(function() {
+  		if(this.checked==true){
+  			
+  			$(this).parent().addClass('boxed-checked');
+  		}
+  		
+
+  	})
+
+  });
+
 
   	// alternate css checkbox groups
 
@@ -44,6 +84,9 @@ $(function() {
 	$('input:radio').change(function(){
 		var theName = this.name;
 
+		//Iterate through all other radio buttons with the same name
+		//attribute to toggle their selection css.
+
 		$('input:radio').each(function() {
 			if(this.name==theName){
 				if($(this).is(':checked')){
@@ -53,7 +96,7 @@ $(function() {
 					}
 					else if($(this).val()=="No"){
 						$(this).parent().addClass('radio-checked-no');
-						console.log("no");
+						
 					}
 					else{
 						$(this).parent().addClass('radio-checked-dk');
@@ -86,29 +129,6 @@ $(function() {
 });
 
 
-
-// nav bar shrink
-
-$(document).scroll(function() {
-
-    if ($(this).scrollTop() >= 50) {
-
-    	// $(".contain-to-grid").addClass("padding-on-my-header");
-    	$(".top-margin").css("height", "45px");
-    	$(".top-margin").css("padding-top", "0px");
-    	
-        // $('#logo-image').attr('src', 'img/Acme_Monogram_Colour.png')
-        
-
-    }
-    if ($(this).scrollTop() < 50) {
-
-        // $(".contain-to-grid").removeClass("padding-on-my-header");
-		$(".top-margin").css("height", "55px");
-		$(".top-margin").css("padding-top", "5px");
-        
-    }
-});
 
 //bottom nav bar
 

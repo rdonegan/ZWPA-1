@@ -5,6 +5,7 @@ class Walkthrough < ActiveRecord::Base
 
 	# Validations
 	validates_presence_of :request_id
+	validates_date :date
 	validates_numericality_of :request_id, only_integer: true, greater_than: 0
 
 	validates_numericality_of :square_footage, only_integer: true, greater_than: 0, allow_nil: true

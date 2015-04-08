@@ -24,6 +24,7 @@ class RequestsController < ApplicationController
 
   # GET /requests/1/edit
   def edit
+
   end
 
   # POST /requests
@@ -74,6 +75,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:customer_id, :contact_firstname, :contact_lastname, :title, :email, :phone, :street_address, :city, :date, :Note, :request_id, :photo, :description)
+      params.require(:request).permit(:customer_id, :contact_firstname, :contact_lastname, :title, :email, :phone, :street_address, :city, :zip_code, :date, :Note, :request_id, :photo, :description)
     end
 end
