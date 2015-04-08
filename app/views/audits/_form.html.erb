@@ -91,8 +91,9 @@
                   <%= waste_form.text_field :origin, placeholder: "Enter origin..." %>
                 </div>
           <% end %>
-          <p><%= f.link_to_add "+ Add an item", :wastes, class: 'button round tiny left' %></p>         
-          <% end %> 
+            <%= f.link_to_add "+ Add an item", :wastes, class: 'button round tiny left' %>  
+          <% end %>
+         
           <p>
             <br /><%#= audit_form.link_to_add("Add Item", :wastes, :class => 'button tiny') %>
           </p>
