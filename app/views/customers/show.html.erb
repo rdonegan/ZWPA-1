@@ -5,6 +5,7 @@
 	<div class="add_button"><%= link_to 'Update Client', edit_customer_path(@customer), class: 'button tiny left ' %></div>
 </div>
 
+<div class="small-12 columns">
 <% if !@requests.empty? %>
 	<table>
 		<thead>
@@ -17,9 +18,9 @@
 		<tbody>
 			<% @requests.each do |r| %>
 				<tr>
-					<td width="200"><%= r.contact_firstname %></td>
-					<td width="150"><%= r.contact_lastname %></td>
-					<td width="100"><%= r.title %></td>
+					<td><%= r.contact_firstname %></td>
+					<td ><%= r.contact_lastname %></td>
+					<td ><%= r.title %></td>
 				</tr>
 			<% end %>
 		</tbody>
@@ -27,6 +28,8 @@
 <% else %>
 	<p> There are no waste entries.</p>
 <% end %> 
+
+</div>
 
 <div class="small-12 columns">
     <%= render 'customer_requests' %>
