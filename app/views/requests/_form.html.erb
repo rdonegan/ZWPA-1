@@ -17,8 +17,7 @@
 
   <div class="small-12 medium-6 columns">
     <div class="actions">
-      
-      <%= f.submit "Save", class: 'button' %>
+      <br><br><br><br>
     </div>
   </div>
 
@@ -37,7 +36,7 @@
       <div class="small-12 medium-6 columns">
         <div class="field row">
           <div class="small-3 columns">
-            <label for="right-label" class="left inline">Date</label>
+            <label for="right-label" class="left inline">* Date</label>
           </div>
           <div class="small-9 columns">
             <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Date of Audit", readonly:"readonly"}, label: false %>
@@ -140,28 +139,12 @@
       </div>
     </div>
 
-    <div class="sticky-footer">
-    <%#= render 'bottom_bar' %>
-      <div class="fixed-bottom  show-for-medium-down">
-        <nav class="top-bar bottom-bar" >
-          <section class="top-bar-section">
-            <%= link_to new_note_path do %>
-              <div class="bottom-button">
-                Add Note
-              </div>
-            <%end%>
-
-            <div class="bottom-button save-button">
-              Save
-            </div>
-             <!-- <ul class="left">
-          <li><%#=link_to 'Add Note', new_note_path, class: "button bottom_button"%></li>
-          <li><%#=link_to 'Save', new_note_path, class: "button bottom_button"%></li>
-      </ul> -->
-      </section>
-      </nav>
+<div class="small-12 medium-6 columns">
+    <div class="actions">
+      
+      <%= f.submit "Save", class: 'button' %>
     </div>
-  </div> 
-
+  </div>
+    
 <!--  -->
 <% end %>
