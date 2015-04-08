@@ -111,11 +111,12 @@
         <div class="fixed-bottom  show-for-medium-down">
           <nav class="top-bar bottom-bar" >
             <section class="top-bar-section">
-              <%= link_to new_note_path do %>
-                <div class="bottom-button">
-                  Add Note
-                </div>
-              <%end%>
+              
+          <%= link_to new_note_path(:request_id => @audit.request_id), data: { confirm: 'Are you sure? Unsaved audit information will be lost!!' } do %>
+            <div class="bottom-button">
+              Add Notes
+            </div>
+                    <% end %>
 
               <div class="bottom-button save-button">
                 Save

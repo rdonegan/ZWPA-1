@@ -871,13 +871,13 @@
       <nav class="top-bar bottom-bar" >
         <section class="top-bar-section">
 
-          <%= link_to new_note_path do %>
+          <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you sure? Unsaved Questionnaire information will be lost!!' } do %>
+           <!-- (@walkthrough.request_id) -->
             <div class="bottom-button">
-              Add Note
-
+              Add Notes
             </div>
-          <%end%>
-          
+                    <% end %>
+
           <div class="bottom-button save-button">
             Save
           </div>
