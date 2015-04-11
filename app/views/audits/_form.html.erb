@@ -104,15 +104,37 @@
             <p><%= f.link_to_add "+ Add an item", :wastes, class: 'button round tiny left' %></p>         
           <% end %> 
         </div> 
-      </fieldset>
+
+        </fieldset>
+      </div>
+
+      <div class="sticky-footer">
+      <%#= render 'bottom_bar' %>
+        <div class="fixed-bottom  show-for-medium-down">
+          <nav class="top-bar bottom-bar" >
+            <section class="top-bar-section">
+              
+          
+
+            </section>
+          </nav>
+        </div>
+      </div>
     </div>
-    
   </div>
+
 
   <div class="small-12 medium-6 columns">
       <div class="actions">
         <%= audit_form.submit "Save Audit", class: 'button' %>
+        <%= link_to new_note_path(request_id: @req_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved audit information will be lost!' } do %>
+            <div class="button">
+              Add Note
+            </div>
+          <% end %>
       </div>
   </div>
 
 <% end %>
+</div>
+
