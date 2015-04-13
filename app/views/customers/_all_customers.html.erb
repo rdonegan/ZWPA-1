@@ -1,4 +1,4 @@
-<table>
+<table width="100%">
   <thead>
     <tr>
       <th>Client Name</th>
@@ -13,7 +13,7 @@
     <% @customers.each do |customer| %>
       <tr>
         <td><%= link_to customer.company_name, customer %></td>
-        <td><%= link_to customer.requests.chronological.last.date.to_s, customer.requests.chronological.last%></td>
+        <td><%= link_to customer.requests.chronological.last.date.strftime('%b %e, %Y'), customer.requests.chronological.last%></td>
         <td><%= link_to customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname, customer.requests.chronological.last %></td>
         <!-- Make this an icon later -->
         <td><%= link_to '>', customer%></td>
@@ -21,3 +21,8 @@
     <% end %>
   </tbody>
 </table>
+
+<br/>
+<span class="paginate">
+<%= will_paginate @customers, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>

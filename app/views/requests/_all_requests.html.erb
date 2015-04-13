@@ -1,4 +1,4 @@
-<table>
+<table width="100%">
   <thead>
     <tr>
       <th>Client</th>
@@ -19,3 +19,9 @@
     <% end %>
   </tbody>
 </table>
+
+<br/>
+
+<span class="paginate">
+<%= will_paginate @requests, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>
