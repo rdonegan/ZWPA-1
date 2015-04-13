@@ -85,3 +85,8 @@ a:visited {
 	color: white;
 }
 
+
+tr {
+    cursor: pointer;
+}
+
