@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @requests = @customer.requests.to_a
+    @requests = @customer.requests.paginate(:page => params[:page]).per_page(10)
   end
 
   def new

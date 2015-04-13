@@ -1,3 +1,4 @@
+<br/>
 <h4>Client Requests</h4>
 <% if !@requests.empty? %>
 
@@ -14,5 +15,16 @@
 		<td>No requests created at this time...</td></br>
 <%end%>
 
-</table></br>
+</table>
+
+
+<br/>
+
+<span class="paginate">
+<%= will_paginate @requests, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>
+
+
+
+</br>
  
