@@ -1,4 +1,4 @@
-<%= simple_form_for(@request, html: { class: 'form-horizontal form-sub'}) do |f| %>
+<%= simple_form_for(@request, html: { class: 'form-horizontal form-sub reqForm'}) do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
