@@ -26,11 +26,13 @@
       <div class="small-12 medium-6 columns">
         <div class="field row">
           <div class="small-3 columns">
-            <label for="right-label" class="left inline">Client</label>
+            <label for="right-label" class="left inline">* Client</label>
           </div>
           <div class="small-9 columns">
             <%= f.collection_select :customer_id, Customer.alphabetical.all, :id, :company_name, prompt: "Select client..." %>
+          <%=link_to "Add new client...", new_customer_path%><br/></br>
           </div>
+
         </div>
       </div>
       <div class="small-12 medium-6 columns">
@@ -141,7 +143,7 @@
 
 <div class="small-12 medium-6 columns">
     <div class="actions">
-      
+      <%= link_to 'View all Requests', requests_path, :class => 'button' %>
       <%= f.submit "Save", class: 'button' %>
     </div>
   </div>
