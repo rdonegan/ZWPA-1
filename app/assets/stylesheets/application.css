@@ -90,8 +90,6 @@ tr {
     cursor: pointer;
 }
 
-
-
 table tbody tr:hover{
 	background-color: #D3D3D3;
 }
