@@ -15,7 +15,11 @@
         <tr>
           <td><%= link_to request.customer.company_name, request%></td>
           <td><%= link_to request.date.strftime('%b %e, %Y'), request %></td>
-          <td><%= link_to request.contact_firstname + ' ' + request.contact_lastname, request %></td>
+          <% if request.contact_firstname.blank? %>
+            <td><%= link_to "-", request %></td>
+          <% else %>
+            <td><%= link_to request.contact_firstname + ' ' + request.contact_lastname, request %></td>
+          <% end %>
           <td><%= link_to '>', request %></td>
         </tr>
       <% end %>
