@@ -1,6 +1,19 @@
 <%= simple_nested_form_for(@customer, html: { class: 'form-horizontal', class: 'formtext' }) do |customer_form| %>
+
+
+ <% if not flash[:notice].nil? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flash[:notice].count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% flash[:notice].full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   
-  <% if @customer.errors.any? %>
+<!--   <% if @customer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this client from being saved:</h2>
 
@@ -10,7 +23,7 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> -->
   <!-- took away user_id input and set it to always be user_id=1 in the controller -->
 
   <div class="row">
