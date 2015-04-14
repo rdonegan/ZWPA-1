@@ -15,8 +15,13 @@
       <% @customers.each do |customer| %>
         <tr>
           <td><%= link_to customer.company_name, customer %></td>
-          <td><%= link_to customer.requests.chronological.last.date.strftime('%b %e, %Y'), customer.requests.chronological.last%></td>
-          <td><%= link_to customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname, customer.requests.chronological.last %></td>
+          <% if customer.requests.any? %>
+            <td><%= link_to customer.requests.chronological.last.date.strftime('%b %e, %Y'), customer%></td>
+            <td><%= link_to customer.requests.chronological.last.contact_firstname + ' ' + customer.requests.chronological.last.contact_lastname, customer %></td>
+          <% else %>
+            <td><%= link_to "None", customer%></td>
+            <td><%= link_to "-", customer %></td>
+          <% end %>
           <!-- Make this an icon later -->
           <td><%= link_to '>', customer%></td>
         </tr>
