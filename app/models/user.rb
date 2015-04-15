@@ -6,8 +6,7 @@
 class User < ActiveRecord::Base
 	
 	# Adds method to set and authenticate against a Bcrypt password
-	# Uncomment this line later.
-	# has_secure_password
+	has_secure_password
 
 	# Relationships
 	has_many :customers
