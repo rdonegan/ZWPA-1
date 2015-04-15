@@ -13,6 +13,7 @@ ZwpaApp::Application.routes.draw do
   resources :requests
 
   resources :users
+  resources :sessions
 
   get 'home/index'
   root 'home#index'
