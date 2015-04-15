@@ -40,6 +40,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
     callsite (0.0.11)
+    cancancan (1.10.1)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -255,6 +256,7 @@ DEPENDENCIES
   activerecord-session_store
   better_errors
   binding_of_caller
+  cancancan
   capistrano
   capistrano-bundler
   capistrano-passenger
