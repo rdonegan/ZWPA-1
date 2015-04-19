@@ -61,7 +61,7 @@ class WalkthroughsController < ApplicationController
   def destroy
     @walkthrough.destroy
     respond_to do |format|
-      format.html { redirect_to walkthroughs_url }
+      format.html { redirect_to controller: 'requests', action: "show", id: @walkthrough.request_id }
       format.json { head :no_content }
     end
   end
