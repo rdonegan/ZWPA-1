@@ -71,7 +71,7 @@ class AuditsController < ApplicationController
   def destroy
     @audit.destroy
     respond_to do |format|
-      format.html { redirect_to audits_url }
+      format.html { redirect_to controller: 'requests', action: "show", id: @audit.request_id }
       format.json { head :no_content }
     end
   end
