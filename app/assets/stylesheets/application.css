@@ -94,3 +94,24 @@ table tbody tr:hover{
 	background-color: #D3D3D3;
 }
 
+.update{
+	background-color: RED;
+}
+
+.custom-buttom-update{
+	
+	@include button(
+$padding: emCalc(12),
+$bg: orange,
+$radius: true,
+$full-width: false,
+$is-input: false
+);
+
+}
+
+/*.top-bar-section ul li > a.button{
+	background-color: #800B46 !important;
+	border-color:#000;
+}
+*/
