@@ -32,6 +32,7 @@ GEM
     addressable (2.3.6)
     ansi (1.4.3)
     arel (4.0.2)
+    bcrypt-ruby (3.1.2)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -40,6 +41,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
     callsite (0.0.11)
+    cancancan (1.10.1)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -253,8 +255,10 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-session_store
+  bcrypt-ruby (~> 3.1.2)
   better_errors
   binding_of_caller
+  cancancan
   capistrano
   capistrano-bundler
   capistrano-passenger

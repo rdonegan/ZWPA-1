@@ -1,4 +1,5 @@
 class WalkthroughsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_walkthrough, only: [:show, :edit, :update, :destroy]
 
   # GET /walkthroughs

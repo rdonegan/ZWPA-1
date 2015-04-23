@@ -9,15 +9,19 @@
   <h1 class="button-head">Documents</h1>
   <div class="add_button show-for-medium-up">
      <ul class="button-group radius ">
-      <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
-      <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
+      <% if can? :manage, :all %>
+        <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
+        <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
+      <% end %>
     </ul>
   </div>
 
   <div class="add_button show-for-small-only">
    <ul class="button-group radius ">
-    <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
-    <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
+   <% if can? :manage, :all %>
+     <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
+     <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
+   <% end %>
   </ul>
 </div>
 
@@ -29,13 +33,18 @@
 <h1 class="button-head">Notes</h1>
   <div class="add_button show-for-medium-up">
      <ul class="button-group radius ">
+     <% if can? :manage, :all %>
       <li><%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%></li>
+     <% end %>
       
     </ul>
   </div>
-
+ 
   <div class="add_button show-for-small-only">
+   <% if can? :manage, :all %>
     <%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%>
+   <% end %>
+    
   
 </div>
 

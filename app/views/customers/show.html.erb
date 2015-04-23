@@ -4,7 +4,10 @@
 
 <div class="small-12 columns">
 	<h1 class="button-head"><%=@customer.company_name%></h1>
+	<% if can? :manage, :all %>
 	<div class="add_button"><%= link_to 'Update Client', edit_customer_path(@customer), class: 'button tiny left ' %></div>
+	<% end %>
+	
 </div>
 
 
@@ -15,5 +18,8 @@
 
 <div class="small-12 columns">
 	<%= link_to 'Back', customers_path, class: "button" %>
-	<%= link_to '+ Add Request', new_request_path(:customer_id => @customer.id), class: "button" %>
+	<% if can? :manage, :all %>
+		<%= link_to '+ Add Request', new_request_path(:customer_id => @customer.id), class: "button" %>
+	<% end %>
+	
 </div>
