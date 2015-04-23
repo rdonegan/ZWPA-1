@@ -139,23 +139,7 @@
                   </div>
                 </div>
                 
-<!-- 
-                *First Name: <%= request_form.text_field :contact_firstname %>
 
-                Last Name: <%= request_form.text_field :contact_lastname %>
-
-                Title: <%= request_form.text_field :title %>
-
-                Email: <%= request_form.text_field :email %>
-
-                Phone: <%= request_form.text_field :phone %>
-
-                Street Address: <%= request_form.text_field :street_address %>
-
-                City: <%= request_form.text_field :city %>
-
-                Zip: <%= request_form.text_field :zip_code %>
-                <%= request_form.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter Date"} %> -->
             <% end %>
           <% end %> 
         </div> 
@@ -164,7 +148,7 @@
 
   <div class="actions">
     <%= link_to 'Back to Clients', customers_path, class: "button small" %>
-    <%= customer_form.submit "Save", class: 'button small' %>
+    <%= customer_form.submit "Save", class: 'button success small' %>
   </div>
   </div>
 <% end %>
