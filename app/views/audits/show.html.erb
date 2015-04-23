@@ -43,12 +43,15 @@
 
   </div>
 
-
   <!-- AUDIT DETAILS - SHOW MEDIUM UP -->
   <div class="medium-4 columns show-for-medium-up">
     <%= render 'audit_details'%>
 
   </div>
+        
+  <% if can? :manage, :all %>
+    <%= link_to 'Delete', @audit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+  <% end %>
 
 </div>
 

@@ -20,7 +20,7 @@
       <div class="actions">
         <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
         <%= f.submit "Save", class: 'button' %>
-        
+                 
       </div>
     </div>
 
@@ -75,10 +75,14 @@
     <%= render 'zero_policy_leed', f: f %>
 
    <!-- Only show on large screens -->
-   <div class="small-12 medium-6 columns show-for-large">
+   <div class="small-12 medium-8 columns show-for-large">
       <div class="actions">
         <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
         <%= link_to 'Add Note', new_note_path(:request_id => @walkthrough.request_id), class: 'button' %>
+        <% if not @walkthrough.date.nil? %>
+           <%= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+        <% end %>
+
         <%= f.submit "Save", class: 'button' %>
 
         
@@ -87,6 +91,17 @@
 
   <!-- Only show on medium and down screens -->
   <%= render 'bottom_bar', f: f %>
+  </div>
+
+  <%#= f.submit "Save", class: 'button' %>
+  
+
+
+  <div class="sticky-footer">
+    <%#= render 'bottom_bar' %>
+      <div class="fixed-bottom  show-for-medium-down">
+      <nav class="top-bar bottom-bar" >
+        <section class="top-bar-section">
 
           <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved Questionnaire information will be lost!' } do %>
            <!-- (@walkthrough.request_id) -->
