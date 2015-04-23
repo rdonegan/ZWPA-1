@@ -78,7 +78,6 @@
    <div class="small-12 medium-8 columns show-for-large">
       <div class="actions">
         <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
-<<<<<<< HEAD
         <%= link_to 'Add Note', new_note_path(:request_id => @walkthrough.request_id), class: 'button' %>
         <% if not @walkthrough.date.nil? %>
            <%= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
@@ -86,9 +85,9 @@
 
         <%= f.submit "Save", class: 'button' %>
 
-=======
+
         <%= f.submit "Save", class: 'button success' %>
->>>>>>> 43450abc5ecc25425bed7f60dfa81683fbf58c80
+
         
       </div>
     </div>
@@ -112,7 +111,7 @@
             <!-- <div class="small-12 medium-6 columns show-for-large">
               Add Notes
             </div> -->
-                    <% end %>
+          <% end %>
 
 <!--           <div class="bottom-button save-button"  >
             Save
