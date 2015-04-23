@@ -21,7 +21,7 @@
 		  <%= @note.description %>
 		</p>
 
-		<%= link_to 'Edit', edit_note_path(@note), class: "button" %> 
-		<%= link_to 'Back to Request', @note.request , class: "button" %>
-
-</div>
+		<%= link_to 'Edit', edit_note_path(@note), class: "button" %>
+        <td><%= link_to 'Delete', :note, method: :delete, data: { confirm: 'Are you sure?' }, class: "button" %></td>		
+        <%= link_to 'Back to Request', request_path(@note.request_id), class: "button" %>
+ </div>

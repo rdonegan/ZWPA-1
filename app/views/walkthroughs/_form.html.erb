@@ -75,10 +75,12 @@
     <%= render 'zero_policy_leed', f: f %>
 
    <!-- Only show on large screens -->
-  <div class="small-12 medium-6 columns show-for-large">
+   <div class="small-12 medium-6 columns show-for-large">
       <div class="actions">
         <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
+        <%= link_to 'Add Note', new_note_path(:request_id => @walkthrough.request_id), class: 'button' %>
         <%= f.submit "Save", class: 'button' %>
+
         
       </div>
     </div>
@@ -86,4 +88,25 @@
   <!-- Only show on medium and down screens -->
   <%= render 'bottom_bar', f: f %>
 
+          <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved Questionnaire information will be lost!' } do %>
+           <!-- (@walkthrough.request_id) -->
+            <!-- <div class="small-12 medium-6 columns show-for-large">
+              Add Notes
+            </div> -->
+                    <% end %>
+
+<!--           <div class="bottom-button save-button"  >
+            Save
+          </div> -->
+
+
+          <!-- <ul class="left">
+          <li><%#=link_to 'Add Note', new_note_path, class: "button bottom_button"%></li>
+          <li><%#=link_to 'Save', new_note_path, class: "button bottom_button"%></li>
+      </ul> -->
+      </section>
+      
+      </nav>
+    </div>
+  </div> 
 <% end %>
