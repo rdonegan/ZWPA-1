@@ -1,13 +1,15 @@
+<h5>
+  <%= link_to "Home", root_url %> / 
+  <%= link_to "Requests", requests_path %> /
+  <%= link_to @audit.request.customer.company_name+" - "+@audit.request.date.strftime('%B %e, %Y'), @audit.request %> /
+  <%= link_to @audit.generator %>
+</h5>
 
 <!-- BREADCRUMBS -->
 <div class="row">
   <div class="small-12 columns">
     <p id="notice"><%= notice %></p>
-    <h4>
-      <%= link_to @audit.request.customer.company_name, @audit.request.customer %> > 
-        <%= @audit.request.date.strftime('%B %e, %Y') %> >
-        <%= @audit.generator %>
-    </h4>
+    
 
   </div>
 
