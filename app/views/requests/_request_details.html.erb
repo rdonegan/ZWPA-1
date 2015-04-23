@@ -3,7 +3,7 @@
 		<h4 class="button-head">Request Details</h4>
 		<div>
     <% if can? :manage, :all %>
-      <%= link_to 'Update', edit_request_path(@request), class: 'button round tiny left ' %>
+      <%= link_to 'Update', edit_request_path(@request), class: 'button tiny left ' %>
     <% end %>
     </div></br>
 	</p>
@@ -32,7 +32,7 @@
 
   <p>
     <strong>Email:</strong>
-    <% if @request.title.empty? %>
+    <% if @request.email.empty? %>
       <%= "n/a" %>
     <% else %>
       <%= @request.email %>

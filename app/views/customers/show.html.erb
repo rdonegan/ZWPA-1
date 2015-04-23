@@ -17,15 +17,23 @@
 </div>
 
 
+<!-- TITLE AND EDIT BUTTON -->
 
-<div class="small-12 columns">
-    <%= render 'customer_requests' %>
- </div>
+	<div class="small-12 columns">
+		<h1 class="button-head">Client Requests</h1>
+		<div class="add_button"><%= link_to '+ Add Request', new_request_path(:customer_id => @customer.id), class: "button tiny round left" %></div>
+	</div>
+
+
+
+	<div class="small-12 columns">
+    	<%= render 'customer_requests' %>
+	</div>
+
 
 <div class="small-12 columns">
 	<%= link_to 'Back', customers_path, class: "button" %>
 	<% if can? :manage, :all %>
 		<%= link_to '+ Add Request', new_request_path(:customer_id => @customer.id), class: "button" %>
 	<% end %>
-	
 </div>

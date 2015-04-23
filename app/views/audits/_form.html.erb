@@ -124,14 +124,18 @@
   </div>
 
 
-  <div class="small-12 medium-6 columns">
+  <div>
       <div class="actions">
-        <%= audit_form.submit "Save Audit", class: 'button' %>
-        <%= link_to new_note_path(request_id: @req_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved audit information will be lost!' } do %>
-            <div class="button">
-              Add Note
-            </div>
-          <% end %>
+       
+
+        <% if defined?(edit) && edit %>
+          <%= link_to 'Cancel', audit_path(@audit), class: 'button tiny alert' %>
+        <% elsif defined?(newaudit) && newaudit %>
+          <%= link_to 'Back', requests_path, :class => 'button tiny' %> 
+        <%end%>
+        <%= link_to 'Add Note' ,new_note_path(request_id: @req_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved audit information will be lost!' }, class: 'button tiny' %>
+        <%= audit_form.submit "Save", class: 'button tiny right success' %>
+
       </div>
   </div>
 

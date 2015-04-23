@@ -5,5 +5,4 @@
   <%= link_to @audit.generator %>
 </h5>
 
-<%= render 'form' %>
-<%= link_to 'Cancel', audit_path(@audit), class: 'button' %>
+<%= render 'form', :edit => true %>
