@@ -49,8 +49,9 @@
 
   </div>
         
-<%= link_to 'Delete', @audit, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+  <% if can? :manage, :all %>
+    <%= link_to 'Delete', @audit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+  <% end %>
 
 </div>
 
