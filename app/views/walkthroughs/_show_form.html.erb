@@ -73,5 +73,32 @@
 
   <!-- Only show on medium and down screens -->
   <%= render 'bottom_bar', f: f %>
+  </div>
+
+  <div class="sticky-footer">
+      <div class="fixed-bottom  show-for-medium-down">
+      <nav class="top-bar bottom-bar" >
+        <section class="top-bar-section">
+
+          <%= link_to new_note_path(:request_id => @walkthrough.request_id) do %>
+            <div class="bottom-button">
+              Add Note
+
+            </div>
+          <%end%>
+          
+          <div class="bottom-button save-button">
+            Save
+          </div>
+
+      <%= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+      </section>
+      
+      </nav>
+    </div>
+  </div> 
+<% end %>
 
 <% end %>

@@ -87,6 +87,17 @@
 
   <!-- Only show on medium and down screens -->
   <%= render 'bottom_bar', f: f %>
+  </div>
+
+  <%#= f.submit "Save", class: 'button' %>
+  <%#= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+  <div class="sticky-footer">
+    <%#= render 'bottom_bar' %>
+      <div class="fixed-bottom  show-for-medium-down">
+      <nav class="top-bar bottom-bar" >
+        <section class="top-bar-section">
 
           <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved Questionnaire information will be lost!' } do %>
            <!-- (@walkthrough.request_id) -->
