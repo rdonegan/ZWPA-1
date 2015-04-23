@@ -80,7 +80,7 @@
         <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
 
         <% if not @walkthrough.date.nil? %>
-           <%= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+           <%= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button alert' %>
         <% end %>
 
         <%= f.submit "Save", class: 'button success' %>
@@ -97,22 +97,22 @@
   
 
 
-<!--   <div class="sticky-footer">
+  <div class="sticky-footer">
     <%#= render 'bottom_bar' %>
       <div class="fixed-bottom  show-for-medium-down">
       <nav class="top-bar bottom-bar" >
         <section class="top-bar-section">
 
-          <%#= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved Questionnaire information will be lost!' } do %>
+          <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you sure you want to navigate away from this page? Unsaved Questionnaire information will be lost!' } do %>
      
-                    <% #end %>
+                    <% end %>
 
 
       </section>
       
       </nav>
     </div>
-  </div>  -->
+  </div> 
 
 
 <% end %>
