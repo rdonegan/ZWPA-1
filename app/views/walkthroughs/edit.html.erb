@@ -1,5 +1,4 @@
 <h5>
-  <%= link_to "Home", root_url %> / 
   <%= link_to "Requests", requests_path %> /
   <%= link_to @walkthrough.request.customer.company_name+" - "+@walkthrough.request.date.strftime('%B %e, %Y'), @walkthrough.request %> /
   <%= link_to "Initial Questionnaire", @walkthrough %>

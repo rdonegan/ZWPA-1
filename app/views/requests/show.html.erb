@@ -1,5 +1,4 @@
-<h5>
-  <%= link_to "Home", root_url %> / 
+<h5> 
   <%= link_to "Requests", requests_path %> /
   <%= link_to @request.customer.company_name+" - "+@request.date.strftime('%B %e, %Y'), @request %>
 </h5>
