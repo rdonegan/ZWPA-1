@@ -1,4 +1,5 @@
 class AuditsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_audit, only: [:show, :edit, :update, :destroy]
 
   # GET /audits
@@ -71,7 +72,7 @@ class AuditsController < ApplicationController
   def destroy
     @audit.destroy
     respond_to do |format|
-      format.html { redirect_to audits_url }
+      format.html { redirect_to controller: 'requests', action: "show", id: @audit.request_id }
       format.json { head :no_content }
     end
   end
@@ -84,7 +85,7 @@ class AuditsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def audit_params
-      params.require(:audit).permit(:request_id, :start_date, :end_date, :generator, :location, wastes_attributes: [:id, :audit_id, :material_type, :weight, :origin])
+      params.require(:audit).permit(:request_id, :start_date, :end_date, :generator, :location, wastes_attributes: [:id, :audit_id, :material_type, :weight, :origin, :_destroy])
     end
 
 end

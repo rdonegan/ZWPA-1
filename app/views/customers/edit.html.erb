@@ -1,6 +1,16 @@
-<h1><%= "Editing Client, " + @customer.company_name%></h1>
+<div class="row">
+	<div class="small-12 columns">
+		<h5>
+			<%= link_to "Clients", customers_path %> /
+			<%= link_to @customer.company_name, @customer %>
+		</h5>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', @customer, class: "button" %> 
-<%= link_to 'All Clients', customers_path, class: "button"  %>
+		<h3><%= "Editing Client, " + @customer.company_name%></h3>
+
+		<%= render 'form' %>
+		
+	</div>
+</div>
+
+

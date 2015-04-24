@@ -1,7 +1,13 @@
+<div class="row">
+	<div class="small-12 columns">
 
+		<h5>
+		  <%= link_to "Requests", requests_path %> /
+		  <%= link_to @walkthrough.request.customer.company_name+" - "+@walkthrough.request.date.strftime('%B %e, %Y'), @walkthrough.request %> /
+		  <%= link_to "Initial Questionnaire", @walkthrough %>
+		</h5>
+	</div>
+	<br><br>
+	<%= render 'form' %>
+</div>
 
-<%= render 'form' %>
-
-<!-- <div class="sticky-footer">
-	<%#= render 'bottom_bar' %>
-</div> -->

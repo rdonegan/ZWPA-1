@@ -50,6 +50,8 @@ gem 'validates_timeliness'
 
 gem 'activerecord-session_store'
 
+gem 'cancancan'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -83,7 +85,7 @@ group :development do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 gem 'unicorn'

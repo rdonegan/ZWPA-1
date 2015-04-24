@@ -1,6 +1,6 @@
 <%= simple_nested_form_for(@audit, html: { class: 'form-horizontal', class: 'formtext' }) do |audit_form| %>
 
-  <% if not flash[:notice].nil? %>
+  <% if not flash[:notice].nil? and not flash[:notice].include? "Logged in!"%>
     <div id="error_explanation">
       <h2><%= pluralize(flash[:notice].count, "error") %> prohibited this audit from being saved:</h2>
 
@@ -15,7 +15,7 @@
     <h1>Audit Form</h1>
   </div>
 
-  <div class="small-12 medium-6 columns">
+  <div class="medium-6 columns show-for-medium-up">
       <div class="actions">
         <br><br><br>
       </div>
@@ -90,29 +90,58 @@
             <%= f.fields_for :wastes do |waste_form| %>
               <%= waste_form.hidden_field :audit_id, input_html: {value: @aud_id}%>
               <div class="row">
-                <div class="small-12 medium-5 columns">
-                  <%= waste_form.select :material_type, ["Batteries", "Cardboard", "Compostable Food Service Ware", "Dairy and Juice Containers", "Electronic Waste", "Fluorescent Tubes", "Food Scraps", "Metal Cans, Glass Bottles, and Jars", "Miscellaneous", "Mixed Paper, Newspaper & Magazines", "Mylar Film", "Paper Towels", "Plastic (1-5 & 7) and Containers", "Plastic Film", "Restroom Waste", "Reuse (Clothes, books, pens, etc.)", "Toner Cartridges", "White Ledger Paper"], prompt: "Material type (required)..." %>
+                <div class="small-12 medium-4 columns">
+                  <%= waste_form.select :material_type, ["Batteries", "Cardboard", "Compostable Food Service Ware", "Dairy and Juice Containers", "Electronic Waste", "Fluorescent Tubes", "Food Scraps", "K-Cups", "Metal Cans, Glass Bottles, and Jars", "Miscellaneous", "Mixed Paper, Newspaper & Magazines", "Mylar Film", "Paper Towels", "Plastic (1-5 & 7) and Containers", "Plastic Film", "Restroom Waste", "Reuse (Clothes, books, pens, etc.)", "Toner Cartridges", "White Ledger Paper"], prompt: "Material type (required)..." %>
                 </div>
                 <div class="small-4 medium-2 columns">
                   <%= waste_form.text_field :weight, placeholder: "Weight (lbs)..." %>
                 </div>
-                <div class="small-8 medium-5 columns">
+                <div class="small-6 medium-4 columns">
                   <%= waste_form.text_field :origin, placeholder: "Enter origin..." %>
+                </div>
+                <div class="small-2 medium-2 columns">
+                  <%= waste_form.link_to_remove 'X', class: 'tiny button round alert', new: true %>
                 </div>
               </div>
             <% end %>
             <p><%= f.link_to_add "+ Add an item", :wastes, class: 'button round tiny left' %></p>         
           <% end %> 
         </div> 
-      </fieldset>
+
+        </fieldset>
+      </div>
+
+      <div class="sticky-footer">
+      <%#= render 'bottom_bar' %>
+        <div class="fixed-bottom  show-for-medium-down">
+          <nav class="top-bar bottom-bar" >
+            <section class="top-bar-section">
+              
+          
+
+            </section>
+          </nav>
+        </div>
+      </div>
     </div>
-    
   </div>
 
-  <div class="small-12 medium-6 columns">
+
+  <div>
       <div class="actions">
-        <%= audit_form.submit "Save Audit", class: 'button' %>
+       
+
+        <% if defined?(edit) && edit %>
+          <%= link_to 'Cancel', audit_path(@audit), class: 'button tiny alert' %>
+        <% elsif defined?(newaudit) && newaudit %>
+          <%= link_to 'Back', requests_path, :class => 'button tiny' %> 
+        <%end%>
+        <%= link_to 'Add Note' ,new_note_path(request_id: @req_id), data: { confirm: 'Are you want to navigate away from this page? Unsaved audit information will be lost!' }, class: 'button tiny' %>
+        <%= audit_form.submit "Save", class: 'button tiny right success' %>
+
       </div>
   </div>
 
 <% end %>
+</div>
+

@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   # GET /notes
@@ -57,7 +58,7 @@ class NotesController < ApplicationController
   def destroy
     @note.destroy
     respond_to do |format|
-      format.html { redirect_to notes_url }
+      format.html { redirect_to request_path(@note.request_id) }
       format.json { head :no_content }
     end
   end

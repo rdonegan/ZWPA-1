@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% if can? :manage, :all %> 
 <p>
   <strong>Audit:</strong>
   <%= @waste.audit_id %>
@@ -17,3 +17,5 @@
 
 <%= link_to 'Edit', edit_waste_path(@waste) %> |
 <%= link_to 'Back', wastes_path %>
+
+<% end %>

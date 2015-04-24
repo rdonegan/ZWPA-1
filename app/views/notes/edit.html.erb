@@ -1,6 +1,16 @@
-<h1>Editing note</h1>
+<div class="row">
+	<div class="small-12 columns">
 
-<%= render 'form' %>
+		<h5> 
+		  <%= link_to "Requests", requests_path %> /
+		  <%= link_to @note.request.customer.company_name+" - "+@note.request.date.strftime('%B %e, %Y'), @note.request %>	
+		</h5>
 
-<%= link_to 'Show', @note %> |
-<%= link_to 'Back', notes_path %>
+		<h1>Editing note</h1>
+
+		<%= render 'form', :edit => true %>
+
+	</div>
+</div>
+
+

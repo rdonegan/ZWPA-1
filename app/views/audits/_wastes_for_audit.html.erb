@@ -1,5 +1,5 @@
 <% if !@wastes.empty? %>
-	<table>
+	<table width="100%">
 		<thead>
 			<tr>
 				<th>Material Type</th>
@@ -10,9 +10,9 @@
 		<tbody>
 			<% @wastes.each do |waste| %>
 				<tr>
-					<td width="200"><%= waste.material_type %></td>
-					<td width="150"><%= waste.weight %></td>
-					<td width="100"><%= waste.origin %></td>
+					<td><%= waste.material_type %></td>
+					<td><%= waste.weight %></td>
+					<td><%= waste.origin %></td>
 				</tr>
 			<% end %>
 		</tbody>

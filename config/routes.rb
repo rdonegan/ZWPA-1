@@ -13,10 +13,15 @@ ZwpaApp::Application.routes.draw do
   resources :requests
 
   resources :users
+  resources :sessions
 
   get 'home/index'
   root 'home#index'
   get '/help' => 'home#help'
+
+  resources :errors  
+  get 'login' => 'sessions#new', as: :login
+  get 'logout' => 'sessions#destroy', as: :logout
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

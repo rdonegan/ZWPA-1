@@ -1,0 +1,79 @@
+<%= simple_form_for(@walkthrough, html: { class: 'form-horizontal form-sub'}) do |f| %>
+
+    <div class="small-12 medium-6 columns">
+      <h1>Initial Questionnaire</h1>
+    </div>
+
+    <div class="small-12 medium-6 columns">
+      <div class="actions">
+        <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
+        <%= f.submit "Save", class: 'button success' %>
+        
+      </div>
+    </div>
+
+  <div class="form-back">
+  <div class="field">
+      <%= f.hidden_field :request_id %><br>
+    </div>
+
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <div class="field row">
+        <div class="small-4 columns">
+          <label for="right-label" class="left inline">* Date</label>
+        </div>
+        <div class="small-8 columns">
+          <%= f.input :date, as: :string, input_html: { class: 'datepicker', placeholder: "Enter date", readonly:"readonly"}, label: false %>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+    <%= render 'size_and_lease', f: f %>
+
+
+ <!--   *****
+    DOES YOUR BUILDING HAVE A...
+    ***** -->
+
+    <%= render 'does_your_building_have', f: f %>
+
+    <!-- ********* -->
+
+    <%= render 'hauler_and_solid_waste', f: f %>
+
+    <%= render 'policy_and_program', f: f %>
+
+    <!-- ****
+    E-WASTES
+    **** -->
+
+    <%= render 'ewaste', f: f %>
+
+    <!-- ****
+    Other Materials
+    **** -->
+
+    <%= render 'other_waste', f: f %>
+    
+    <!-- **** -->
+
+    <%= render 'zero_policy_leed', f: f %>
+
+   <!-- Only show on large screens -->
+  <div class="small-12 medium-6 columns show-for-large">
+      <div class="actions">
+        <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button' %>
+        <%= f.submit "Save", class: 'button success' %>
+        
+      </div>
+    </div>
+
+  <!-- Only show on medium and down screens -->
+  <%= render 'bottom_bar', f: f %>
+  </div>
+
+<% end %>
+
