@@ -31,6 +31,10 @@ table{
 	margin-right:.5em;
 } 
 
+.button-group{
+	padding-top: 1em;
+}
+
 .add_button{
 	margin: 1.2em;	
 }
