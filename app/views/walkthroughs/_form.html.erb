@@ -91,28 +91,8 @@
 
   <!-- Only show on medium and down screens -->
   <%= render 'bottom_bar', f: f %>
-  </div>
-
-  <%#= f.submit "Save", class: 'button' %>
   
 
-
-  <div class="sticky-footer">
-    <%#= render 'bottom_bar' %>
-      <div class="fixed-bottom  show-for-medium-down">
-      <nav class="top-bar bottom-bar" >
-        <section class="top-bar-section">
-
-          <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: { confirm: 'Are you sure you want to navigate away from this page? Unsaved Questionnaire information will be lost!' } do %>
-     
-                    <% end %>
-
-
-      </section>
-      
-      </nav>
-    </div>
-  </div> 
-
-
+  </div> <!-- FormBack End -->
 <% end %>
+
