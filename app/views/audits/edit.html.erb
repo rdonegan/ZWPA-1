@@ -1,5 +1,5 @@
 <h5>
-  <%= link_to "Home", root_url %> / 
+  
   <%= link_to "Requests", requests_path %> /
   <%= link_to @audit.request.customer.company_name+" - "+@audit.request.date.strftime('%B %e, %Y'), @audit.request %> /
   <%= link_to @audit.generator %>
