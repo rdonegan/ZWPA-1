@@ -77,8 +77,8 @@ table{
 	transition: all 0.1s ease-in-out 0.1s;
 }
 
-.option_hover{
-	border-color: #ffffff ;
+.option:hover{
+	border-color: rgba(15, 100, 15, 1) ;
 	
 }
 
