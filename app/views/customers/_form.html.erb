@@ -1,7 +1,7 @@
 <%= simple_nested_form_for(@customer, html: { class: 'form-horizontal', class: 'formtext' }) do |customer_form| %>
 
 
- <% if not flash[:notice].nil? %>
+ <% if not flash[:notice].nil? and not flash[:notice].include? "Logged in!" %>
     <div id="error_explanation">
       <h2><%= pluralize(flash[:notice].count, "error") %> prohibited this client from being saved:</h2>
 
