@@ -1,14 +1,17 @@
-<div class="small-12 columns">
-  <h1 class="button-head">All Requests</h1>
-  <% if can? :manage, :all %>
-  	<div class="add_button"><%= link_to '+ Add Request', new_request_path, class: 'button round tiny left ' %></div>
-  <% end %>
-  
+<div class="row">
+	<div class="small-12 columns">
+	  <h1 class="button-head">All Requests</h1>
+	  <% if can? :manage, :all %>
+	  	<div class="add_button"><%= link_to '+ Add Request', new_request_path, class: 'button round tiny left ' %></div>
+	  <% end %>
+	  
+	</div>
+
+	<div class="small-12 columns">
+	    <%= render 'all_requests' %>
+	</div>
+
 </div>
 
-<div class="small-12 columns">
-    <%= render 'all_requests' %>
-</div>
 
 
-<br>

@@ -1,8 +1,13 @@
-<h5>
-  <%= link_to "Requests", requests_path %> /
-  <%= link_to @request.customer.company_name+" - "+@request.date.strftime('%B %e, %Y'), @request.customer %>
-</h5>
+<div class="row">
+	<div class="small-12 columns">
+		<h5>
+		  <%= link_to "Requests", requests_path %> /
+		  <%= link_to @request.customer.company_name+" - "+@request.date.strftime('%B %e, %Y'), @request.customer %>
+		</h5>
+	</div>
+</div>
 
-<%= render 'form' %>
-<%= link_to 'Cancel', request_path(@request), class: 'button' %>
-
+<div class="row">
+	<%= render 'form' %>
+	<%= link_to 'Cancel', request_path(@request), class: 'button alert right' %>
+</div>

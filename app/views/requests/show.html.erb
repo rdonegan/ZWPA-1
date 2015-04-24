@@ -1,75 +1,75 @@
-<h5> 
-  <%= link_to "Requests", requests_path %> /
-  <%= link_to @request.customer.company_name+" - "+@request.date.strftime('%B %e, %Y'), @request %>
-</h5>
-
-<div class="small-12 large-8 columns">
-  <p id="notice"><%= notice %></p>
-
-  <h1 class="button-head">Documents</h1>
-  <div class="add_button show-for-medium-up">
-     <ul class="button-group radius ">
-      <% if can? :manage, :all %>
-        <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
-        <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
-      <% end %>
-    </ul>
+<div class="row">
+  <div class="small-12 columns">
+    <h5> 
+      <%= link_to "Requests", requests_path %> /
+      <%= link_to @request.customer.company_name+" - "+@request.date.strftime('%B %e, %Y'), @request %>
+    </h5>
   </div>
 
-  <div class="add_button show-for-small-only">
-   <ul class="button-group radius ">
-   <% if can? :manage, :all %>
-     <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
-     <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
-   <% end %>
-  </ul>
-</div>
+  <div class="small-12 large-8 columns">
+    <p id="notice"><%= notice %></p>
 
+    <h1 class="button-head">Documents</h1>
+    <div class="add_button show-for-medium-up">
+       <ul class="button-group radius ">
+        <% if can? :manage, :all %>
+          <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
+          <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
+        <% end %>
+      </ul>
+    </div>
 
-<%= render 'docs_by_request' %>
-
-</br>
-
-<h1 class="button-head">Notes</h1>
-  <div class="add_button show-for-medium-up">
+    <div class="add_button show-for-small-only">
      <ul class="button-group radius ">
      <% if can? :manage, :all %>
-      <li><%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%></li>
+       <li><%=link_to "+ Add Questionnaire",new_walkthrough_path(:request_id => @request.id), class: "button tiny "%></li>
+       <li><%=link_to "+ Add Audit", new_audit_path(:request_id => @request.id), class: "button tiny" %></li>
      <% end %>
-      
     </ul>
   </div>
- 
-  <div class="add_button show-for-small-only">
-   <% if can? :manage, :all %>
-    <%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%>
-   <% end %>
+
+
+  <%= render 'docs_by_request' %>
+
+  </br>
+
+  <h1 class="button-head">Notes</h1>
+    <div class="add_button show-for-medium-up">
+       <ul class="button-group radius ">
+       <% if can? :manage, :all %>
+        <li><%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%></li>
+       <% end %>
+        
+      </ul>
+    </div>
+   
+    <div class="add_button show-for-small-only">
+     <% if can? :manage, :all %>
+      <%=link_to "+ New Note",new_note_path(:request_id => @request.id), class: "button tiny "%>
+     <% end %>
+      
     
-  
-</div>
-
-<%= render 'notes_by_request' %>
-
-</br>
-
-
-<div class="show-for-medium-down">
-  <%= render 'request_details'%>
-</div>
-
-
-
-</div>
-
-<div class="medium-4 columns show-for-large-only ">
-    <%= render 'request_details' %>
-</div>
-
-
-
-
-<div class="row">
-  <div class="small-12 medium-12 large-7 columns">
-    <%= link_to 'Back to All Requests', requests_path, :class => "button" %>
   </div>
+
+  <%= render 'notes_by_request' %>
+
+  </br>
+
+
+  <div class="show-for-medium-down">
+    <%= render 'request_details'%>
+  </div>
+
+  </div>
+
+  <div class="medium-4 columns show-for-large-only ">
+      <%= render 'request_details' %>
+  </div>
+
+  <div class="row">
+    <div class="small-12 medium-12 large-7 columns">
+      <%= link_to 'Back to All Requests', requests_path, :class => "button" %>
+    </div>
+  </div>
+
 </div>
