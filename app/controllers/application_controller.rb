@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # TODO: create a standardized error page with our styling
-  # rescue_from CanCan::AccessDenied do |exception|
-  #   # flash[:error] = "You are not authorized to access this page. Please login before continuing"
-  #   # render template: 'errors/unauthorized'
-  # end
+  rescue_from CanCan::AccessDenied do |exception|
+    # flash[:error] = "You are not authorized to access this page. Please login before continuing"
+    render 'errors/unauthorized'
+  end
 
   private
   def current_user
