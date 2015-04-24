@@ -16,7 +16,7 @@
 
 <!-- TITLE AND EDIT BUTTON -->
 <div class="row">
-  <div class="small-12 medium-8 columns">
+  <div class="small-12 large-8 columns">
     <h1 class="button-head">Waste Audit</h1>
     <div class="add_button">
     <% if can? :manage, :all %>
@@ -35,22 +35,37 @@
 
       <!-- DOWNLOAD AS EXCEL -->
       <div class="small-12 columns show-for-medium-up">
+        <br>
         <p>
           Download:
           <%= link_to "CSV", audit_path(format: "csv") %> |
           <%= link_to "Excel", audit_path(format: "xls") %>
         </p>
+
+        
       </div>
 
     </div>
 
+    <div class="row">
+       <div class="small-12 columns show-for-medium-down">
+        <br>
+              <%= render 'audit_details'%>
+
+      </div>
+    </div>
+
   </div>
 
+ 
+
   <!-- AUDIT DETAILS - SHOW MEDIUM UP -->
-  <div class="medium-4 columns show-for-medium-up">
+  <div class="medium-4 columns show-for-large-up">
     <%= render 'audit_details'%>
 
   </div>
+
+
         
   <% if can? :manage, :all %>
     
@@ -59,89 +74,3 @@
 </div>
 
 
-<!-- AUDIT DETAILS -->
-<!-- <div class="row show-for-small-only">
-  <div class="small-12 columns">
-    <table>
-      <tbody>
-        
-        <tr>
-          <td width="200">Generator</td>
-          <td><%= @audit.generator %></td>
-        </tr>
-
-        <tr>
-          <td width="200">Time Period</td>
-          <td><%= @audit.start_date.strftime('%b %e, %Y') + " - " + @audit.end_date.strftime('%b %e') %></td>
-        </tr>
-
-        <tr>
-          <td width="200">Location</td>
-          <td><%= @audit.location %></td>
-        </tr>
-        
-      </tbody>
-  </table>
-
-
-  </div>
-
-</div> -->
-
-
-
-<!-- ITEMS -->
-<!-- <div class="row">
-  <div class="small-12 columns">
-    <h3 class="show-for-small-only">Items</h3>
-    <%= render 'wastes_for_audit' %>
-  </div>
-</div> -->
-
-
-<!-- <div class="small-12 large-8 columns">
-	<p id="notice"><%= notice %></p>
-	<h4>
-		<%= link_to @audit.request.customer.company_name, @audit.request.customer %> > 
-	    <%= @audit.request.date.strftime('%B %e, %Y') %> >
-	    <%= @audit.generator %>
- 	</h4>
-
- 	<h1 class="button-head"><%= @audit.generator %> Audit</h1>
-  
- 	<br><br><br><br> -->
-
-
-  <!-- <p>
-    Download:
-    <%= link_to "CSV", audit_path(format: "csv") %> |
-    <%= link_to "Excel", audit_path(format: "xls") %>
-  </p> -->
-  
- 	<!-- <div class="show-for-medium-up">
- 		<%= render 'wastes_for_audit' %>
-  </div>
-
-  <div class="show-for-small-only">
-   		<%= render 'wastes_for_audit' %>
-	</div> -->
-<!-- </br>
-
-</br> -->
-
-<!-- <div class="show-for-medium-down">
-  <%= render 'audit_details'%>
-</div> -->
-
-<!-- </div>
-
-<div class="large-4 columns show-for-large-only ">
-    <%= render 'audit_details' %>
-</div>
-
-<div class="row">
-  <div class="small-12 medium-12 large-7 columns">
-    <%= link_to 'Edit Audit', edit_audit_path(@audit), :class => "button " %>
-    <%= link_to 'Back to All Audits', audits_path, :class => "button" %>
-  </div>
-</div> -->
