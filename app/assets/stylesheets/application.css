@@ -31,6 +31,10 @@ table{
 	margin-right:.5em;
 } 
 
+.button-group{
+	padding-top: 1em;
+}
+
 .add_button{
 	margin: 1.2em;	
 }
@@ -43,35 +47,44 @@ table{
 /********************/
 
 .getting_started_container{
-	
-  	background-color: rgba(15, 52, 15, 0.07);
-  	border-style:solid;
-  	border-color: rgba(15, 52, 15, 0.3);
+
   	border-width: 1px;
-  	border-radius: 4px;
+  	background: 
+  		linear-gradient(
+      		rgba(15, 159, 15, .05), 
+      		rgba(15, 159, 15, .05)
+      
+    	),
+		url("sos.png");
   	text-align:center;
   	margin-bottom: 2em;
+  	color:#3f3f3f;
   
-  	
-
 }
 
+.getting_started_container h1{
+	color:#3f3f3f;
+}
+
+.option-button h4{
+	color:#ffffff;
+}
+
+
 .option{
-	background-color: rgba(15, 52, 15, 0.2);
+	background-color: rgba(15, 159, 15, .7);
 	margin: 1em 1.8em 1.8em 1.8em;
 	padding: 2em 2em;
 	border-style: solid;
 	border-radius: 10px;
+	border-color: rgba(15, 159, 15, .7);
 	transition: all 0.1s ease-in-out 0.1s;
 }
 
-.option_hover{
-	border-color:rgba(36, 71, 53, 1) ;
+.option:hover{
+	border-color: rgba(15, 100, 15, 1) ;
 	
-
 }
-
-
 
 a:visited {
 	color: white;
@@ -94,6 +107,37 @@ table tbody tr:hover{
 	background-color: #D3D3D3;
 }
 
+/*TOP NAV BUTTONS*/
 
+.top-bar-section ul li > a.button.navbut{
+	background-color: rgba(15, 159, 15, 1);
+}
+
+.top-bar-section ul li > a.button.navbut:hover{
+	background-color:rgba(15, 100, 15, 1);
+}
+
+
+.litterbug{
+	padding-top:1em;
+	padding-bottom:1em;
+	width: 12em;
+
+}
+
+.errormessage{
+	text-align: center;
+
+}
+
+.errormessage h1{
+	font-size: 6em;
+	color: #3f3f3f;
+
+}
+
+.errormessage h2{
+	color:#3f3f3f;
+}
 
 

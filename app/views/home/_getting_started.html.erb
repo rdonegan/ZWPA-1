@@ -5,7 +5,7 @@
 
 	<div class=" content-padding ">
 		<div class="row">
-			<h2>Welcome,</h2>
+			<h1>Welcome,</h1>
 		</div>
 		<div class="row">
 			<% if can? :manage, :all %>
@@ -14,11 +14,6 @@
 		</div>
 		<div class="row">
 
-			<!-- <ul class="small-block-grid-1 medium-block-grid-3">
-				<li>Add a New Client</li>
-				<li>Add a Request to an Existing Client</li>
-				<li>Update an Ongoing Request</li>
-			</ul> -->
 			
 			<!-- option 1 -->
 			<% if can? :manage, :all %>
@@ -51,7 +46,7 @@
 			<% else %>
 
 			<%=link_to login_path do %>
-				<div class="small-12 medium-12 columns option-button">
+				<div class="small-12 medium-9 large-5 columns option-button small-centered">
 					<div class="option">
 						<h4>Login</h4>
 					</div>

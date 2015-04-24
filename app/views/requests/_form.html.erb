@@ -15,7 +15,7 @@
     <h1>Request</h1>
   </div>
 
-  <div class="small-12 medium-6 columns">
+  <div class="small-12 medium-6 columns show-for-medium-up">
     <div class="actions">
       <br><br><br><br>
     </div>
@@ -141,12 +141,15 @@
       </div>
     </div>
 
-<div class="small-12 medium-6 columns">
-    <div class="actions">
-      <%= link_to 'View all Requests', requests_path, :class => 'button' %>
-      <%= f.submit "Save", class: 'button' %>
+    <div class="small-12 medium-6 columns">
+        <div class="actions">
+          <%= link_to 'View all Requests', requests_path, :class => 'button' %>
+          <%= f.submit "Save", class: 'button success' %>
+          
+        </div>
     </div>
-  </div>
+
     
 <!--  -->
 <% end %>
+</div>

@@ -27,12 +27,12 @@
         <ul class="left">
           <li class="has-form">
             <% if can? :manage, :all %>
-              <%= link_to 'New Client', new_customer_path, :class => "button" %>
+              <%= link_to 'New Client', new_customer_path, :class => "button navbut" %>
             <% end %>
           </li>
           <li class="has-form">
             <% if can? :manage, :all %>
-            <%= link_to 'New Request', new_request_path, :class => "button" %>
+            <%= link_to 'New Request', new_request_path, :class => "button navbut" %>
             <% end %>
           </li>
           

@@ -4,7 +4,7 @@
       <nav class="top-bar bottom-bar" >
         <section class="top-bar-section">
 
-          <%= link_to new_note_path(:request_id => @walkthrough.request_id) do %>
+          <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: {confirm: "Are you sure? Unsaved data will be lost."} do %>
             <div class="bottom-button">
               Add Note
 
