@@ -1,8 +1,15 @@
-<h5>
-  
-  <%= link_to "Requests", requests_path %> /
-  <%= link_to @audit.request.customer.company_name+" - "+@audit.request.date.strftime('%B %e, %Y'), @audit.request %> /
-  <%= link_to @audit.generator %>
-</h5>
+<div class="row">
 
-<%= render 'form', :edit => true %>
+	<div class="small-12 columns">
+
+		<h5>
+		  
+		  <%= link_to "Requests", requests_path %> /
+		  <%= link_to @audit.request.customer.company_name+" - "+@audit.request.date.strftime('%B %e, %Y'), @audit.request %> /
+		  <%= link_to @audit.generator %>
+		</h5>
+
+		<%= render 'form', :edit => true %>
+	</div>
+
+</div>
