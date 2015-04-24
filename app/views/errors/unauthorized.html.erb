@@ -1,5 +1,37 @@
-<div class="small-12 columns getting_started_container ">
+<!-- <div class="small-12 columns getting_started_container ">
 	<div class="row">
 		<h3>Please login before continuing</h3>	
 	</div>
+</div> -->
+
+
+<div class="errormessage">
+
+	<div class="row">
+		<div class="small-12 columns small-centered">
+			<h1>Oops!</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns small-centered">
+			<%= image_tag "litterbug.png", class: "litterbug" %>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns small-centered">
+			<h2>You need to login to view that page.</h2>
+		</div>
+
+	</div>
+
+	<%=link_to login_path do %>
+		<div class="small-12 medium-9 large-5 columns option-button small-centered">
+			<div class="option">
+				<h4>Login</h4>
+			</div>
+		</div>
+	<% end %>
 </div>

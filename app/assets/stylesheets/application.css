@@ -118,4 +118,26 @@ table tbody tr:hover{
 }
 
 
+.litterbug{
+	padding-top:1em;
+	padding-bottom:1em;
+	width: 12em;
+
+}
+
+.errormessage{
+	text-align: center;
+
+}
+
+.errormessage h1{
+	font-size: 6em;
+	color: #3f3f3f;
+
+}
+
+.errormessage h2{
+	color:#3f3f3f;
+}
+
 
