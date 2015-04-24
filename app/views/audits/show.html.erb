@@ -1,76 +1,81 @@
-<h5> 
-  <%= link_to "Requests", requests_path %> /
-  <%= link_to @audit.request.customer.company_name+" - "+@audit.request.date.strftime('%B %e, %Y'), @audit.request %> /
-  <%= link_to @audit.generator %>
-</h5>
-
-<!-- BREADCRUMBS -->
+  
 <div class="row">
   <div class="small-12 columns">
-    <p id="notice"><%= notice %></p>
-    
+    <h5> 
+      <%= link_to "Requests", requests_path %> /
+      <%= link_to @audit.request.customer.company_name+" - "+@audit.request.date.strftime('%B %e, %Y'), @audit.request %> /
+      <%= link_to @audit.generator %>
+    </h5>
 
-  </div>
-
-</div>
-
-<!-- TITLE AND EDIT BUTTON -->
-<div class="row">
-  <div class="small-12 large-8 columns">
-    <h1 class="button-head">Waste Audit</h1>
-    <div class="add_button">
-    <% if can? :manage, :all %>
-      <%= link_to 'Update', edit_audit_path(@audit), class: 'button tiny left ' %>
-      <%= link_to 'Delete', @audit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny alert' %>
-    <% end %>
-    </div>
-
-
-    <!-- RECORDED WASTE MATERIALS -->
+    <!-- BREADCRUMBS -->
     <div class="row">
       <div class="small-12 columns">
-        <%= render 'wastes_for_audit' %>
-      </div>
-
-
-      <!-- DOWNLOAD AS EXCEL -->
-      <div class="small-12 columns show-for-medium-up">
-        <br>
-        <p>
-          Download:
-          <%= link_to "CSV", audit_path(format: "csv") %> |
-          <%= link_to "Excel", audit_path(format: "xls") %>
-        </p>
-
+        <p id="notice"><%= notice %></p>
         
+
       </div>
 
     </div>
 
+    <!-- TITLE AND EDIT BUTTON -->
     <div class="row">
-       <div class="small-12 columns show-for-medium-down">
-        <br>
-              <%= render 'audit_details'%>
+      <div class="small-12 large-8 columns">
+        <h1 class="button-head">Waste Audit</h1>
+        <div class="add_button">
+        <% if can? :manage, :all %>
+          <%= link_to 'Update', edit_audit_path(@audit), class: 'button tiny left ' %>
+          <%= link_to 'Delete', @audit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny alert' %>
+        <% end %>
+        </div>
+
+
+        <!-- RECORDED WASTE MATERIALS -->
+        <div class="row">
+          <div class="small-12 columns">
+            <%= render 'wastes_for_audit' %>
+          </div>
+
+
+          <!-- DOWNLOAD AS EXCEL -->
+          <div class="small-12 columns show-for-large-only">
+            <br>
+            <p>
+              Download:
+              <%= link_to "CSV", audit_path(format: "csv") %> |
+              <%= link_to "Excel", audit_path(format: "xls") %>
+            </p>
+
+            
+          </div>
+
+        </div>
+
+        <div class="row">
+           <div class="small-12 columns show-for-medium-down">
+            <br>
+                  <%= render 'audit_details'%>
+
+          </div>
+        </div>
 
       </div>
-    </div>
 
-  </div>
+     
 
- 
+      <!-- AUDIT DETAILS - SHOW MEDIUM UP -->
+      <div class="medium-4 columns show-for-large-up">
+        <%= render 'audit_details'%>
 
-  <!-- AUDIT DETAILS - SHOW MEDIUM UP -->
-  <div class="medium-4 columns show-for-large-up">
-    <%= render 'audit_details'%>
-
-  </div>
+      </div>
 
 
+            
+      <% if can? :manage, :all %>
         
-  <% if can? :manage, :all %>
-    
-  <% end %>
+      <% end %>
 
+    </div>
+  </div>
 </div>
 
 
