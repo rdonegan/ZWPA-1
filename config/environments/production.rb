@@ -84,7 +84,7 @@ ZwpaApp::Application.configure do
     port:                 587,
     domain:               'gmail.com',
     user_name:            'zwpawasteaudit',
-    password:             'recycle1',
+    password:             'literallytrashy',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
