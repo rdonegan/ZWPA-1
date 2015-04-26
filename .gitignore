@@ -21,5 +21,6 @@
 # Ignore the coverage directory
 /coverage
 
-# Ignore the seeds.rb
+# Ignore the seeds.rb & password recovery email
 /db/seeds.rb
+/app/views/password_mailer/password_email.html.erb
