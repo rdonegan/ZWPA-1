@@ -141,13 +141,25 @@
       </div>
     </div>
 
-    <div class="small-12 medium-6 columns">
+   <!--  <div class="small-12 medium-6 columns">
         <div class="actions">
-          <%= link_to 'View all Requests', requests_path, :class => 'button' %>
-          <%= f.submit "Save", class: 'button success' %>
+          <%#= link_to 'View all Requests', requests_path, :class => 'button' %>
+          <%#= f.submit "Save", class: 'button success' %>
           
         </div>
+    </div> -->
+
+    <div>
+      <div class="actions">
+        <% if defined?(edit) && edit %>
+          <%= link_to 'Back', @request, class: 'button tiny alert' %>
+        <% elsif defined?(newrequest) && newrequest %>
+          <%= link_to 'Back to all Requests', requests_path, :class => 'button tiny' %> 
+        <%end%>
+        <%= f.submit "Save", class: 'button tiny right success' %>
+
     </div>
+  </div>
 
     
 <!--  -->
