@@ -8,12 +8,7 @@ class Ability
       if user.role?(:admin)
         can :manage, :all
       else
-        cannot :read, Customer
-        cannot :read, Request
-        cannot :read, Note
-        cannot :read, Walkthrough
-        cannot :read, Audit
-        cannot :read, User 
+        cannot :read, :all
       end
     
     # The first argument to `can` is the action you are giving the user
