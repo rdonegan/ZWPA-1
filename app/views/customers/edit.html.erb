@@ -5,10 +5,7 @@
 			<%= link_to @customer.company_name, @customer %>
 		</h5>
 
-
-		<h3><%= "Editing Client, " + @customer.company_name%></h3>
-
-		<%= render 'form' %>
+		<%= render 'form', :edit => true %>
 		
 	</div>
 </div>
