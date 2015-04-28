@@ -4,9 +4,7 @@
 
     <h1 class="button-head">All Clients</h1>
         <div class="add_button">
-        <% if can? :manage, :all %>
           <%= link_to '+ Add Client', new_customer_path, class: 'button round tiny left ' %>  
-      <% end %>
         </div>
 
     <%= render 'all_customers' %>
