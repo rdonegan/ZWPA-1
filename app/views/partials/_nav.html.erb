@@ -13,10 +13,10 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li><%= link_to 'Clients', customers_path %></li>
-          <li><%= link_to 'Requests', requests_path %></li>
-          <li><a href="/help.html">Help</a></li>
           <% if can? :manage, :all %>
+            <li><%= link_to 'Clients', customers_path %></li>
+            <li><%= link_to 'Requests', requests_path %></li>
+            <li><a href="/help.html">Help</a></li>
             <li><%= link_to 'Logout', logout_path %></li>
           <% else %>
             <li><%= link_to 'Login', login_path %></li>
