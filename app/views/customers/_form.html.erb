@@ -12,7 +12,12 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form-back">
+  <% if defined?(edit) && edit %>
+    <h1><%= "Editing Client, " + @customer.company_name%></h1>
+  <% elsif defined?(newclient) && newclient %>
+    <h1>New Client</h1>
+  <%end%>
   <div class="row">
       <div class="span7">
         <fieldset>
@@ -146,9 +151,23 @@
         </fieldset>
       </div>
 
-  <div class="actions">
-    <%= link_to 'Back to Clients', customers_path, class: "button small" %>
-    <%= customer_form.submit "Save", class: 'button success small' %>
+      <div>
+        <div class="actions">
+          <% if defined?(edit) && edit %>
+            <%= link_to 'Cancel', @customer, class: 'button tiny alert' %>
+          <% elsif defined?(newclient) && newclient %>
+            <%= link_to 'Back', customers_path, :class => 'button tiny' %> 
+          <%end%>
+          <%= customer_form.submit "Save", class: 'button tiny right success' %>
+
+        </div>
+      </div>
+
+<!--   <div class="actions">
+    <%#= link_to 'Back to Clients', customers_path, class: "button small" %>
+    <%#= customer_form.submit "Save", class: 'button success small' %>
   </div>
-  </div>
+  </div> -->
 <% end %>
+
+</div>

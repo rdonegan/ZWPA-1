@@ -8,8 +8,11 @@
 		<div class="small-12 medium-12 large-7 columns">
 			<h2>Recent Requests</h2>
 			<!-- Show latest requests that have been issued -->
-			<%= render :partial => "recent_requests", locals: { requests: @requests } %>
-
+			<% if can? :manage, :all %>
+				<%= render :partial => "recent_requests", locals: { requests: @requests } %>
+			<% else %>
+				<p> Login to View Recent Requests</p>
+			<% end %> 
 		</div>
 
 
@@ -20,9 +23,12 @@
 			<div class="row">
 				<div class="small-12 columns">
 					<h3>Recent Audits</h3>
-					<%= render :partial => "recent_audits", locals: { audits: @audits } %>
+					<% if can? :manage, :all %>
+						<%= render :partial => "recent_audits", locals: { audits: @audits } %>
+					<% else %>
+						<p> Login to View Recent Audits </p>
+					<% end %>
 				</div>
-
 			</div>
 			
 
