@@ -18,6 +18,7 @@ ZwpaApp::Application.routes.draw do
   get 'home/index'
   root 'home#index'
   get '/help' => 'home#help'
+  get '/about' => 'home#about'
 
   resources :errors  
   get 'login' => 'sessions#new', as: :login
