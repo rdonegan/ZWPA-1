@@ -19,9 +19,17 @@
         </div>
       </div>
       
-      <div class="actions"><%= submit_tag "Log In", class: "button" %></div>
+      <div class="actions"><%= submit_tag "Log In", class: "button" %>
+      <%= button_to "sessions/mail" do %>
+        <div>Forgot Password?</div>
+      <% end %>
+      </div>
     <% end %>
+    
   </div>
+
+
+
 
   <div class="large-4 columns show-for-large-up">
     <%= image_tag "prc-logo.png", class: "litterbug" %>
