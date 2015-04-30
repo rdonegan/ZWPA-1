@@ -1,8 +1,3 @@
-# Refer to lab 13 from 272 for basic tutorials on how to use authentication.
-# These requirements are very involved, and should probably be saved more
-# for the end of the project.
-
-
 class User < ActiveRecord::Base
 	
 	# Adds method to set and authenticate against a Bcrypt password
@@ -34,6 +29,5 @@ class User < ActiveRecord::Base
 		User.first.try(:authenticate, password)
 	end
 
-	#reset password - TO DO LATER
 
 end

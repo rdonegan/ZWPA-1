@@ -15,6 +15,8 @@ ZwpaApp::Application.routes.draw do
   resources :users
   resources :sessions
 
+  post 'sessions/mail'
+
   get 'home/index'
   root 'home#index'
   get '/help' => 'home#help'

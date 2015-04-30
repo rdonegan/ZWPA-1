@@ -15,6 +15,12 @@ class SessionsController < ApplicationController
       end
 	end
 
+	def mail
+		PasswordMailer.password_email.deliver
+		flash.now.alert = "Password Recovery Email Sent"
+		render "new"		
+	end
+
 	def destroy
 	  session[:user_id] = nil
       redirect_to root_url, notice: "Logged out!"	
