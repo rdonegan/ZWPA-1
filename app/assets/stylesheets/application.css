@@ -141,3 +141,14 @@ table tbody tr:hover{
 }
 
 
+/*ABOUT PAGE*/
+.about_img{
+	width: 10em;
+	padding-top: 2em;
+	/*text-align:center;*/
+}
+
+.row_center{
+	text-align: center;
+}
+
