@@ -3,8 +3,14 @@
 
 
 		<h5>
-			<%= link_to "Clients", customers_path %> /
-			<%= link_to @customer.company_name, @customer %>
+			<div class="button-head">
+				<%= link_to "Clients", customers_path %> /
+				<%= link_to @customer.company_name, @customer %>
+			</div>
+			<% if can? :manage, :all %>
+				<div class="add_button"><%= link_to 'Update Client', edit_customer_path(@customer), class: 'button tiny left ' %>
+				</div>
+			<% end %>
 		</h5>
 	</div>
 </div>
@@ -15,19 +21,11 @@
 			<p id="notice"><%= notice %></p>
 		</div>
 
-		<div class="small-12 columns">
-			<h1 class="button-head"><%=@customer.company_name%></h1>
-			<% if can? :manage, :all %>
-			<div class="add_button"><%= link_to 'Update Client', edit_customer_path(@customer), class: 'button tiny left ' %></div>
-			<% end %>
-			
-		</div>
-
 
 		<!-- TITLE AND EDIT BUTTON -->
 
 			<div class="small-12 columns">
-				<h1 class="button-head">Client Requests</h1>
+				<h2 class="button-head">Client Requests</h2>
 				<div class="add_button"><%= link_to '+ Add Request', new_request_path(:customer_id => @customer.id), class: "button tiny round left" %></div>
 			</div>
 
@@ -40,9 +38,7 @@
 
 		<div class="small-12 columns">
 			<%= link_to 'Back', customers_path, class: "button" %>
-			<% if can? :manage, :all %>
-				<%= link_to '+ Add Request', new_request_path(:customer_id => @customer.id), class: "button" %>
-			<% end %>
+			
 		</div>
 
 </div>

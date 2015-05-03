@@ -51,11 +51,10 @@ table{
   	border-width: 1px;
   	background: 
   		linear-gradient(
-      		rgba(15, 159, 15, .05), 
-      		rgba(15, 159, 15, .05)
+      		rgba(15, 159, 15, .15), 
+      		rgba(15, 159, 15, .15)
       
-    	),
-		url("sos.png");
+    	);
   	text-align:center;
   	margin-bottom: 2em;
   	color:#3f3f3f;
@@ -140,4 +139,15 @@ table tbody tr:hover{
 	color:#3f3f3f;
 }
 
+
+/*ABOUT PAGE*/
+.about_img{
+	width: 10em;
+	padding-top: 2em;
+	/*text-align:center;*/
+}
+
+.row_center{
+	text-align: center;
+}
 

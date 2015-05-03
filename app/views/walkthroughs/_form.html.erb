@@ -77,21 +77,13 @@
    <!-- Only show on large screens -->
    <div class="small-12 medium-8 columns show-for-large">
       <div class="actions">
-        <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button tiny alert' %>
+        <%= link_to 'Back to Request', request_path(@walkthrough.request_id), class: 'button tiny' %>
 
         <% if not @walkthrough.date.nil? %>
            <%= link_to 'Delete', @walkthrough, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny alert' %>
         <% end %>
 
-        <%= link_to new_note_path(:request_id => @walkthrough.request_id), data: {confirm: "Are you sure? Unsaved data will be lost."} do %>
-            <div class="button tiny">
-              Add Note
-
-            </div>
-          <%end%>
-
         <%= f.submit "Save", class: 'button tiny success' %>
-
         
       </div>
     </div>
