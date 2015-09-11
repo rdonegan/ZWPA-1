@@ -1,28 +1,13 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== Zero Waste Pennsylvania Waste Audit Application
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Designed for non-profit, Zero Waste Pennsylvania (ZWPA), the ZWPA App aims to improve the waste auditing process by reducing reliance on paper records and streamlining content gathering. OVer the course of 4 months, I worked on a team of 4 to design, code, and revise the relevant web application in Spring 2015. Our final implementation was well-received by members of ZWPA, and is currently in use in the field.
+
+Ruby on Rails was used to create the database and Foundation was used as a front end framework. A postgres database supports data collection and archiving.
+
+To run:
+
+* Clone this repository and run <tt>bundle install</tt> and then <tt>rake db:migrate</tt>.
+* Make sure you have Postgres up and running.
+* Run <tt>rails server</tt> and navigate to localhost:3000 .
+
